@@ -154,25 +154,47 @@ export default function StatsGrid() {
     { label: 'Latest Block', value: '3,777,402', icon: '/icons/latest-block.png' },
   ];
 
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 bg-grid text-white bg-opacity-20">
-        {stats.map((stat, idx) => (
-          <div
-            key={idx}
-            className="bg-transparent border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform flex items-center space-x-4"
-          >
-            {/* Custom icon image on the left side of the text */}
-            <div className="flex-shrink-0">
-              <img src={stat.icon} alt={stat.label} className="w-8 h-8" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold">{stat.label}</h3>
-              <p className="text-2xl font-bold">{stat.value}</p>
-            </div>
+//   return (
+//     <div className="container mx-auto px-4 py-8">
+//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 bg-grid text-white bg-opacity-20">
+//         {stats.map((stat, idx) => (
+//           <div
+//             key={idx}
+//             className="bg-transparent border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform flex items-center space-x-4"
+//           >
+//             {/* Custom icon image on the left side of the text */}
+//             <div className="flex-shrink-0">
+//               <img src={stat.icon} alt={stat.label} className="w-8 h-8" />
+//             </div>
+//             <div>
+//               <h3 className="text-lg font-semibold">{stat.label}</h3>
+//               <p className="text-2xl font-bold">{stat.value}</p>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+return (
+  <div className="container mx-auto px-4 py-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {stats.map((stat, idx) => (
+        <div
+          key={idx}
+          className="bg-gradient-to-r from-transparent via-transparent to-[#8af969] p-4 border border-white/20 rounded-lg shadow-md hover:scale-105 transition transform flex items-center space-x-4 relative"
+        >
+          {/* Custom icon image on the left side of the text */}
+          <div className="flex-shrink-0">
+            <img src={stat.icon} alt={stat.label} className="w-8 h-8" />
           </div>
-        ))}
-      </div>
+          <div>
+            <h3 className="text-lg font-semibold">{stat.label}</h3>
+            <p className="text-2xl font-bold">{stat.value}</p>
+          </div>
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 }
