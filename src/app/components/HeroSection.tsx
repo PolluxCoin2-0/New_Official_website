@@ -17,14 +17,14 @@ export default function HeroSection() {
     },
     {
       text: "POLLUX",
-      className: "dark:text-[#8af969]",
+      className: "text-[#8af969]",
     },
   ];
 
   const wordsA = [
     {
       text: "web",
-      className: "text-green-500 dark:text-[#8af969]",
+      className: "text-green-500 text-[#8af969]",
     },
   ];
 
