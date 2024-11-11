@@ -204,7 +204,10 @@
   //     </div>
   //   );
   // }
-"use client";
+
+
+  
+  "use client";
 
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
@@ -230,11 +233,10 @@ export default function StatsGrid() {
       if (card) {
         VanillaTilt.init(card, {
           max: 15,
-          perspective: 1400,
+          perspective: 1000, // Adjusted to reduce cuboid effect
           easing: "cubic-bezier(.03,.98,.52,.99)",
           speed: 1200,
-          glare: true,
-          "max-glare": 0.2,
+          glare: false, // Disable glare
           scale: 1.04,
           reset: true,
         });
@@ -257,7 +259,8 @@ export default function StatsGrid() {
           <div
             key={idx}
             ref={(el) => (cardRefs.current[idx] = el)}
-            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969c2] p-4 rounded-lg transition transform flex items-center space-x-4 border border-gray-500 hover:border-[1px] hover:border-white hover:bg-gradient-to-r hover:from-transparent hover:via-transparent hover:to-[#8bf969] hover:scale-105"
+            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969c2] p-4 rounded-lg transition transform flex items-center space-x-4 border border-gray-500 hover:border-white hover:bg-gradient-to-r hover:from-transparent hover:via-transparent hover:to-[#8bf969] hover:scale-105"
+            style={{ boxShadow: "none", transformStyle: "flat" }} // Disable depth effect
           >
             <div className="flex-shrink-0">
               <img src={stat.icon} alt={stat.label} className="w-8 h-8" />
