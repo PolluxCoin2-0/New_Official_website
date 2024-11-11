@@ -205,8 +205,7 @@
   //   );
   // }
 
-
-  "use client";
+"use client";
 
 import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
@@ -258,7 +257,7 @@ export default function StatsGrid() {
           <div
             key={idx}
             ref={(el) => (cardRefs.current[idx] = el)}
-            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969c2] p-4 rounded-lg shadow-md transition transform flex items-center space-x-4 border border-gray-500 hover:border-[1px] hover:border-white"
+            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969c2] p-4 rounded-lg shadow-md transition transform flex items-center space-x-4 border border-gray-500 hover:border-[1px] hover:border-white hover:bg-gradient-to-r hover:from-transparent hover:via-transparent hover:to-[#8bf969] hover:scale-105"
           >
             <div className="flex-shrink-0">
               <img src={stat.icon} alt={stat.label} className="w-8 h-8" />
