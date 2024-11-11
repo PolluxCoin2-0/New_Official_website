@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white; /* Black background with white text */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100"><g fill="none" stroke="%23ffffff10" stroke-width="1"><path d="M0 0L100 0L50 86.6Z"></path><path d="M50 0L100 86.6H0Z"></path><path d="M-50 86.6L50 86.6L0 173.2Z"></path><path d="M100 86.6L200 86.6L150 173.2Z"></path></g></svg>');
+  background-size: 80px 80px; /* Adjust grid size */
+}
+
+@layer utilities {
+  .shadow-glow {
+    box-shadow: 0 0 10px 5px #ff;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+
