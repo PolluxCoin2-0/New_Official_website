@@ -8,9 +8,9 @@ import Footer from './components/Footer';
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body >
         <Navbar />
-        <main>{children}</main>
+        <main className=' w-full p-2'>{children}</main>
         <Footer />
       </body>
     </html>
