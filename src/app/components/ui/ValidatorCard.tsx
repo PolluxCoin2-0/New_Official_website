@@ -92,15 +92,26 @@ const ValidatorCard = () => {
       }}
     >
       {/* Image Section */}
-      <div className="flex-1">
+      {/* <div className="flex-1">
         <Image
-          src="/validator-image.jpg" // Replace with actual image path
+          src="/banner.jpg" // Replace with actual image path
           alt="Validator Node"
           width={350}
           height={220}
           className="rounded-lg object-cover"
         />
-      </div>
+      </div> */}
+      {/* Image Section */}
+<div className="flex-1">
+  <Image
+    src="/banner.jpg" // Correct path to image in public folder
+    alt="Validator Node"
+    width={350}
+    height={220}
+    className="rounded-lg object-cover"
+  />
+</div>
+
 
       {/* Text Content */}
       <div className="flex-1 mt-6 lg:mt-0 lg:ml-8 text-white">

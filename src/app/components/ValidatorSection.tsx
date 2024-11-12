@@ -478,7 +478,7 @@ const ValidatorCard = () => {
         {/* Image Section (Left side for first card) */}
         <div className={`flex-1 w-full ${isFirstCard ? "sm:order-1" : ""} max-w-[320px]`}>
           <Image
-            src="/validator-image.jpg" // Replace with actual image
+            src="/banner.jpg" // Replace with actual image
             alt="Validator Node"
             width={320}
             height={200}
