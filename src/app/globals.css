@@ -21,8 +21,8 @@ body {
 }
 
 /* This ensures smooth scrolling for the entire page */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 

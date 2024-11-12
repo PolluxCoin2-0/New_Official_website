@@ -225,6 +225,210 @@
 
 
 
+// "use client";
+
+// import React, { useState } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+
+// const ValidatorCard = () => {
+//   // Handle mouse movement inside the card to display the gradient
+//   const handleMouseMove = (
+//     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+//     setMousePosition: React.Dispatch<React.SetStateAction<{ x: number; y: number }>>,
+//     setGradientVisible: React.Dispatch<React.SetStateAction<boolean>>
+//   ) => {
+//     const rect = e.currentTarget.getBoundingClientRect();
+//     setMousePosition({
+//       x: e.clientX - rect.left,
+//       y: e.clientY - rect.top,
+//     });
+//     setGradientVisible(true);
+//   };
+
+//   // Hide the gradient when mouse leaves the card
+//   const handleMouseLeave = (
+//     setGradientVisible: React.Dispatch<React.SetStateAction<boolean>>
+//   ) => {
+//     setGradientVisible(false);
+//   };
+
+//   // Validator card component
+//   const ValidatorCardContent = () => {
+//     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+//     const [gradientVisible, setGradientVisible] = useState(false);
+
+//     return (
+//       <div
+//         className="relative flex flex-col items-center p-5 rounded-xl shadow-xl border border-gray-400"
+//         onMouseMove={(e) =>
+//           handleMouseMove(e, setMousePosition, setGradientVisible)
+//         }
+//         onMouseLeave={() => handleMouseLeave(setGradientVisible)}
+//         style={{
+//           background: gradientVisible
+//             ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(138, 249, 105, 0.3), transparent 30%)`
+//             : undefined,
+//         }}
+//       >
+//         {/* Image Section */}
+//         <div className="flex-1">
+//           <Image
+//             src="/validator-image.jpg" // Replace with actual image
+//             alt="Validator Node"
+//             width={400}
+//             height={250}
+//             className="rounded-lg object-cover"
+//           />
+//         </div>
+
+//         {/* Text Content */}
+//         <div className="flex-1 mt-6 lg:mt-0 lg:ml-8 text-white">
+//           <button className="border border-green-400 text-green-400 px-4 py-2 rounded-lg bg-transparent mb-4">
+//             Validator
+//           </button>
+//           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+//             How to Run a Pollux Validator Node and Participate in the Network
+//           </h2>
+//           <p className="text-lg mb-6">
+//             Running a Pollux validator node allows you to participate in the
+//             network, contribute to its security and decentralization, and be
+//             rewarded for your participation.
+//           </p>
+//           <Link href="/learn-more">
+//             <button className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+//               <span className="text-white text-xl relative px-20 md:px-10 py-2.5 text-nowrap transition-all ease-in duration-75 bg-[#181717] dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+//                 Learn More
+//               </span>
+//             </button>
+//           </Link>
+//         </div>
+//       </div>
+//     );
+//   };
+
+//   return (
+//     <div>
+//       {/* First Validator Section (Full Width) */}
+//       <ValidatorCardContent />
+
+//       {/* Second and Third Validator Sections (Side by Side) */}
+//       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+//         {/* Second Validator Section */}
+//         <ValidatorCardContent />
+
+//         {/* Third Validator Section */}
+//         <ValidatorCardContent />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ValidatorCard;
+
+
+
+// "use client";
+
+// import React, { useState } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+
+// const ValidatorCard = () => {
+//   // Handle mouse movement inside the card to display the gradient
+//   const handleMouseMove = (
+//     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+//     setMousePosition: React.Dispatch<React.SetStateAction<{ x: number; y: number }>>,
+//     setGradientVisible: React.Dispatch<React.SetStateAction<boolean>>
+//   ) => {
+//     const rect = e.currentTarget.getBoundingClientRect();
+//     setMousePosition({
+//       x: e.clientX - rect.left,
+//       y: e.clientY - rect.top,
+//     });
+//     setGradientVisible(true);
+//   };
+
+//   // Hide the gradient when mouse leaves the card
+//   const handleMouseLeave = (
+//     setGradientVisible: React.Dispatch<React.SetStateAction<boolean>>
+//   ) => {
+//     setGradientVisible(false);
+//   };
+
+//   // Validator card component
+//   const ValidatorCardContent = () => {
+//     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+//     const [gradientVisible, setGradientVisible] = useState(false);
+
+//     return (
+//       <div
+//         className="relative flex flex-col items-center p-5 rounded-xl shadow-xl border border-gray-400"
+//         onMouseMove={(e) =>
+//           handleMouseMove(e, setMousePosition, setGradientVisible)
+//         }
+//         onMouseLeave={() => handleMouseLeave(setGradientVisible)}
+//         style={{
+//           background: gradientVisible
+//             ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(138, 249, 105, 0.3), transparent 30%)`
+//             : undefined,
+//         }}
+//       >
+//         {/* Image Section */}
+//         <div className="flex-1 w-full">
+//           <Image
+//             src="/validator-image.jpg" // Replace with actual image
+//             alt="Validator Node"
+//             width={400}
+//             height={250}
+//             className="rounded-lg object-cover w-full h-auto"
+//           />
+//         </div>
+
+//         {/* Text Content */}
+//         <div className="flex-1 mt-6 lg:mt-0 lg:ml-8 text-white text-center lg:text-left">
+//           <button className="border border-green-400 text-green-400 px-4 py-2 rounded-lg bg-transparent mb-4">
+//             Validator
+//           </button>
+//           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+//             How to Run a Pollux Validator Node and Participate in the Network
+//           </h2>
+//           <p className="text-lg mb-6">
+//             Running a Pollux validator node allows you to participate in the
+//             network, contribute to its security and decentralization, and be
+//             rewarded for your participation.
+//           </p>
+//           <Link href="/learn-more">
+//             <button className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+//               <span className="text-white text-xl relative px-20 md:px-10 py-2.5 text-nowrap transition-all ease-in duration-75 bg-[#181717] dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+//                 Learn More
+//               </span>
+//             </button>
+//           </Link>
+//         </div>
+//       </div>
+//     );
+//   };
+
+//   return (
+//     <div>
+//       {/* First Validator Section (Full Width) */}
+//       <ValidatorCardContent />
+
+//       {/* Second and Third Validator Sections (Side by Side on Medium Screens and Larger, Stacked on Mobile) */}
+//       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+//         {/* Second Validator Section */}
+//         <ValidatorCardContent />
+
+//         {/* Third Validator Section */}
+//         <ValidatorCardContent />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ValidatorCard;
+
 "use client";
 
 import React, { useState } from "react";
@@ -254,13 +458,13 @@ const ValidatorCard = () => {
   };
 
   // Validator card component
-  const ValidatorCardContent = () => {
+  const ValidatorCardContent = ({ isFirstCard = false }: { isFirstCard?: boolean }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [gradientVisible, setGradientVisible] = useState(false);
 
     return (
       <div
-        className="relative flex flex-col items-center p-5 rounded-xl shadow-xl border border-gray-400"
+        className="relative flex flex-col sm:flex-row items-center sm:items-start p-4 sm:p-6 rounded-lg shadow-lg border border-gray-400"
         onMouseMove={(e) =>
           handleMouseMove(e, setMousePosition, setGradientVisible)
         }
@@ -271,33 +475,33 @@ const ValidatorCard = () => {
             : undefined,
         }}
       >
-        {/* Image Section */}
-        <div className="flex-1">
+        {/* Image Section (Left side for first card) */}
+        <div className={`flex-1 w-full ${isFirstCard ? "sm:order-1" : ""} max-w-[320px]`}>
           <Image
             src="/validator-image.jpg" // Replace with actual image
             alt="Validator Node"
-            width={400}
-            height={250}
-            className="rounded-lg object-cover"
+            width={320}
+            height={200}
+            className="rounded-lg object-cover w-full h-auto"
           />
         </div>
 
-        {/* Text Content */}
-        <div className="flex-1 mt-6 lg:mt-0 lg:ml-8 text-white">
+        {/* Text Content (Right side for first card) */}
+        <div className={`flex-1 mt-4 sm:mt-0 text-white text-center sm:text-left ${isFirstCard ? "sm:ml-8" : ""}`}>
           <button className="border border-green-400 text-green-400 px-4 py-2 rounded-lg bg-transparent mb-4">
             Validator
           </button>
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">
             How to Run a Pollux Validator Node and Participate in the Network
           </h2>
-          <p className="text-lg mb-6">
+          <p className="text-sm sm:text-lg mb-6">
             Running a Pollux validator node allows you to participate in the
             network, contribute to its security and decentralization, and be
             rewarded for your participation.
           </p>
           <Link href="/learn-more">
-            <button className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-              <span className="text-white text-xl relative px-20 md:px-10 py-2.5 text-nowrap transition-all ease-in duration-75 bg-[#181717] dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <button className="mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs sm:text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+              <span className="text-white relative px-12 sm:px-20 py-2.5 transition-all ease-in duration-75 bg-[#181717] dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Learn More
               </span>
             </button>
@@ -309,11 +513,11 @@ const ValidatorCard = () => {
 
   return (
     <div>
-      {/* First Validator Section (Full Width) */}
-      <ValidatorCardContent />
+      {/* First Validator Section (Image on left, Text on right) */}
+      <ValidatorCardContent isFirstCard={true} />
 
-      {/* Second and Third Validator Sections (Side by Side) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {/* Second and Third Validator Sections (Side by Side on Medium Screens and Larger, Stacked on Mobile) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 mt-8">
         {/* Second Validator Section */}
         <ValidatorCardContent />
 
