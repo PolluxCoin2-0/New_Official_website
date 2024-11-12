@@ -549,16 +549,18 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
       {/* Desktop Navbar */}
-      <div className="hidden md:flex items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-6">
+      <div className="hidden md:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-2">
         {/* Left: Logo */}
         <div className="cursor-pointer">
-          <Image
-            src="/polluxlogowhite.png"
-            alt="Polluxcoin Logo"
-            width={64} // Set the width
-            height={64} // Set the height
-            className="w-auto h-16"
-          />
+        <Image
+    src="/polluxlogowhite.png"
+    alt="Polluxcoin Logo"
+    // fill
+    height={44}
+    width={124}
+    style={{ objectFit: "contain" }}
+    className=""
+  />
         </div>
 
         {/* Center: Navigation Menu */}
