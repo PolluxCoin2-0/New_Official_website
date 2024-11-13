@@ -30,6 +30,7 @@ import HeroSection from './components/HeroSection';
 import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
 import ValidatorSection from './components/ValidatorSection';
+import BlogCarousel from './components/BlogCarousel';
 // import { AnimatedTestimonialsDemo } from './components/AnimatedTestimonialsDemo'; // Default import
 
 // import { TimelineDemo } from "./components/timeline-demo";
@@ -43,6 +44,8 @@ export default function Home() {
       <StatsGrid />
       <ThreeDCardsSection />
       <ValidatorSection />
+      <BlogCarousel />
+      
       {/* <TimelineDemo /> */}
 
       {/* <AnimatedTestimonialsDemo /> This should work now */}
