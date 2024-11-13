@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
-import communeImg from "../../../public/Asset 1.svg";
+import communeImg from "../../../public/Frame.svg";
 import telegramImg from "../../../public/telegram.svg";
 import twitterImg from "../../../public/twitter 1 1 (1).svg";
 import linkedinImg from "../../../public/linkedin.svg";
@@ -43,10 +43,10 @@ const Page = () => {
           className="flex flex-col md:flex-row justify-between items-center w-full px-4 lg:px-32 pt-0 md:pt-12 pb-12 rounded-2xl "
           onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
           onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => {
-            setIsHovered(false);
-            setBgPosition({ x: 0, y: 0 }); // Reset background position on mouse leave
-          }}
+          // onMouseLeave={() => {
+          //   setIsHovered(false);
+          //   setBgPosition({ x: 0, y: 0 }); // Reset background position on mouse leave
+          // }}
           style={{
             boxShadow: isHovered
               ? "0 2px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.4) "
@@ -136,8 +136,8 @@ const Page = () => {
             alt="banner-image"
             width={0}
             height={0}
-            style={{ width: "100%" }}
-            className="rounded-2xl"
+            style={{ width: "90%" }}
+            className="rounded-2xl "
           />
         </div>
       </div>

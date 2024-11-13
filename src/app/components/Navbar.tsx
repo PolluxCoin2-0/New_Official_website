@@ -19,6 +19,7 @@ import {
 } from "@radix-ui/react-navigation-menu";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image"; // Import the Image component
+// import { PopupWidget } from "react-calendly";
 
 export default function Navbar() {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -26,6 +27,7 @@ export default function Navbar() {
   );
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
+  // const [showCalendly, setShowCalendly] = useState(false); // State to toggle Calendly popup
 
   const handleMouseEnter = useCallback((index: number) => {
     setHoveredIndex(index);
@@ -40,6 +42,10 @@ export default function Navbar() {
       }
     }, 200);
   }, [hoveredIndex]);
+
+  // const handleContactClick = () => {
+  //   setShowCalendly(true); // Show Calendly popup on contact click
+  // };
 
   const menuItems = [
     { title: "Home", href: "/" },
@@ -69,7 +75,14 @@ export default function Navbar() {
         { title: "News & Events", href: "X" },
       ],
     },
-    { title: "Ecosystem", href: "" },
+    { title: "Ecosystem", 
+      dropdown: [
+        { title: "Wallet", href: "/Community" },
+        { title: "Explorer", href: "" },
+        { title: "Extension", href: "" },
+        { title: "Uvi Mining", href: "",  },
+      ],
+     },
     {
       title: "About",
       dropdown: [
@@ -176,6 +189,17 @@ export default function Navbar() {
       <div className="md:hidden">
         <MobileNavbar />
       </div>
+
+      {/* Calendly Popup */}
+      {/* {showCalendly && (
+       <PopupWidget
+       url="https://calendly.com/durgeshgichi789/30min"
+       rootElement={document.body}  // Use document.body as the root element
+       text="Click here to schedule!"
+       textColor="#ffffff"
+       color="linear-gradient(to right, #37dd00, #8af969)"
+     />
+      )} */}
     </nav>
   );
 }
