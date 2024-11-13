@@ -31,9 +31,7 @@ import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
 import ValidatorSection from './components/ValidatorSection';
 import BlogCarousel from './components/BlogCarousel';
-// import { AnimatedTestimonialsDemo } from './components/AnimatedTestimonialsDemo'; // Default import
 
-// import { TimelineDemo } from "./components/timeline-demo";
 
 import FeatureCards from './components/FeatureCards';
 
@@ -46,9 +44,7 @@ export default function Home() {
       <ValidatorSection />
       <BlogCarousel />
       
-      {/* <TimelineDemo /> */}
-
-      {/* <AnimatedTestimonialsDemo /> This should work now */}
+     
       <FeatureCards />
     </div>
   );
