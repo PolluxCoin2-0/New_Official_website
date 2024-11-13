@@ -218,7 +218,10 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center space-y-4 px-4 sm:px-8 md:px-16 bg-transparent">
       {/* Logo with Tilt Effect */}
-      <motion.div
+
+
+
+      {/* <motion.div
         className="mt-10 sm:mt-14 md:mt-20"
         whileHover={{
           rotate: [0, 10, -10, 5, -5, 0], // Tilt effect
@@ -227,13 +230,51 @@ export default function HeroSection() {
         transition={{ type: "spring", stiffness: 200, damping: 10 }}
       >
         <Image
-          src="/polluxtoken.png"
+          src="/token2.svg"
           alt="Polluxcoin Logo"
           width={320}  // Adjust the width as per your design
           height={320} // Adjust the height as per your design
           className="w-48 sm:w-64 md:w-72 lg:w-80"
         />
-      </motion.div>
+      </motion.div> */}
+
+
+      {/* Logo with Continuous Rotation and Gradient Hover Effect */}
+<motion.div
+  className="relative mt-10 sm:mt-14 md:mt-20"
+ 
+  transition={{
+    type: 'spring',
+    stiffness: 200,
+    damping: 10,
+    background: { duration: 0.3 },
+  }}
+  style={{ background: 'transparent' }} // Default background
+>
+  <motion.div
+    animate={{ rotate: 360 }}
+    whileHover={{ rotate: 0 }} // Stops rotation on hover
+    transition={{
+      repeat: Infinity,
+      duration: 10, // Continuous rotation speed
+      ease: 'linear',
+    }}
+  >
+    <Image
+      src="/token3.png"
+      alt="Polluxcoin Logo"
+      width={320}
+      height={320}
+      className="w-48 sm:w-64 md:w-72 lg:w-80"
+    />
+  </motion.div>
+</motion.div>
+
+
+
+
+
+
 
       {/* Typewriter effect for BUILD AWESOME WITH POLLUX */}
       <TypewriterEffect
