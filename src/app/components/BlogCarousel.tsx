@@ -145,3 +145,4 @@ const BlogCarousel: React.FC = () => {
 };
 
 export default BlogCarousel;
+
