@@ -20,6 +20,8 @@ module.exports = {
       boxShadow: {
         glow: '0 0 10px 5px #ff',
       },
+
+      
     },
   },
   plugins: [

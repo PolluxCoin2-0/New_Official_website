@@ -1,6 +1,10 @@
+
 // // "use client";
 
 // // import React, { useState, useCallback } from "react";
+// // import MobileNavbar from "./MobileNavbar";
+
+
 // // import Link from "next/link";
 // // import { Button } from "@/app/components/ui/button";
 // // import {
@@ -14,10 +18,9 @@
 // // import { ChevronDown } from "lucide-react";
 
 // // export default function Navbar() {
-// //   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
-// //     null
-// //   );
+// //   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
 // //   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+// //   const [isHovered, setIsHovered] = useState(false); // Added hover state for button
 
 // //   const handleMouseEnter = useCallback(
 // //     (index: number) => {
@@ -60,20 +63,20 @@
 // //   ];
 
 // //   return (
-// //     <nav className="fixed top-0 left-0 w-full bg-black backdrop-blur-md bg-opacity-70 z-50 shadow-lg">
-// //       <div className="flex items-center justify-between px-6 py-2 max-w-7xl mx-auto">
+// //     <nav className="fixed top-0 left-0 w-full">
+// //       <div className="flex items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-6 ">
 // //         {/* Left: Logo Only */}
-// //         <div className="flex items-center space-x-2">
+// //         <div className="cursor-pointer">
 // //           <img
 // //             src="/polluxlogowhite.png"
 // //             alt="Polluxcoin Logo"
-// //             className="h-12 w-auto"
+// //             className="h-16 w-full"
 // //           />
 // //         </div>
 
 // //         {/* Center: Navigation Menu */}
-// //         <NavigationMenu className="flex space-x-4">
-// //           <NavigationMenuList className="flex space-x-4">
+// //         <NavigationMenu className="flex space-x-6">
+// //           <NavigationMenuList className="flex space-x-14">
 // //             {menuItems.map((item, index) => (
 // //               <NavigationMenuItem
 // //                 key={index}
@@ -127,13 +130,33 @@
 // //         </NavigationMenu>
 
 // //         {/* Right: Get $POLLUX Button */}
-// //         {/* <Button variant="primary">Get $POLLUX</Button> */}
-
+// //         <Button
+// //           variant="primary"
+// //           className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-12 w-40 px-6"  // Ensure button size is fixed
+// //           onMouseEnter={() => setIsHovered(true)}  // Hover in
+// //           onMouseLeave={() => setIsHovered(false)} // Hover out
+// //         >
+// //           {isHovered ? (
+// //             <img src="/polluxicon.png" alt="Pollux Icon" className="h-6 w-6"  />
+// //           ) : (
+// //             <p className="font-semibold">GET $POX</p>
+// //           )}
+// //         </Button>
 // //         {/* <Button
 // //   variant="primary"
-// //   className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300"
+// //   className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-12 px-6"
+// //   onMouseEnter={() => setIsHovered(true)}  // Hover in
+// //   onMouseLeave={() => setIsHovered(false)} // Hover out
 // // >
-// //   Get $POLLUX
+// //   {isHovered ? (
+// //     <img 
+// //       src="/polluxicon.png" 
+// //       alt="Pollux Icon" 
+// //       className="h-6 w-6"  // Ensure image has fixed dimensions
+// //     />
+// //   ) : (
+// //     "Get $POLLUX"
+// //   )}
 // // </Button> */}
 
 // //       </div>
@@ -161,7 +184,7 @@
 // export default function Navbar() {
 //   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
 //   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-//   const [isHovered, setIsHovered] = useState(false); // Added hover state for button
+//   const [isHovered, setIsHovered] = useState(false);
 
 //   const handleMouseEnter = useCallback(
 //     (index: number) => {
@@ -204,14 +227,15 @@
 //   ];
 
 //   return (
-//     <nav className="fixed top-0 left-0 w-full">
-//       <div className="flex items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-6 ">
-//         {/* Left: Logo Only */}
+//     <nav className="fixed top-0 left-0 w-full z-50">
+//       {/* Desktop Navbar */}
+//       <div className="hidden md:flex items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-6">
+//         {/* Left: Logo */}
 //         <div className="cursor-pointer">
 //           <img
 //             src="/polluxlogowhite.png"
 //             alt="Polluxcoin Logo"
-//             className="h-16 w-full"
+//             className="h-16 w-auto"
 //           />
 //         </div>
 
@@ -273,33 +297,20 @@
 //         {/* Right: Get $POLLUX Button */}
 //         <Button
 //           variant="primary"
-//           className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-12 w-40 px-6"  // Ensure button size is fixed
-//           onMouseEnter={() => setIsHovered(true)}  // Hover in
-//           onMouseLeave={() => setIsHovered(false)} // Hover out
+//           className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-12 w-40 px-6"
+//           onMouseEnter={() => setIsHovered(true)}
+//           onMouseLeave={() => setIsHovered(false)}
 //         >
 //           {isHovered ? (
-//             <img src="/polluxicon.png" alt="Pollux Icon" className="h-6 w-6"  />
+//             <img
+//               src="/polluxicon.png"
+//               alt="Pollux Icon"
+//               className="h-6 w-6"
+//             />
 //           ) : (
 //             <p className="font-semibold">GET $POX</p>
 //           )}
 //         </Button>
-//         {/* <Button
-//   variant="primary"
-//   className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-12 px-6"
-//   onMouseEnter={() => setIsHovered(true)}  // Hover in
-//   onMouseLeave={() => setIsHovered(false)} // Hover out
-// >
-//   {isHovered ? (
-//     <img
-//       src="/polluxicon.png"
-//       alt="Pollux Icon"
-//       className="h-6 w-6"  // Ensure image has fixed dimensions
-//     />
-//   ) : (
-//     "Get $POLLUX"
-//   )}
-// </Button> */}
-
 //       </div>
 //     </nav>
 //   );
@@ -322,6 +333,7 @@ import {
   NavigationMenuLink,
 } from "@radix-ui/react-navigation-menu";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image"; // Import the Image component
 
 export default function Navbar() {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -385,22 +397,20 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
       {/* Desktop Navbar */}
-      <div className="hidden md:flex items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-6">
+      <div className="hidden md:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-2">
         {/* Left: Logo */}
         <div className="cursor-pointer">
-        {/* <Image
-              src={PolluxLogo}
-              alt="banner-image"
-              width={0}
-              height={0}
-              style={{ width: "0" }} // Set default width to 100% for mobile
-              className="rounded-2xl w-full h-md:w-[70%]" // Use Tailwind's responsive width utilities
-            /> */}
-          <img
-            src="/polluxlogowhite.png"
-            alt="Polluxcoin Logo"
-            className="h-16 w-auto"
-          />
+
+        <Image
+    src="/polluxlogowhite.png"
+    alt="Polluxcoin Logo"
+    // fill
+    height={44}
+    width={124}
+    style={{ objectFit: "contain" }}
+    className=""
+  />
+
         </div>
 
         {/* Center: Navigation Menu */}
@@ -464,7 +474,13 @@ export default function Navbar() {
           onMouseLeave={() => setIsHovered(false)}
         >
           {isHovered ? (
-            <img src="/polluxicon.png" alt="Pollux Icon" className="h-6 w-6" />
+            <Image
+              src="/polluxicon.png"
+              alt="Pollux Icon"
+              width={24} // Set the width
+              height={24} // Set the height
+              className="h-6 w-6"
+            />
           ) : (
             <p className="font-semibold">GET $POX</p>
           )}
