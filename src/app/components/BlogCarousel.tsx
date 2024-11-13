@@ -7,7 +7,7 @@ const blogPosts = [
   {
     title: 'We built an AI chess bot with ChatGPT',
     author: 'John Anderson',
-    image: '/imgs/blog/1.png',
+    image: '/banner.jpg',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
   },
   {
@@ -19,31 +19,31 @@ const blogPosts = [
   {
     title: 'Calm down, monoliths are totally fine',
     author: 'Andrea Bates',
-    image: '/imgs/blog/3.png',
+    image: '/banner.jpg',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
   },
   {
     title: 'A quick guide to Framer Motion (for dummies)',
     author: 'Jess Drum',
-    image: '/imgs/blog/4.png',
+    image: '/banner.jpg',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
   },
   {
     title: 'You probably don\'t need kubernetes',
     author: 'Phil White',
-    image: '/imgs/blog/5.png',
+    image: '/banner.jpg',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
   },
   {
     title: 'State of JavaScript in 2024',
     author: 'Karen Peabody',
-    image: '/imgs/blog/6.png',
+    image: '/banner.jpg',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
   },
   {
     title: 'What\'s new in Python?',
     author: 'Dante Gordon',
-    image: '/imgs/blog/7.png',
+    image: '/banner.jpg',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
   },
 ];
