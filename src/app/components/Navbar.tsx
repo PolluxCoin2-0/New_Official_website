@@ -1,6 +1,4 @@
 
-
-
 // // "use client";
 
 // // import React, { useState, useCallback } from "react";
@@ -161,21 +159,16 @@
 // //   )}
 // // </Button> */}
 
-
- 
-
-
 // //       </div>
 // //     </nav>
 // //   );
 // // }
 
-
-
 // "use client";
 
 // import React, { useState, useCallback } from "react";
 // import MobileNavbar from "./MobileNavbar";
+
 // import Link from "next/link";
 // import { Button } from "@/app/components/ui/button";
 // import {
@@ -319,174 +312,15 @@
 //           )}
 //         </Button>
 //       </div>
-
-//       {/* Mobile Navbar */}
-//       <div className="md:hidden">
-//         <MobileNavbar />
-//       </div>
 //     </nav>
 //   );
 // }
-
-
-// "use client";
-
-// import React, { useState, useCallback } from "react";
-// import MobileNavbar from "./MobileNavbar";
-// import Link from "next/link";
-// import Image from "next/image";
-// import { Button } from "@/app/components/ui/button";
-// import {
-//   NavigationMenu,
-//   NavigationMenuItem,
-//   NavigationMenuList,
-//   NavigationMenuTrigger,
-//   NavigationMenuContent,
-//   NavigationMenuLink,
-// } from "@radix-ui/react-navigation-menu";
-// import { ChevronDown } from "lucide-react";
-
-// export default function Navbar() {
-//   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
-//   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-//   const [isHovered, setIsHovered] = useState(false);
-
-//   const handleMouseEnter = useCallback(
-//     (index: number) => {
-//       setHoveredIndex(index);
-//       setOpenDropdownIndex(index);
-//     },
-//     []
-//   );
-
-//   const handleMouseLeave = useCallback(() => {
-//     setHoveredIndex(null);
-//     setTimeout(() => {
-//       if (hoveredIndex === null) {
-//         setOpenDropdownIndex(null);
-//       }
-//     }, 200);
-//   }, [hoveredIndex]);
-
-//   const menuItems = [
-//     { title: "Home", href: "/" },
-//     {
-//       title: "Developers",
-//       dropdown: ["Documentation", "Grant Program", "Build"],
-//     },
-//     {
-//       title: "Networks",
-//       dropdown: ["Validator App", "Nominator App", "Pollux Explorer", "Pollux Staking"],
-//     },
-//     {
-//       title: "Community",
-//       dropdown: ["Community", "Partner With Us", "Blog", "News & Events"],
-//     },
-//     { title: "Ecosystem", href: "/ecosystem" },
-//     { title: "About", dropdown: ["About Us", "Contact"] },
-//   ];
-
-//   return (
-//     <nav className="fixed top-0 left-0 w-full z-50">
-//       {/* Desktop Navbar */}
-//       <div className="hidden md:flex items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-6">
-//         {/* Left: Logo */}
-//         <div className="cursor-pointer">
-//           <Image
-//             src="/polluxlogowhite.png"
-//             alt="Polluxcoin Logo"
-//             width={64}
-//             height={64}
-//             className="h-16 w-auto"
-//           />
-//         </div>
-
-//         {/* Center: Navigation Menu */}
-//         <NavigationMenu className="flex space-x-6">
-//           <NavigationMenuList className="flex space-x-14">
-//             {menuItems.map((item, index) => (
-//               <NavigationMenuItem
-//                 key={index}
-//                 className="relative group"
-//                 onMouseEnter={() => handleMouseEnter(index)}
-//                 onMouseLeave={handleMouseLeave}
-//               >
-//                 <NavigationMenuTrigger className="flex items-center space-x-1 text-white hover:text-[#8af969]">
-//                   <span>{item.title}</span>
-//                   {item.dropdown && (
-//                     <ChevronDown
-//                       className={`transition-transform duration-300 ${
-//                         openDropdownIndex === index ? "rotate-180" : ""
-//                       }`}
-//                       size={16}
-//                     />
-//                   )}
-//                 </NavigationMenuTrigger>
-
-//                 {/* Dropdown Menu */}
-//                 {item.dropdown && openDropdownIndex === index && (
-//                   <NavigationMenuContent
-//                     onMouseEnter={() => setHoveredIndex(index)}
-//                     onMouseLeave={handleMouseLeave}
-//                     className="absolute left-0 mt-2 w-max bg-black text-white rounded-lg shadow-lg"
-//                   >
-//                     <ul className="p-2">
-//                       {item.dropdown.map((subItem, subIndex) => (
-//                         <li
-//                           key={subIndex}
-//                           className="hover:bg-[#8af969] hover:text-black rounded-md transition-all"
-//                         >
-//                           <NavigationMenuLink asChild>
-//                             <Link
-//                               href={`/${subItem.toLowerCase().replace(/\s+/g, "-")}`}
-//                               className="block px-4 py-2"
-//                             >
-//                               {subItem}
-//                             </Link>
-//                           </NavigationMenuLink>
-//                         </li>
-//                       ))}
-//                     </ul>
-//                   </NavigationMenuContent>
-//                 )}
-//               </NavigationMenuItem>
-//             ))}
-//           </NavigationMenuList>
-//         </NavigationMenu>
-
-//         {/* Right: Get $POLLUX Button */}
-//         <Button
-//           variant="primary"
-//           className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-12 w-40 px-6"
-//           onMouseEnter={() => setIsHovered(true)}
-//           onMouseLeave={() => setIsHovered(false)}
-//         >
-//           {isHovered ? (
-//             <Image
-//               src="/polluxicon.png"
-//               alt="Pollux Icon"
-//               width={24}
-//               height={24}
-//               className="h-6 w-6"
-//             />
-//           ) : (
-//             <p className="font-semibold">GET $POX</p>
-//           )}
-//         </Button>
-//       </div>
-
-//       {/* Mobile Navbar */}
-//       <div className="md:hidden">
-//         <MobileNavbar />
-//       </div>
-//     </nav>
-//   );
-// }
-
 
 "use client";
 
 import React, { useState, useCallback } from "react";
+import Image from "next/image";
+import PolluxLogo from "../../../public/polluxlogowhite.png";
 import MobileNavbar from "./MobileNavbar";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";
@@ -502,17 +336,16 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image"; // Import the Image component
 
 export default function Navbar() {
-  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
+    null
+  );
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = useCallback(
-    (index: number) => {
-      setHoveredIndex(index);
-      setOpenDropdownIndex(index);
-    },
-    []
-  );
+  const handleMouseEnter = useCallback((index: number) => {
+    setHoveredIndex(index);
+    setOpenDropdownIndex(index);
+  }, []);
 
   const handleMouseLeave = useCallback(() => {
     setHoveredIndex(null);
@@ -527,23 +360,38 @@ export default function Navbar() {
     { title: "Home", href: "/" },
     {
       title: "Developers",
-      dropdown: ["Documentation", "Grant Program", "Build"],
+      dropdown: [
+        { title: "Documentation", href: "" },
+        { title: "Grant Program", href: "/Grant" },
+        { title: "Build", href: "" },
+      ],
     },
     {
       title: "Networks",
       dropdown: [
-        "Validator App",
-        "Nominator App",
-        "Pollux Explorer",
-        "Pollux Staking",
+        { title: "Validator App", href: "" },
+        { title: "Nominator App", href: "" },
+        { title: "Pollux Explorer", href: "" },
+        { title: "Pollux Staking", href: "" },
       ],
     },
     {
       title: "Community",
-      dropdown: ["Community", "Partner With Us", "Blog", "News & Events"],
+      dropdown: [
+        { title: "Community", href: "/Community" },
+        { title: "Partner With Us", href: "" },
+        { title: "Blog", href: "" },
+        { title: "News & Events", href: "X" },
+      ],
     },
-    { title: "Ecosystem", href: "/ecosystem" },
-    { title: "About", dropdown: ["About Us", "Contact"] },
+    { title: "Ecosystem", href: "" },
+    {
+      title: "About",
+      dropdown: [
+        { title: "About Us", href: "/AboutUs" },
+        { title: "Contact", href: "" },
+      ],
+    },
   ];
 
   return (
@@ -552,6 +400,7 @@ export default function Navbar() {
       <div className="hidden md:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-2">
         {/* Left: Logo */}
         <div className="cursor-pointer">
+
         <Image
     src="/polluxlogowhite.png"
     alt="Polluxcoin Logo"
@@ -561,6 +410,7 @@ export default function Navbar() {
     style={{ objectFit: "contain" }}
     className=""
   />
+
         </div>
 
         {/* Center: Navigation Menu */}
@@ -568,7 +418,7 @@ export default function Navbar() {
           <NavigationMenuList className="flex space-x-14">
             {menuItems.map((item, index) => (
               <NavigationMenuItem
-                key={index}
+                key={index}      
                 className="relative group"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -600,12 +450,10 @@ export default function Navbar() {
                         >
                           <NavigationMenuLink asChild>
                             <Link
-                              href={`/${subItem
-                                .toLowerCase()
-                                .replace(/\s+/g, "-")}`}
+                              href={subItem.href}
                               className="block px-4 py-2"
                             >
-                              {subItem}
+                              {subItem.title}
                             </Link>
                           </NavigationMenuLink>
                         </li>
