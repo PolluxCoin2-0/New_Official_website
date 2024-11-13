@@ -308,6 +308,7 @@ export const TypewriterEffect = ({
         { duration: 0.3, delay: stagger(0.1), ease: "easeInOut" }
       );
     }
+
   }, [isInView, animate]);
 
   const renderWords = () => (
