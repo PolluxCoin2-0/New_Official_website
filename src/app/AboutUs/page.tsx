@@ -35,6 +35,7 @@ import React from "react";
 import Image from "next/image";
 import visionImg from "../../../public/visions.svg";
 import missionImg from "../../../public/mission.svg";
+import aboutBgImg from "../../../public/OBJECTS.svg";
 import { BsTwitterX } from "react-icons/bs";
 import JoinUs from "../components/ui/JoinUs";
 
@@ -52,8 +53,10 @@ const page = () => {
   );
   return (
     <div className=" min-h-screen px-2 md:px-4 lg:px-6 xl:px-64 mt-32  ">
+    
       {/* About us  */}
-      <div>
+      <div className="flex flex-row">
+        <div>
         <p className="text-4xl font-semibold ">About Pollux</p>
         <p className="text-[#a7a4a4] mt-5 text-lg font-medium">
           At Pollux, , we are dedicated to leveraging blockchain technology to
@@ -73,6 +76,18 @@ const page = () => {
             Contact Us
           </span>
         </button>
+        </div>
+
+        <div className="-mt-32">
+        <Image
+              src={aboutBgImg}
+              alt="banner-image"
+              width={0}
+              height={0}
+              style={{ width: "90%",}} // Set default width to 100% for mobile
+              className="rounded-2xl w-full md:w-[70%]" // Use Tailwind's responsive width utilities
+            />
+            </div>
       </div>
 
       {/* Mission, Vision */}
@@ -135,7 +150,7 @@ const page = () => {
         <p className="text-4xl font-semibold ">
           Meet the Visionaries Driving PolluxChain Forward
         </p>
-        <div className="w-[80%] h-44 bg-green-600 rounded-2xl bg-gradient-to-b from-[#032100] to-[#289c0e] flex flex-row justify-center mx-auto mt-8"></div>
+        <div className="w-[80%] h-44 bg-green-600 rounded-2xl bg-gradient-to-b from-[#1C5A04] to-[#68A541] flex flex-row justify-center mx-auto mt-8"></div>
 
         <div className="flex flex-row justify-center space-x-24 w-full -mt-28">
           <div className="flex flex-col items-center w-[25%] border-[1px] border-[#575555]  p-4 rounded-4xl bg-[#0e0d0d] rounded-2xl pt-12 pb-12 transform transition-transform duration-200 hover:scale-105">
