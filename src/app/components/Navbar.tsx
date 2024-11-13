@@ -4,8 +4,7 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import Image from "next/image";
-import PolluxLogo from "../../../public/polluxlogowhite.png";
+
 import MobileNavbar from "./MobileNavbar";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";

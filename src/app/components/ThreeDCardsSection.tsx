@@ -218,7 +218,7 @@ export default function ThreeDCardsSection() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
         {cards.map((card, index) => (
           <CardContainer key={index} className="inter-var w-full sm:w-[350px]">
-            <CardBody className="relative group/card bg-gradient-to-r from-black/40 to-black/60 border-gray-400 w-full h-[400px] rounded-xl p-8 border">
+            <CardBody className="relative group/card bg-gradient-to-r from-black/30 to-black/60 border-gray-400 w-full h-[400px] rounded-xl p-8 border">
               <CardItem
                 translateZ={50}
                 className="text-xl font-bold text-neutral-500 dark:text-neutral-100"

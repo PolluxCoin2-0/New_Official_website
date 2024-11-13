@@ -10,7 +10,7 @@ body {
 
 @layer utilities {
   .shadow-glow {
-    box-shadow: 0 0 10px 5px #ff;
+    box-shadow: 0 0 10px 5px #fff;
   }
 }
 

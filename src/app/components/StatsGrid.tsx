@@ -515,6 +515,9 @@
 //     </div>
 //   );
 // }
+
+
+
 'use client';
 
 import React from "react";
@@ -538,8 +541,8 @@ export default function StatsGrid() {
     const { offsetWidth: width, offsetHeight: height } = element;
     const { clientX: mouseX, clientY: mouseY } = e;
 
-    const moveX = (mouseX / width - 0.5) * 10;
-    const moveY = (mouseY / height - 0.5) * 10;
+    const moveX = (mouseX / width - 0.5) * 5;
+    const moveY = (mouseY / height - 0.5) * 5;
 
     element.style.transform = `rotateX(${moveY}deg) rotateY(${moveX}deg)`;
   };
