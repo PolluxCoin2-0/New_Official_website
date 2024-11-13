@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import bannerImg from "../../../public/banner.jpg";
+import banner2Img from "../../../public/banner 2.jpg";
 import Image from "next/image";
-import ambasImg from "../../../public/Ambas.svg";
 import Calendly from "../Calendly/page";
 import JoinUs from "../components/ui/JoinUs";
 
@@ -93,19 +93,19 @@ const Page = () => {
         </div>
       </Tilt>
 
-      <div className="flex flex-col md:flex-row justify-between items-center  p-2 md:p-10  w-full   pt-24 pb-24 mt-16 mb-16">
-        <div className="w-full md:w-[50%] flex justify-center md:justify-start">
+      <div className="flex flex-col md:flex-row  justify-between space-x-8 items-center  p-2 md:p-10  w-full   pt-24 pb-24 mt-16 mb-16">
+        <div className="w-full md:w-[30%] flex justify-center md:justify-start">
           <Image
-            src={ambasImg}
+            src={banner2Img}
             alt="banner-image"
             width={0}
             height={0}
-            style={{ width: "50%" }}
+            style={{ width: "90%" }}
             className="rounded-2xl"
           />
         </div>
 
-        <div className=" flex flex-col justify-start items-start w-full lg:w-[50%] ">
+        <div className=" flex flex-col justify-start items-start w-full lg:w-[70%] ">
           <div className=" flex flex-col justify-start items-start">
             <p className="text-start text-2xl lg:text-3xl font-semibold">
               The Grant Application Journey
