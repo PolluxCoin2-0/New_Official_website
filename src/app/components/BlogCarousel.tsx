@@ -1,7 +1,7 @@
-
 "use client"; // Add this line at the top
 
 import React, { useState } from 'react';
+import Image from 'next/image'; // Import Image from next/image
 
 const blogPosts = [
   {
@@ -122,10 +122,12 @@ const BlogCarousel: React.FC = () => {
                   className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1"
                   style={{ width: '350px', marginRight: '20px' }} // Width of each item
                 >
-                  <img
+                  <Image
                     src={post.image}
-                    className="mb-3 h-[200px] w-full rounded-lg object-cover"
                     alt={post.title}
+                    className="mb-3 h-[200px] w-full rounded-lg object-cover"
+                    width={350} // Set a specific width and height for optimization
+                    height={200}
                   />
                   <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
                     {post.author}
