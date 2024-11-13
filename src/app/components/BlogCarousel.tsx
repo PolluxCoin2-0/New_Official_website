@@ -62,14 +62,14 @@ const BlogCarousel: React.FC = () => {
   };
 
   return (
-    <section className="bg-black-100 py-8">
-      <div className="relative overflow-hidden p-4">
-        <div className="mx-auto max-w-6xl">
+    <section className="bg-black-100 py-12">
+      <div className="relative overflow-hidden p-2">
+        <div className="mx-auto max-w-20xl">
           <div className="flex items-center justify-between">
             <h2 className="mb-4 text-4xl">The Team Blog</h2>
             <div className="flex items-center gap-2">
               <button
-                className="rounded-lg border-[1px] border-neutral-400 bg-black p-1.5 text-2xl transition-opacity"
+                className="rounded-lg border-[1px] border-neutral-100 bg-black p-1.5 text-2xl transition-opacity"
                 onClick={handlePrev}
               >
                 <svg
@@ -120,7 +120,7 @@ const BlogCarousel: React.FC = () => {
                 <div
                   key={index}
                   className="relative shrink-0 cursor-pointer transition-transform hover:-translate-y-1"
-                  style={{ width: '350px', marginRight: '20px' }} // Width of each item
+                  style={{ width: '350px', marginRight: '40px' }} // Width of each item
                 >
                   <Image
                     src={post.image}
@@ -129,11 +129,11 @@ const BlogCarousel: React.FC = () => {
                     width={350} // Set a specific width and height for optimization
                     height={200}
                   />
-                  <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs uppercase text-neutral-500">
+                  <span className="rounded-md border-[1px] border-neutral-400 px-1.5 py-1 text-xs uppercase text-neutral-500">
                     {post.author}
                   </span>
                   <p className="mt-1.5 text-lg font-medium">{post.title}</p>
-                  <p className="text-sm text-neutral-500">{post.description}</p>
+                  <p className="text-sm text-neutral-400">{post.description}</p>
                 </div>
               ))}
             </div>
