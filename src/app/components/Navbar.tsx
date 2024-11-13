@@ -1,5 +1,3 @@
-
-
 // // "use client";
 
 // // import React, { useState, useCallback } from "react";
@@ -138,24 +136,15 @@
 // //   Get $POLLUX
 // // </Button> */}
 
-
-
-
-    
-
 // //       </div>
 // //     </nav>
 // //   );
 // // }
 
-
-
-
 // "use client";
 
 // import React, { useState, useCallback } from "react";
 // import MobileNavbar from "./MobileNavbar";
-
 
 // import Link from "next/link";
 // import { Button } from "@/app/components/ui/button";
@@ -301,9 +290,9 @@
 //   onMouseLeave={() => setIsHovered(false)} // Hover out
 // >
 //   {isHovered ? (
-//     <img 
-//       src="/polluxicon.png" 
-//       alt="Pollux Icon" 
+//     <img
+//       src="/polluxicon.png"
+//       alt="Pollux Icon"
 //       className="h-6 w-6"  // Ensure image has fixed dimensions
 //     />
 //   ) : (
@@ -311,20 +300,16 @@
 //   )}
 // </Button> */}
 
-
- 
-
-
 //       </div>
 //     </nav>
 //   );
 // }
 
-
-
 "use client";
 
 import React, { useState, useCallback } from "react";
+import Image from "next/image";
+import PolluxLogo from "../../../public/polluxlogowhite.png";
 import MobileNavbar from "./MobileNavbar";
 import Link from "next/link";
 import { Button } from "@/app/components/ui/button";
@@ -339,17 +324,16 @@ import {
 import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
-  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
+    null
+  );
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = useCallback(
-    (index: number) => {
-      setHoveredIndex(index);
-      setOpenDropdownIndex(index);
-    },
-    []
-  );
+  const handleMouseEnter = useCallback((index: number) => {
+    setHoveredIndex(index);
+    setOpenDropdownIndex(index);
+  }, []);
 
   const handleMouseLeave = useCallback(() => {
     setHoveredIndex(null);
@@ -364,23 +348,38 @@ export default function Navbar() {
     { title: "Home", href: "/" },
     {
       title: "Developers",
-      dropdown: ["Documentation", "Grant Program", "Build"],
+      dropdown: [
+        { title: "Documentation", href: "" },
+        { title: "Grant Program", href: "/Grant" },
+        { title: "Build", href: "" },
+      ],
     },
     {
       title: "Networks",
       dropdown: [
-        "Validator App",
-        "Nominator App",
-        "Pollux Explorer",
-        "Pollux Staking",
+        { title: "Validator App", href: "" },
+        { title: "Nominator App", href: "" },
+        { title: "Pollux Explorer", href: "" },
+        { title: "Pollux Staking", href: "" },
       ],
     },
     {
       title: "Community",
-      dropdown: ["Community", "Partner With Us", "Blog", "News & Events"],
+      dropdown: [
+        { title: "Community", href: "/Community" },
+        { title: "Partner With Us", href: "" },
+        { title: "Blog", href: "" },
+        { title: "News & Events", href: "X" },
+      ],
     },
-    { title: "Ecosystem", href: "/ecosystem" },
-    { title: "About", dropdown: ["About Us", "Contact"] },
+    { title: "Ecosystem", href: "" },
+    {
+      title: "About",
+      dropdown: [
+        { title: "About Us", href: "/AboutUs" },
+        { title: "Contact", href: "" },
+      ],
+    },
   ];
 
   return (
@@ -389,6 +388,14 @@ export default function Navbar() {
       <div className="hidden md:flex items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-6">
         {/* Left: Logo */}
         <div className="cursor-pointer">
+        {/* <Image
+              src={PolluxLogo}
+              alt="banner-image"
+              width={0}
+              height={0}
+              style={{ width: "0" }} // Set default width to 100% for mobile
+              className="rounded-2xl w-full h-md:w-[70%]" // Use Tailwind's responsive width utilities
+            /> */}
           <img
             src="/polluxlogowhite.png"
             alt="Polluxcoin Logo"
@@ -401,7 +408,7 @@ export default function Navbar() {
           <NavigationMenuList className="flex space-x-14">
             {menuItems.map((item, index) => (
               <NavigationMenuItem
-                key={index}
+                key={index}      
                 className="relative group"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -433,12 +440,10 @@ export default function Navbar() {
                         >
                           <NavigationMenuLink asChild>
                             <Link
-                              href={`/${subItem
-                                .toLowerCase()
-                                .replace(/\s+/g, "-")}`}
+                              href={subItem.href}
                               className="block px-4 py-2"
                             >
-                              {subItem}
+                              {subItem.title}
                             </Link>
                           </NavigationMenuLink>
                         </li>
@@ -459,11 +464,7 @@ export default function Navbar() {
           onMouseLeave={() => setIsHovered(false)}
         >
           {isHovered ? (
-            <img
-              src="/polluxicon.png"
-              alt="Pollux Icon"
-              className="h-6 w-6"
-            />
+            <img src="/polluxicon.png" alt="Pollux Icon" className="h-6 w-6" />
           ) : (
             <p className="font-semibold">GET $POX</p>
           )}
