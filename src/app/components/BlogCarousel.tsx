@@ -8,7 +8,7 @@ const blogPosts = [
     title: 'We built an AI chess bot with ChatGPT',
     author: 'John Anderson',
     image: '/banner.jpg',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.',
+    description: 'Lorem ipsum dolor sit amet consectetur . Sequi, dolor.',
   },
   {
     title: 'How to grow your personal brand as a web designer',
