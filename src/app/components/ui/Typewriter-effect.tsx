@@ -305,7 +305,7 @@ export const TypewriterEffect = ({
       animate(
         "span",
         { display: "inline-block", opacity: 1, width: "fit-content" },
-        { duration: 0.3, delay: stagger(0.1), ease: "easeInOut" }
+        { duration: 0.3, delay: stagger(0.04), ease: "easeInOut" }
       );
     }
 
