@@ -50,7 +50,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative bg-black border border-white rounded-xl overflow-hidden">
+    <div className="relative bg-gradient-to-r from-black/30 to-black/60 border border-white rounded-xl overflow-hidden">
       {/* Slider Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center">
         {/* Image */}
