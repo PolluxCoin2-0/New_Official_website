@@ -56,7 +56,7 @@ import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
 
 
-import BlogCarousel from './components/BlogCarousel';
+// import BlogCarousel from './components/BlogCarousel';
 import ImageCarousel from './components/ui/ImageCarousel';
 
 
@@ -74,7 +74,7 @@ export default function Home() {
       <ThreeDCardsSection />
       <Slider />
 
-      <BlogCarousel />
+      {/* <BlogCarousel /> */}
       <div className="mt-10">
         <ImageCarousel />
 
