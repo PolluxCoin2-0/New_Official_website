@@ -200,7 +200,7 @@ export default function ThreeDCardsSection() {
   ];
 
   return (
-    <section className="my-12 px-4 sm:px-12 flex flex-col justify-center items-center w-full">
+    <section className="my-12  px-2 md:px-4 lg:px-6 xl:px-40 flex flex-col justify-center items-center w-full">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-8 w-full">
         {cards.map((card, index) => (
           <CardContainer key={index} className="inter-var w-full sm:w-[350px]">

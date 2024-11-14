@@ -620,13 +620,15 @@ export default function StatsGrid() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className=" px-2 md:px-4 lg:px-6 xl:px-40 py-8">
       {/* Grid layout with responsive classes */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-12 ">
         {stats.map((stat, idx) => (
           <div
             key={idx}
-            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969c2] p-4 rounded-lg transition transform flex items-center space-x-4 border border-gray-500 hover:border-white hover:bg-gradient-to-r hover:from-transparent hover:via-transparent hover:to-[#8bf969] hover:scale-105"
+            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969c2] p-4 rounded-lg transition transform 
+            flex items-center space-x-4 border border-gray-500 hover:border-white hover:bg-gradient-to-r hover:from-transparent
+             hover:via-transparent hover:to-[#8bf969] hover:scale-105"
             style={{ boxShadow: "none", transformStyle: "flat" }}
             onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
             onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}

@@ -623,7 +623,7 @@ export default function Navbar() {
       dropdown: [
         { title: "Documentation", href: "" },
         { title: "Grant Program", href: "/Grant" },
-        { title: "Build", href: "" },
+        { title: "Build", href: "/Build" },
       ],
     },
     {
@@ -641,7 +641,7 @@ export default function Navbar() {
         { title: "Community", href: "/Community" },
         { title: "Partner With Us", href: "" },
         { title: "Blog", href: "" },
-        { title: "News & Events", href: "X" },
+        { title: "News & Events", href: "/Events" },
       ],
     },
     {
@@ -663,9 +663,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className="fixed top-0 left-0 w-full z-50 px-2 md:px-4 lg:px-6 xl:px-64 ">
       {/* Desktop Navbar (lg and larger) */}
-      <div className="hidden lg:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 px-20 py-2">
+      <div className="hidden lg:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30  py-2 ">
         {/* Left: Logo */}
         <div className="cursor-pointer">
           <Link href="/">

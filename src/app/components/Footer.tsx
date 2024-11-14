@@ -8,7 +8,7 @@ import { SiDiscord } from "react-icons/si";
 
 export default function Footer() {
     return (
-      <footer className="p-6 text-center px-4 md:px-4 lg:px-6 xl:px-64 mt-16">
+      <footer className="p-6 text-center px-4 md:px-4 lg:px-6 xl:px-64 mt-0 md:mt-16">
         <div className="flex flex-col md:flex-row justify-between ">
           <div className="w-[40%] md:w-[10%]">
           <Image
