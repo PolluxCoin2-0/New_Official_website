@@ -621,7 +621,7 @@ export default function Navbar() {
     {
       title: "Developers",
       dropdown: [
-        { title: "Documentation", href: "" },
+        { title: "Documentation", href: "https://docpolluxchain.netlify.app/" },
         { title: "Grant Program", href: "/Grant" },
         { title: "Build", href: "/Build" },
       ],
