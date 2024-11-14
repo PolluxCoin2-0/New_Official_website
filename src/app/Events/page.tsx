@@ -12,9 +12,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { RiSpaceShipFill } from "react-icons/ri";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-const page = () => {
-  const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
+const Page = () => {
+  const [bgPosition, setBgPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isHovered) {
       const { left, top, width, height } =
@@ -190,4 +191,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

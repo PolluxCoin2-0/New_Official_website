@@ -55,8 +55,8 @@ import HeroSection from './components/HeroSection';
 import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
 // import ValidatorSection from './components/ValidatorSection';
-import BlogCarousel from './components/BlogCarousel';
-import ImageCarousel from './components/ui/ImageCarousel';
+// import BlogCarousel from './components/BlogCarousel';
+// import ImageCarousel from './components/ui/ImageCarousel';
 
 // import ImageGallery from './components/ImageGallery';
 // import ImageCarousel from './components/ui/ImageCarousel';
@@ -71,10 +71,9 @@ export default function Home() {
       <StatsGrid />
       <ThreeDCardsSection />
       <Slider />
-      <BlogCarousel />
-      <div className="mt-10">
-        <ImageCarousel />
-      </div>
+      {/* <BlogCarousel /> */}
+      {/* <ImageCarousel /> */}
+     
       
 
       

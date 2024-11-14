@@ -7,6 +7,11 @@ import { SiVagrant } from "react-icons/si";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaArrowUpRightDots } from "react-icons/fa6";
 
+type CardProps = {
+  title: string;
+  description: string;
+};
+
 const data = [
   {
     title: "Gas Fee Back to the Developers",
@@ -31,7 +36,7 @@ const data = [
 ];
 
 // Reusable Card Component
-const Card = ({ title, description }) => (
+const Card: React.FC<CardProps> = ({ title, description }) => (
   <div className="text-start w-full sm:w-[48%] md:w-[100%] lg:w-[48%] xl:w-[48%] border-[1px] border-[#72a861] p-4 md:p-8 rounded-3xl">
     <div className="flex flex-row justify-between">
       <p className="text-xl md:text-2xl font-semibold">{title}</p>
