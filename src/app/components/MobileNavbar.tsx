@@ -282,7 +282,7 @@ export default function MobileNavbar() {
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/Community" },
+        { title: "Community", href: "/community" },
         { title: "Partner With Us", href: "/partner" },
         { title: "Blog", href: "/blog" },
         { title: "News & Events", href: "/news" },
@@ -292,7 +292,7 @@ export default function MobileNavbar() {
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/AboutUs" },
+        { title: "About Us", href: "/about-us" },
         { title: "Contact", href: "/contact" },
       ],
     },

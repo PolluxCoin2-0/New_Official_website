@@ -56,7 +56,10 @@ import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
 // import ValidatorSection from './components/ValidatorSection';
 import BlogCarousel from './components/BlogCarousel';
-import FeatureCards from './components/FeatureCards';
+import ImageCarousel from './components/ui/ImageCarousel';
+
+// import ImageGallery from './components/ImageGallery';
+// import ImageCarousel from './components/ui/ImageCarousel';
 
 
 import Slider from "./components/Slider";
@@ -69,11 +72,12 @@ export default function Home() {
       <ThreeDCardsSection />
       <Slider />
       <BlogCarousel />
+      <div className="mt-10">
+        <ImageCarousel />
+      </div>
       
 
       
-
-      <FeatureCards />
     </div>
   );
 }
