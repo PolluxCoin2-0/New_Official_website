@@ -60,14 +60,13 @@ import ImageCarousel from './components/ui/ImageCarousel';
 
 
 
-import MouseEffect from './components/MouseEffect';
 
 import Slider from "./components/Slider";
 
 export default function Home() {
   return (
     <div className="px-4 sm:px-12 lg:px-24">
-       <MouseEffect />
+     
       <HeroSection />
       <StatsGrid />
       <ThreeDCardsSection />
