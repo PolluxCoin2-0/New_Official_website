@@ -248,7 +248,7 @@ export default function Navbar() {
       dropdown: [
         { title: "Documentation", href: "" },
         { title: "Grant Program", href: "/Grant" },
-        { title: "Build", href: "" },
+        { title: "Build", href: "/Build" },
       ],
     },
     {
@@ -266,7 +266,7 @@ export default function Navbar() {
         { title: "Community", href: "/Community" },
         { title: "Partner With Us", href: "" },
         { title: "Blog", href: "" },
-        { title: "News & Events", href: "X" },
+        { title: "News & Events", href: "/Events" },
       ],
     },
     {
