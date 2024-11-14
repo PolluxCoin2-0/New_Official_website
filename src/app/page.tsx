@@ -54,12 +54,13 @@
 import HeroSection from './components/HeroSection';
 import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
-// import ValidatorSection from './components/ValidatorSection';
-// import BlogCarousel from './components/BlogCarousel';
-// import ImageCarousel from './components/ui/ImageCarousel';
 
-// import ImageGallery from './components/ImageGallery';
-// import ImageCarousel from './components/ui/ImageCarousel';
+
+import BlogCarousel from './components/BlogCarousel';
+import ImageCarousel from './components/ui/ImageCarousel';
+
+
+
 
 
 import Slider from "./components/Slider";
@@ -67,16 +68,23 @@ import Slider from "./components/Slider";
 export default function Home() {
   return (
     <div className="px-4 sm:px-12 lg:px-24">
+     
       <HeroSection />
       <StatsGrid />
       <ThreeDCardsSection />
       <Slider />
-      {/* <BlogCarousel /> */}
-      {/* <ImageCarousel /> */}
-     
+
+      <BlogCarousel />
+      <div className="mt-10">
+        <ImageCarousel />
+
+        
+      </div>
+
       
 
       
     </div>
+    
   );
 }
