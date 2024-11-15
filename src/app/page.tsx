@@ -116,15 +116,17 @@ export default function Home() {
         <ThreeDCardsSection />
       </div>
 
+      
+      {/* Slider Section */}
+      <div className="mt-12">
+        <Slider />
+      </div>
+
       {/* Pulse Beams Animation */}
       <div className="mt-12">
         <PulseBeams />
       </div>
 
-      {/* Slider Section */}
-      <div className="mt-12">
-        <Slider />
-      </div>
 
       {/* Preview Section */}
       {/* <div className="mt-12">
