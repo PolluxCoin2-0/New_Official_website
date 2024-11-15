@@ -96,8 +96,8 @@
 import HeroSection from './components/HeroSection';
 import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
-import ImageCarousel from './components/ui/ImageCarousel';
-import { Preview } from "./components/Preview";
+// import ImageCarousel from './components/ui/ImageCarousel';
+// import { Preview } from "./components/Preview";
 import { PulseBeams } from "@/app/components/ui/PulseBeam";  // Adjust the path as necessary
 import Slider from "./components/Slider";
 
