@@ -1,10 +1,6 @@
-
-
-
 // // "use client";
 
 // // import React, { useState, useCallback } from "react";
-
 
 // // import MobileNavbar from "./MobileNavbar";
 // // import Link from "next/link";
@@ -75,7 +71,7 @@
 // //         { title: "News & Events", href: "X" },
 // //       ],
 // //     },
-// //     { title: "Ecosystem", 
+// //     { title: "Ecosystem",
 // //       dropdown: [
 // //         { title: "Wallet", href: "/Community" },
 // //         { title: "Explorer", href: "" },
@@ -116,7 +112,7 @@
 // //           <NavigationMenuList className="flex space-x-14">
 // //             {menuItems.map((item, index) => (
 // //               <NavigationMenuItem
-// //                 key={index}      
+// //                 key={index}
 // //                 className="relative group"
 // //                 onMouseEnter={() => handleMouseEnter(index)}
 // //                 onMouseLeave={handleMouseLeave}
@@ -203,7 +199,6 @@
 // //     </nav>
 // //   );
 // // }
-
 
 // // "use client";
 
@@ -390,11 +385,6 @@
 // //   );
 // // }
 
-
-
-
-
-
 // // "use client";
 
 // // import React, { useState, useCallback } from "react";
@@ -579,7 +569,6 @@
 // //   );
 // // }
 
-
 "use client";
 
 import React, { useState, useCallback } from "react";
@@ -596,9 +585,12 @@ import {
 } from "@radix-ui/react-navigation-menu";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { CgDollar } from "react-icons/cg";
 
 export default function Navbar() {
-  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
+    null
+  );
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -646,12 +638,7 @@ export default function Navbar() {
     },
     {
       title: "Ecosystem",
-      dropdown: [
-        { title: "Wallet", href: "/Community" },
-        { title: "Explorer", href: "" },
-        { title: "Extension", href: "" },
-        { title: "Uvi Mining", href: "" },
-      ],
+      href: "/Ecosystem",
     },
     {
       title: "About",
@@ -665,7 +652,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-2 md:px-4 lg:px-6 xl:px-64 ">
       {/* Desktop Navbar (lg and larger) */}
-      <div className="hidden lg:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30  py-2 ">
+      <div className="hidden lg:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 py-2 ">
         {/* Left: Logo */}
         <div className="cursor-pointer">
           <Link href="/">
@@ -690,12 +677,15 @@ export default function Navbar() {
                 onMouseLeave={handleMouseLeave}
               >
                 {!item.dropdown ? (
-                  <Link href={item.href} className="flex items-center space-x-1 text-white hover:text-[#8af969]">
+                  <Link
+                    href={item.href}
+                    className="flex items-center text-md font-medium space-x-1 text-white hover:text-[#8af969]"
+                  >
                     {item.title}
                   </Link>
                 ) : (
                   <>
-                    <NavigationMenuTrigger className="flex items-center space-x-1 text-white hover:text-[#8af969]">
+                    <NavigationMenuTrigger className="flex items-center text-md font-medium space-x-1 text-white hover:text-[#8af969]">
                       <span>{item.title}</span>
                       <ChevronDown
                         className={`transition-transform duration-300 ${
@@ -719,7 +709,10 @@ export default function Navbar() {
                               className="hover:bg-[#8af969] hover:text-black rounded-md transition-all"
                             >
                               <NavigationMenuLink asChild>
-                                <Link href={subItem.href} className="block px-4 py-2">
+                                <Link
+                                  href={subItem.href}
+                                  className="block px-4 py-2"
+                                >
                                   {subItem.title}
                                 </Link>
                               </NavigationMenuLink>
@@ -734,6 +727,8 @@ export default function Navbar() {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
+
+        
 
         {/* Right: Get $POLLUX Button */}
         <Button
@@ -751,7 +746,13 @@ export default function Navbar() {
               className="h-6 w-6"
             />
           ) : (
-            <p className="font-semibold text-sm">GET $POX</p>
+            <div className="flex flex-row items-center">
+              <p className="text-md font-bold">Get</p>
+              <p>
+                <CgDollar />
+              </p>
+              <p className="text-md font-bold">POX</p>
+            </div>
           )}
         </Button>
       </div>
@@ -763,6 +764,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
-

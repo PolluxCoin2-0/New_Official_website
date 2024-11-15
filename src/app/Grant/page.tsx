@@ -93,7 +93,7 @@ const Page = () => {
         </div>
       </Tilt>
 
-      <div className="flex flex-col md:flex-row  justify-between space-x-8 items-center  p-2 md:p-10  w-full   pt-24 pb-24 mt-16 mb-16">
+      <div className="flex flex-col md:flex-row  justify-between space-x-8 items-center w-full   pt-12 pb-12 mt-16 mb-16 border-b-[1px] border-[#504f4f]">
         <div className="w-full md:w-[30%] flex justify-center md:justify-start">
           <Image
             src={banner2Img}
@@ -105,7 +105,7 @@ const Page = () => {
           />
         </div>
 
-        <div className=" flex flex-col justify-start items-start w-full lg:w-[70%] ">
+        <div className=" flex flex-col justify-start items-start w-full lg:w-[70%]  ">
           <div className=" flex flex-col justify-start items-start">
             <p className="text-start text-2xl lg:text-3xl font-semibold">
               The Grant Application Journey
@@ -122,12 +122,12 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-baseline w-full pt-24 pb-24 ">
-        <div className="w-full md:w-[40%] flex justify-start">
+      <div className="flex flex-col md:flex-row  space-x-8 justify-between items-baseline  pb-12 border-b-[1px] border-[#504f4f] w-full">
+        <div className="w-full md:w-[30%] flex justify-start">
           <p className="text-3xl font-semibold">How to Apply?</p>
         </div>
 
-        <div className="flex flex-col justify-start items-start w-full md:w-[60%]">
+        <div className="flex flex-col justify-start items-start w-full lg:w-[70%] ">
           <div className="text-start text-md lg:text-lg font-medium mt-6 text-[#ccc7c7]">
             <p>
               Applicants can easily navigate the application process through our
@@ -161,102 +161,8 @@ const Page = () => {
         </div>
       </div>
 
-      {/* <div className="flex flex-col md:flex-row justify-between items-center  w-full pt-0 md:pt-24 pb-24">
-        <div className="text-start mt-6 w-full md:w-[60%]">
-          <p className="text-xl md:text-2xl font-semibold">
-            Nurturing Beyond Finance: <br />
-            The Support Ecosystem
-          </p>
-
-          <p className="mt-6 text-sm md:text-md font-medium leading-7 md:leading-4 lg:leading-7 text-[#ccc7c7]">
-            The Pollux Grants Program is committed to providing comprehensive
-            support to projects beyond financial backing. Our goal is to create
-            a nurturing environment where projects can thrive. Through our
-            support ecosystem, we offer a range of resources and assistance
-            tailored to the needs of each project, including:
-          </p>
-          <ul className="list-disc pl-5 text-[#ccc7c7] text-sm md:text-md leading-7 md:leading-4 lg:leading-7 mt-6">
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-          </ul>
-        </div>
-        <div className="w-full md:w-[40%] flex justify-center md:justify-end">
-          <Image
-            src={communeImg}
-            alt="banner-image"
-            width={0}
-            height={0}
-            style={{ width: "50%" }}
-            className="rounded-2xl"
-          />
-        </div>
-      </div> */}
-
-      {/* <div className="flex flex-col md:flex-row justify-between items-center w-full pt-0 md:pt-24 pb-24">
-        <div className="w-full md:w-[40%] flex justify-center md:justify-start">
-          <Image
-            src={ambasImg}
-            alt="banner-image"
-            width={0}
-            height={0}
-            style={{ width: "50%" }}
-            className="rounded-2xl"
-          />
-        </div>
-
-        <div className="w-full md:w-[60%] text-start">
-          <p className="text-2xl font-semibold">
-            Key Areas of Growth: <br /> Fostering Sustainability
-          </p>
-
-          <p>
-            The 5ire Grants Program strategically focuses on key areas essential
-            for the sustainable growth of the ecosystem. These include:
-          </p>
-          <ul className="list-disc pl-5 text-[#ccc7c7] leading-6 mt-6">
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-            <li>
-              Early-stage project grants: Financial support to kickstart
-              projects at their inception.
-            </li>
-          </ul>
-        </div>
-      </div> */}
    
-   <div>
+   <div className="mt-12">
    <JoinUs/>
    </div>
       

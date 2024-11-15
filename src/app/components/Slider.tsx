@@ -1,14 +1,22 @@
-
-
-
 "use client"; // Ensure this is at the top
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Slider = () => {
+  const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isHovered) {
+      const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+      const x = ((e.clientX - left) / width) * 100;
+      const y = ((e.clientY - top) / height) * 100;
+      setBgPosition({ x, y });
+    }
+  };
+
   const slides = [
     {
       imageSrc: "/banner.jpg", // Replace with your image path
@@ -51,12 +59,31 @@ const Slider = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  
+  // Automatically change slides every 2 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextSlide(); // Change to the next slide
+    }, 2000); // Change slide every 2 seconds
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
-    <div className="px-2 md:px-4 lg:px-6 xl:px-40 relative bg-gradient-to-r from-black/30 to-black/60  rounded-xl overflow-hidden shadow-lg">
+    <div className="mt-24 mb-24 px-2 md:px-4 lg:px-6 xl:px-40 relative bg-gradient-to-r from-black/30 to-black/60 rounded-xl overflow-hidden shadow-lg"
+    >
       {/* Slider Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-center p-8 border border-white rounded-2xl w-full ">
+      <div className="flex flex-col lg:flex-row items-center justify-center p-8 border border-white rounded-2xl w-full"
+        onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
+        onMouseEnter={() => setIsHovered(true)}
+        style={{
+          boxShadow: isHovered
+            ? "0 2px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.4) "
+            : "none",
+          background: isHovered
+            ? `radial-gradient(circle at ${bgPosition.x}% ${bgPosition.y}%, rgba(138, 249, 105, 0.1), transparent) `
+            : "transparent",
+        }}>
         {/* Image */}
         <div className="w-full lg:w-[40%] rounded-lg overflow-hidden shadow-lg">
           <Image
@@ -64,7 +91,7 @@ const Slider = () => {
             alt="Slide Image"
             width={500}
             height={400}
-            className="object-cover rounded-lg"
+            className="object-cover rounded-2xl"
           />
         </div>
 
@@ -72,33 +99,36 @@ const Slider = () => {
         <div className="w-full lg:w-[60%] p-6 text-white rounded-lg shadow-lg">
           {/* Navigation Arrows inside the border */}
           <div className="flex flex-row space-x-2 justify-end -mt-6">
-          <button
-            onClick={prevSlide}
-            className="px-2 py-2 border-[1px]  rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
-          >
-            <span className="text-white text-2xl font-bold"><FaLongArrowAltLeft /></span>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="px-2 py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
-          >
-            <span className="text-white text-2xl font-bold"><FaLongArrowAltRight /></span>
-          </button>
-        </div>
-          <p className=" text-lg font-medium mb-4">{slides[currentSlide].title}</p>
+            <button
+              onClick={prevSlide}
+              className="px-2 py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
+            >
+              <span className="text-white text-2xl font-bold">
+                <FaLongArrowAltLeft />
+              </span>
+            </button>
+            <button
+              onClick={nextSlide}
+              className="px-2 py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
+            >
+              <span className="text-white text-2xl font-bold">
+                <FaLongArrowAltRight />
+              </span>
+            </button>
+          </div>
+          <p className="text-lg font-medium mb-4">{slides[currentSlide].title}</p>
           <h2 className="text-2xl font-bold mb-4">{slides[currentSlide].heading}</h2>
           <p className="text-lg mb-6">{slides[currentSlide].description}</p>
           <a
             href={slides[currentSlide].buttonLink}
-            className="inline-block py-1 px-6 border-2 text-lg font-medium border-[#8AF969] text-[#8AF969] hover:bg-green-400 hover:text-black transition duration-300 rounded-full"
+            className="text-center text-lg font-medium bg-gradient-to-r from-[#1C5A04] to-[#68A541] px-12 rounded-2xl py-2 "
           >
             {slides[currentSlide].buttonText}
           </a>
-        </div>
-       
-      </div>
 
-    
+        
+        </div>
+      </div>
     </div>
   );
 };
