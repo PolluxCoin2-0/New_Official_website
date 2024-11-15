@@ -190,6 +190,8 @@
 import { TypewriterEffect } from './ui/Typewriter-effect';
 import { motion } from 'framer-motion';
 import Image from 'next/image';  // Import Image from next/image
+import { MdOutlineRestartAlt } from "react-icons/md";
+import { MdDocumentScanner } from "react-icons/md";
 
 export default function HeroSection() {
   const words = [
@@ -210,7 +212,7 @@ export default function HeroSection() {
 
   const wordsA = [
     {
-      text: "web",
+      text: "WEB",
       className: "text-[#8af969]",
     },
   ];
@@ -270,13 +272,7 @@ export default function HeroSection() {
   </motion.div>
 </motion.div>
 
-
-
-
-
-
-
-      {/* Typewriter effect for BUILD AWESOME WITH POLLUX */}
+{/* Typewriter effect for BUILD AWESOME WITH POLLUX */}
       <TypewriterEffect
         words={words}
         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-8"
@@ -284,17 +280,22 @@ export default function HeroSection() {
 
       {/* Headline: Decentralize the web */}
       <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-[#fff]">
-        Decentralize the <TypewriterEffect words={wordsA} className="inline" />
-      </h2>
+        DECENTRALIZE THE </h2>
+
+       <h2> <TypewriterEffect words={wordsA} className="inline" /></h2>
+      
 
       {/* Buttons Section */}
       <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center items-center">
-        <button className="border-2 border-[#fff] px-6 py-3 rounded-md bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] transition-all w-full sm:w-auto">
-          START
-        </button>
+      <button className="flex items-center text-xl font-semibold px-6 py-3 rounded-xl bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] transition-all w-full sm:w-auto">
+    <MdOutlineRestartAlt className="mr-2" size={24}/> START
+</button>
 
-        <button className="border-2 border-white px-6 py-3 rounded-md hover:bg-white hover:text-black w-full sm:w-auto">
-          Documentation
+
+        
+
+        <button className=" flex items-center border-[1px] border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black w-full sm:w-auto">
+        <MdDocumentScanner className="mr-2" size={20}/> DOCUMENTATION
         </button>
       </div>
     </section>

@@ -176,7 +176,7 @@ const page = () => {
         <p className="text-2xl md:text-3xl font-semibold">Get Started With Pollux</p>
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 lg:space-x-10 items-center w-full mt-12 md:mt-40   ">
        
-          <div className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px]
+          <div className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] transform transition-transform duration-200 hover:scale-105
           md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-b-2 md:rounded-b-[48px] p-4 lg:p-6">
             <p className="border-[1px] border-[#72a861] h-8 w-8  rounded-full "> 01</p>
                <div className="border-[1px] border-[#72a861] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
@@ -185,7 +185,7 @@ const page = () => {
                 </div>
           </div>
 
-          <div className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] mt-0 md:-mt-48 
+          <div className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] mt-0 md:-mt-48 transform transition-transform duration-200 hover:scale-105
           md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-t-2 md:rounded-t-[48px] p-4 lg:p-6">
             <p className="block md:hidden border-[1px] border-[#72a861] h-8 w-8 rounded-full "> 02</p>
             <div className="border-[1px] border-[#72a861] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
@@ -195,7 +195,7 @@ const page = () => {
                 <p className="hidden md:block border-[1px] border-[#72a861] h-8 w-8 rounded-full "> 02</p>
           </div>
 
-          <div className="flex flex-col space-y-4 items-center justify-between   w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px]
+          <div className="flex flex-col space-y-4 items-center justify-between   w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] transform transition-transform duration-200 hover:scale-105
             md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-b-2 md:rounded-b-[48px] p-4 lg:p-6">
             <p className="border-[1px] border-[#72a861] h-8 w-8 rounded-full "> 03</p>
                <div className="border-[1px] border-[#72a861] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
@@ -204,7 +204,7 @@ const page = () => {
                 </div>
           </div>
 
-          <div className="flex flex-col space-y-4 items-center justify-between  w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] mt-0 md:-mt-48  
+          <div className="flex flex-col space-y-4 items-center justify-between  w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] mt-0 md:-mt-48  transform transition-transform duration-200 hover:scale-105
           md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-t-2 md:rounded-t-[48px] p-4 lg:p-6">
            <p className="block md:hidden border-[1px] border-[#72a861] h-8 w-8 rounded-full "> 04</p>
             <div className="border-[1px] border-[#72a861]  w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
@@ -221,7 +221,7 @@ const page = () => {
       <div className="mt-16 md:mt-32 mb-8 md:mb-16">
         <p className="text-3xl font-semibold">Quick Links</p>
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-6 lg:space-x-8 mt-16 ">
-      <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px] 
+      <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px] transform transition-transform duration-200 hover:scale-105
          ">
                <div className="border-[1px] border-[#72a861] w-full rounded-3xl p-4 md:p-6 flex flex-col justify-between h-full">
                    <p className="flex justify-end"><FaArrowUpRightDots color="#ffffff" size={24} /></p>
@@ -229,7 +229,7 @@ const page = () => {
                 </div>
           </div>
 
-          <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px] mt-6 md:mt-0 
+          <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px] mt-6 md:mt-0 transform transition-transform duration-200 hover:scale-105
          ">
                <div className="border-[1px] border-[#72a861] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
                    <p className="flex justify-end"><FaArrowUpRightDots color="#ffffff" size={24} /></p>
@@ -237,14 +237,14 @@ const page = () => {
                 </div>
           </div>
 
-          <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px]  mt-6 md:mt-0
+          <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px]  mt-6 md:mt-0 transform transition-transform duration-200 hover:scale-105
          ">
                <div className="border-[1px] border-[#72a861] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
                    <p className="flex justify-end"><FaArrowUpRightDots color="#ffffff" size={24} /></p>
                    <p className="mt-auto mb-0 text-start md:text-md lg:text-xl font-semibold">Run Validator</p>
                 </div>
           </div>
-          <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px]  mt-6 md:mt-0
+          <div className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px]  mt-6 md:mt-0 transform transition-transform duration-200 hover:scale-105
          ">
                <div className="border-[1px] border-[#72a861] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
                    <p className="flex justify-end"><FaArrowUpRightDots color="#ffffff" size={24} /></p>

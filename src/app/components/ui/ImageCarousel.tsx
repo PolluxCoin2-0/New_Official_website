@@ -160,7 +160,7 @@ const images = [
 
 const ImageCarousel = () => {
   return (
-    <div className="relative overflow-hidden w-screen h-64 md:h-96 left-1/2 transform -translate-x-1/2">
+    <div className="relative overflow-hidden w-screen h-64 md:h-96 left-1/2 transform -translate-x-1/2 mt-10">
       <motion.div
         className="flex items-center"
         initial={{ x: 0 }}

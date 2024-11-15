@@ -84,7 +84,7 @@ const Page = () => {
         </div>
       </Tilt>
 
-      <div className="flex flex-col md:flex-row justify-between items-center rounded-2xl p-12 px-4 lg:px-32 mt-0 md:mt-16">
+      <div className="flex flex-col md:flex-row justify-between items-center rounded-2xl p-6 mt-0 md:mt-16">
         <div className="text-start ">
           <p className="text-2xl md:text-3xl font-medium ">
             Become a Pollux Ambassadar

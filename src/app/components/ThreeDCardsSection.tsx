@@ -204,17 +204,20 @@ export default function ThreeDCardsSection() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-8 w-full">
         {cards.map((card, index) => (
           <CardContainer key={index} className="inter-var w-full sm:w-[350px]">
-            <CardBody className="relative group/card bg-gradient-to-r from-black/30 to-black/60 border-gray-400 w-full h-[400px] rounded-xl p-8 border">
+            <CardBody className="text-center relative group/card bg-gradient-to-r from-black/30 to-black/60 border-gray-400 w-full h-[400px] rounded-2xl p-8 border">
+              <div className="flex justify-center">
               <CardItem
                 translateZ={50}
-                className="text-xl font-bold text-neutral-500 dark:text-neutral-100"
+                className=" text-xl font-bold text-neutral-500 dark:text-neutral-100"
               >
                 {card.title}
               </CardItem>
+              </div>
+             
               <CardItem
                 as="p"
                 translateZ={60}
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-400 break-words overflow-hidden"
+                className=" text-md max-w-sm mt-2  break-words overflow-hidden text-[#a7a4a4]  text-md font-medium"
               >
                 {card.description}
               </CardItem>
@@ -229,14 +232,15 @@ export default function ThreeDCardsSection() {
                 />
               </CardItem>
 
-              <div className="flex justify-left items-center mt-4">
+              <div className="flex justify-center items-center mt-4">
                 <CardItem
                   translateZ={20}
                   as={Link}
                   href={card.link}
                   target="__blank"
-                  className="px-4 py-2 rounded-xl text-xs font-normal text-neutral-600 text-neutral-100"
+                  className="px-4 py-2 rounded-xl text-xl  font-semibold  "
                 >
+                  
                   Learn more →
                 </CardItem>
               </div>
