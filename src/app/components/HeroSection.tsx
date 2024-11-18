@@ -156,7 +156,7 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Typewriter effect for BUILD AWESOME WITH POLLUX */}
+      {/* Typewriter effect for nn BUILD AWESOME WITH POLLUX */}
       <div className="flex flex-col 2xl:flex-row items-center">
         <TypewriterEffect
           words={words}
@@ -176,6 +176,12 @@ export default function HeroSection() {
         <button className="flex items-center justify-center text-lg font-semibold px-6 py-3 rounded-xl bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] transition-all w-full sm:w-auto">
           <MdOutlineRestartAlt className="mr-2" size={24} /> GET STARTED
         </button>
+
+
+
+
+
+
 
         <button className=" flex items-center justify-center text-lg border-[1px] border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black w-full sm:w-auto">
           <MdDocumentScanner className="mr-2" size={20} /> EXPLORE DOCS
