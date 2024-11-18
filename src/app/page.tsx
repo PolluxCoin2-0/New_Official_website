@@ -128,8 +128,8 @@ export default function Home() {
       <div className="mt-12">
         <PulseBeams />
       </div>
-
-
+       <Evolution/>
+       <Performance/>
       {/* Preview Section */}
       {/* <div className="mt-12">
         <Preview />
