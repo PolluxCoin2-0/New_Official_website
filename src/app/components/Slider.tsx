@@ -70,10 +70,10 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="mt-24 mb-24 px-2 md:px-4 lg:px-6 xl:px-40 relative bg-gradient-to-r from-black/30 to-black/60 rounded-xl overflow-hidden shadow-lg"
+    <div className="mt-24 mb-24 px-2 md:px-4 lg:px-6 xl:px-40 relative bg-gradient-to-r from-black/30 to-black/60  overflow-hidden shadow-lg"
     >
       {/* Slider Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-center p-8 border border-white rounded-2xl w-full"
+      <div className="flex flex-col lg:flex-row items-center justify-center p-4 md:p-8 border border-[#5a5858] w-full"
         onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
         onMouseEnter={() => setIsHovered(true)}
         style={{
@@ -85,7 +85,7 @@ const Slider = () => {
             : "transparent",
         }}>
         {/* Image */}
-        <div className="w-full lg:w-[40%] rounded-lg overflow-hidden shadow-lg">
+        <div className="w-full lg:w-[40%] rounded-lg flex justify-center overflow-hidden shadow-lg">
           <Image
             src={slides[currentSlide].imageSrc}
             alt="Slide Image"
@@ -96,7 +96,7 @@ const Slider = () => {
         </div>
 
         {/* Content */}
-        <div className="w-full lg:w-[60%] p-6 text-white rounded-lg shadow-lg">
+        <div className="w-full lg:w-[60%] p-0 md:p-6 text-white rounded-lg shadow-lg mt-8 md:mt-6 lg:mt-0 ">
           {/* Navigation Arrows inside the border */}
           <div className="flex flex-row space-x-2 justify-end -mt-6">
             <button
@@ -116,9 +116,9 @@ const Slider = () => {
               </span>
             </button>
           </div>
-          <p className="text-lg font-medium mb-4">{slides[currentSlide].title}</p>
+          {/* <p className="text-md md:text-lg font-medium mb-4 text-nowrap">{slides[currentSlide].title}</p> */}
           <h2 className="text-2xl font-bold mb-4">{slides[currentSlide].heading}</h2>
-          <p className="text-lg mb-6">{slides[currentSlide].description}</p>
+          <p className="text-md md:text-lg text-[#a7a4a4] mb-6">{slides[currentSlide].description}</p>
           <a
             href={slides[currentSlide].buttonLink}
             className="text-center text-lg font-medium bg-gradient-to-r from-[#1C5A04] to-[#68A541] px-12 rounded-2xl py-2 "

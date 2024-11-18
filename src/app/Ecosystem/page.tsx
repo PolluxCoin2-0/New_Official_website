@@ -1,121 +1,237 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image"; // Import Image from next/image
-import img from "../../../public/growth.jpg"; // Image to be used for the surrounding elements
+import Image from "next/image";
+import img from "../../../public/ele2.svg";
+import { GiConcentricCrescents } from "react-icons/gi";
+import { GrProjects } from "react-icons/gr";
 
 const page = () => {
-  // Define the distances for each image (radius of the wheel)
-  const distances = [350, 350, 350, 350, 350, 350]; // Equal distances for a balanced wheel
+  const distances = [350, 350, 350, 350, 350, 350];
 
   return (
-    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-64 mt-24">
-      <p className="text-4xl font-bold">Our Diverse Ecosystem</p>
-      <p className="text-lg font-semibold pt-4">
-        Integrated Excellence with Pollux Chain
-      </p>
+    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-64 mt-24 pb-64">
+      {/* Animated Rockets Background */}
+      <div className="absolute inset-0 z-0">
+        {[...Array(20)].map((_, index) => (
+          <motion.div
+            key={`rocket-${index}`}
+            className="absolute rounded-full shadow-lg"
+            style={{
+              width: "15px",
+              height: "15px",
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              backgroundColor: "#77af54", // Green rocket color
+              boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
+            }}
+            initial={{
+              opacity: 0,
+              scale: 1,
+            }}
+            animate={{
+              y: ["0%", "-50%", "-100%"],
+              opacity: [1, 0.5, 0],
+              scale: [1, 1.2, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          >
+            {[...Array(5)].map((_, sparkIndex) => (
+              <motion.div
+                key={`spark-${index}-${sparkIndex}`}
+                className="absolute bg-yellow-300 rounded-full"
+                style={{
+                  width: `${Math.random() * 3}px`,
+                  height: `${Math.random() * 3}px`,
+                  bottom: 0,
+                  left: `${Math.random() * 100 - 50}%`,
+                }}
+                animate={{
+                  y: [0, -10],
+                  opacity: [1, 0],
+                }}
+                transition={{
+                  duration: Math.random() * 0.5 + 0.5,
+                  repeat: Infinity,
+                  delay: Math.random() * 0.2,
+                }}
+              />
+            ))}
+          </motion.div>
+        ))}
 
-      <div className="flex justify-center mt-60">
-        <div className="relative flex justify-center items-center w-[400px] h-[400px] border-dashed border-2 rounded-full">
-          {/* Central image */}
-          <div className="absolute flex justify-center items-center w-[320px] h-[320px] rounded-full">
-            <Image
-              src="/token3.png"
-              alt="Polluxcoin Logo"
-              width={320}
-              height={320}
-              className="w-48 sm:w-64 md:w-72 lg:w-80"
-            />
-          </div>
+        {[...Array(150)].map((_, index) => (
+          <motion.div
+            key={`star-${index}`}
+            className="absolute rounded-full"
+            style={{
+              width: `${Math.random() * 2 + 1}px`,
+              height: `${Math.random() * 2 + 1}px`,
+              backgroundColor: `rgba(255, 255, 255, ${Math.random() * 0.8})`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              boxShadow: "0 0 8px rgba(255, 255, 255, 0.8)",
+            }}
+            animate={{
+              opacity: [0.6, 1, 0.6],
+              scale: [1, 1.5, 1],
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
 
-          {/* Lines and surrounding images */}
-          {[...Array(6)].map((_, index) => {
-            // Calculate the angle for each line (60-degree increments)
-            const angle = (index * 360) / 6;
-            const translateX = distances[index]; // Use the adjusted distance
+      {/* Main Content */}
+      <div className="relative z-10 text-white pb-64">
+        <p className="text-4xl font-bold">Our Diverse Ecosystem</p>
+        <p className="text-lg font-semibold pt-4 text-gray-300">
+          Integrated Excellence with Pollux Chain
+        </p>
 
-            // Line style to create a radial line from the center to each image
-            const lineStyle: React.CSSProperties = {
-              position: "absolute", // Explicitly specify position as 'absolute'
-              top: "50%",
-              left: "50%",
-              width: "2px", // Line thickness
-              height: `${translateX}px`, // Line length (distance from center)
-              background: "linear-gradient(45deg, #55E128, #0A2505)", // Custom gradient effect
-              boxShadow:
-                "0 0 5px rgba(85,224,40, 0.6), 0 0 20px rgba(255, 255, 255, 0.5)", // Shiny/glassy border effect
-              backdropFilter: "blur(5px)", // Apply a blur to give a glassy effect
-              transform: `rotate(${angle}deg)`, // Rotate line to the correct angle
-              transformOrigin: "top", // Rotation around the center of the wheel
-              zIndex: -1, // Lines should be behind the images
-              animation: `travelGradient 2s infinite ${index * 0.5}s`, // Animation of the gradient traveling outward
-            };
+        <div className="flex justify-center mt-60">
+          <div className="relative flex justify-center items-center w-[400px] h-[400px] border-dashed border-2 border-white rounded-full">
+            <div className="absolute flex justify-center items-center w-[320px] h-[320px] rounded-full">
+              <Image
+                src="/token3.png"
+                alt="Polluxcoin Logo"
+                width={320}
+                height={320}
+                className="w-48 sm:w-64 md:w-72 lg:w-80"
+              />
+            </div>
 
-            // Image transform to place it at the tip of the line
-            const imageTransform = `rotate(${angle - 90}deg) translateX(${translateX}px)`;
+            {[...Array(6)].map((_, index) => {
+              const angle = (index * 360) / 6;
+              const translateX = distances[index];
 
-            return (
-              <React.Fragment key={index}>
-                {/* Line from the center to the surrounding image */}
-                <div style={lineStyle}></div>
+              // Fix for Framer Motion style compatibility
 
-                {/* Image at the tip of the line */}
-                <div
-                  className="absolute"
-                  style={{
-                    transform: imageTransform, // Position image at the tip of the line
-                    transformOrigin: "center", // Ensure the image rotates from its center
-                  }}
-                >
+              const imageTransform = `rotate(${angle - 90}deg) translateX(${translateX}px)`;
+
+              return (
+                <React.Fragment key={index}>
+                  {/* Ensuring Framer Motion's type compatibility */}
                   <motion.div
-                    className=""
-                    transition={{
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 10,
-                      background: { duration: 0.3 },
+                    style={{  position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      width: "2px",
+                      height: `${translateX}px`,
+                      background: "linear-gradient(45deg, #55E128, #0A2505)", // Green gradient for the line
+                      boxShadow: "0 0 5px rgba(85,224,40, 0.6), 0 0 20px rgba(255, 255, 255, 0.5)",
+                      transform: `rotate(${angle}deg)`, // Rotate the line
+                      transformOrigin: "top",
+                      zIndex: -1,}}
+                    animate={{
+                      height: ["350px", "360px", "350px"], // Move the line up and down
                     }}
-                    style={{ background: "transparent" }} // Default background
+                    transition={{
+                      repeat: Infinity,
+                      duration: 1,
+                      ease: "easeInOut",
+                    }}
+                  />
+
+                  <div
+                    className="absolute"
+                    style={{
+                      transform: imageTransform,
+                      transformOrigin: "center",
+                    }}
                   >
                     <motion.div
-                      animate={{ rotate: 360 }}
-                      whileHover={{ rotate: 0 }} // Stops rotation on hover
                       transition={{
-                        repeat: Infinity,
-                        duration: 10, // Continuous rotation speed
-                        ease: "linear",
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 10,
+                      }}
+                      style={{
+                        background: "rgba(255, 255, 255, 0.9)",
+                        borderRadius: "50%",
                       }}
                     >
-                      <Image
-                        src={img}
-                        alt={`Polluxcoin Logo ${index}`} // Alt text for each image
-                        width={100}
-                        height={100}
-                        className="rounded-full w-32 h-32 border-2 border-white shadow-md"
-                      />
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        whileHover={{ rotate: 0 }}
+                        transition={{
+                          repeat: Infinity,
+                          duration: 10,
+                          ease: "linear",
+                        }}
+                      >
+                        <div className="rounded-full w-32 h-32 bg-black shadow-inner shadow-green-500 flex justify-center items-center">
+                          <Image
+                            src={img}
+                            alt={`Polluxcoin Logo ${index}`}
+                            width={50}
+                            height={50}
+                          />
+                        </div>
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
-                </div>
-              </React.Fragment>
-            );
-          })}
+                  </div>
+                </React.Fragment>
+              );
+            })}
+          </div>
         </div>
       </div>
 
-      {/* CSS for the gradient animation */}
-      <style jsx>{`
-        @keyframes travelGradient {
-          0% {
-            background-position: 50% 50%; /* Start from the center */
-          }
-          50% {
-            background-position: 100% 100%; /* Travel to the end (surrounding image) */
-          }
-          100% {
-            background-position: 50% 50%; /* Return back to the center */
-          }
-        }
-      `}</style>
+      {/* Our Projects */}
+      <div className="mt-16">
+        <div className="flex flex-row space-x-2 items-center">
+          <p>
+            <GiConcentricCrescents size={32} />
+          </p>
+          <p className="text-4xl font-semibold">Discover our Ecosystem</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+          {/* Box 1 */}
+          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
+            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
+              <p><GrProjects size={52} className="text-white" /></p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-4 text-white mt-10">All Projects</h3>
+            <p className="text-gray-300">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates velit eveniet aliquid veritatis. Tempora beatae doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi doloremque aperiam, minus exercitationem debitis a?
+            </p>
+          </div>
+
+          {/* Box 2 */}
+          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
+            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
+              <p><GrProjects size={52} className="text-white" /></p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-4 text-white mt-10">All Projects</h3>
+            <p className="text-gray-300">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates velit eveniet aliquid veritatis. Tempora beatae doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi doloremque aperiam, minus exercitationem debitis a?
+            </p>
+          </div>
+
+          {/* Box 3 */}
+          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
+            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
+              <p><GrProjects size={52} className="text-white" /></p>
+            </div>
+
+            <h3 className="text-xl font-semibold mb-4 text-white mt-10">All Projects</h3>
+            <p className="text-gray-300">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates velit eveniet aliquid veritatis. Tempora beatae doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi doloremque aperiam, minus exercitationem debitis a?
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

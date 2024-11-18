@@ -22,6 +22,7 @@ interface PerformanceGraphProps {
 }
 
 const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ data }) => {
+
  useEffect(() => {
     // Root element
     // Root element

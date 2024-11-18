@@ -9,7 +9,7 @@ import { SiDiscord } from "react-icons/si";
 export default function Footer() {
     return (
       <footer className="p-6 text-center px-4 md:px-4 lg:px-6 xl:px-64 mt-0 md:mt-16">
-        <div className="flex flex-col md:flex-row justify-between ">
+        <div className="flex flex-col md:flex-row justify-between space-x-0 md:space-x-4 lg:space-x-0 ">
           <div className="w-[40%] md:w-[10%]">
           <Image
               src={polluxLogo}
@@ -22,31 +22,31 @@ export default function Footer() {
           </div>
 
           <div className="text-start mt-5 md:mt-0">
-            <p className="text-xl font-bold text-[#8AF969]">Company</p>
-            <p className="text-lg font-semibold pt-4">About Us </p>
-            <p className="text-lg font-semibold pt-2">Contact</p>
+            <p className="text-xl md:text-lg lg:text-xl font-bold text-[#8AF969]">Company</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-4">About Us </p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Contact</p>
           </div>
 
           <div className="text-start  mt-5 md:mt-0">
-            <p className="text-xl font-bold text-[#8AF969]">Quick Links</p>
-            <p className="text-lg font-semibold pt-4">Pollux Explorer</p>
-            <p className="text-lg font-semibold pt-2">Pollux Staking</p>
-            <p className="text-lg font-semibold pt-2">Validator</p>
+            <p className="text-xl md:text-lg lg:text-xl font-bold text-[#8AF969]">Quick Links</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-4">Pollux Explorer</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Pollux Staking</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Validator</p>
           </div>
 
           <div className="text-start  mt-5 md:mt-0">
-            <p className="text-xl font-bold text-[#8AF969]">Explore</p>
-            <p className="text-lg font-semibold pt-4">Ecosystem</p>
-            <p className="text-lg font-semibold pt-2">Blog</p>
-            <p className="text-lg font-semibold pt-2">Community</p>
-            <p className="text-lg font-semibold pt-2">Brand Kit</p>
+            <p className="text-xl md:text-lg lg:text-xl font-bold text-[#8AF969]">Explore</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-4">Ecosystem</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Blog</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Community</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Brand Kit</p>
           </div>
 
           <div className="text-start  mt-5 md:mt-0">
-            <p className="text-xl font-bold text-[#8AF969]">Learn </p>
-            <p className="text-lg font-semibold pt-4">Documentation</p>
-            <p className="text-lg font-semibold pt-2">Whitepaper</p>
-            <p className="text-lg font-semibold pt-2">Become an Ambassador</p>
+            <p className="text-xl md:text-lg lg:text-xl font-bold text-[#8AF969]">Learn </p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-4">Documentation</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Whitepaper</p>
+            <p className="text-lg md:text-sm lg:text-lg font-semibold pt-2">Become an Ambassador</p>
           </div>
 
           <div className="flex flex-row space-x-3  mt-5 md:mt-0">

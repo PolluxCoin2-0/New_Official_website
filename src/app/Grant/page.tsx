@@ -33,7 +33,8 @@ const Page = () => {
           </span>
         </p>
         <p className="text-xl md:text-4xl font-medium ">
-          The $10 Million Grant Program
+        The $5 Million Grant Program
+
         </p>
       </div>
 
@@ -60,14 +61,13 @@ const Page = () => {
         >
           <div className="text-start w-full lg:w-[40%]">
             <p className="text-2xl lg:text-3xl font-semibold">
-              Pollux Grant Program
+            Pollux Grant Program 
+
             </p>
             <p className="text-md lg   :text-lg font-medium mt-6 text-justify text-[#a7a4a4]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{" "}
-              Suscipit veniam magnam iste, maxime porro repudiandae,
-              <br /> provident Suscipit veniam magnam iste, maxime porro <br />{" "}
-              repudiandae, provident qui itaque rem quaerat aperiam dolorum, nam
-              deserunt pariatur?
+            The $5 Million Pollux Grants Program is designed to support and fund groundbreaking projects within the PolluxChain ecosystem. Our mission is to empower developers to create and launch applications on PolluxChain, accelerating the adoption and growth of decentralized technologies. This program seeks to cultivate a dynamic community of developers and innovators by providing the resources and support essential for their success.
+
+
             </p>
 
             <button
@@ -108,15 +108,13 @@ const Page = () => {
         <div className=" flex flex-col justify-start items-start w-full lg:w-[70%]  ">
           <div className=" flex flex-col justify-start items-start">
             <p className="text-start text-2xl lg:text-3xl font-semibold">
-              The Grant Application Journey
+            The Application Journey 
+
             </p>
             <p className="text-start text-md lg:text-lg font-medium mt-6 text-[#8d8b8b]">
-              Prospective projects undergo a meticulous application process. The
-              range of grant amounts, from $10,000 to $100,000, adds a layer of
-              flexibility to accommodate projects at various stages of
-              development. What sets this program apart is the option for grants
-              to be disbursed in either USDT or 5ire Token, providing applicants
-              with a choice that aligns with their strategic objectives.
+            PolluxChain grant program offers prospective projects a comprehensive  and thorough application process. With grant amounts ranging from $50,000 to $5,000,000, 
+            the program is designed to support projects at different stages of growth and innovation. What makes PolluxChain initiative unique is the flexibility of 
+            receiving grants in the native $POX Token, allowing applicants to choose the option that best fits their strategic needs and objectives.
             </p>
           </div>
         </div>
@@ -124,27 +122,22 @@ const Page = () => {
 
       <div className="flex flex-col md:flex-row  space-x-8 justify-between items-baseline  pb-12 border-b-[1px] border-[#504f4f] w-full">
         <div className="w-full md:w-[30%] flex justify-start">
-          <p className="text-3xl font-semibold">How to Apply?</p>
+          <p className="text-3xl font-semibold">How To Apply ?          </p>
         </div>
 
         <div className="flex flex-col justify-start items-start w-full lg:w-[70%] ">
           <div className="text-start text-md lg:text-lg font-medium mt-6 text-[#ccc7c7]">
             <p>
-              Applicants can easily navigate the application process through our
-              dedicated portal. Please visit to get started. <br />
-              Detailed guidelines and criteria are available to assist you in
-              preparing your submission.
+            Applicants can seamlessly navigate the grant application process through our dedicated PolluxChain portal. Visit today to get started. Comprehensive guidelines and eligibility criteria are provided to help you prepare your submission effectively.
+
             </p>
             <p className="mt-5">
-              The journey from application submission to grant disbursement
-              involves a thorough evaluation by the <br />
-              Grants Committee, team interviews, and the formation of a
-              multi-sig wallet upon approval. This approach <br />
-              ensures not only financial support but a commitment to achieving
-              measurable milestones.
+            The journey from application submission to grant disbursement under our $5 million PolluxChain Grant Program includes a rigorous evaluation by the Pollux Grants Committee, in-depth team interviews, and the creation of a multi-sig wallet upon approval. This ensures that recipients receive not only financial backing but also ongoing support for achieving significant milestones.
+
             </p>
             <p className="mt-5">
-              *Please take a look at the milestone-based funding plan.
+              *Explore our milestone-based funding strategy for more details.
+
             </p>
           </div>
           <div>

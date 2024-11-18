@@ -9,20 +9,25 @@ interface Section {
   id: string;
   title: string;
   description: string;
+  para: string;
   imageSrc: string; // Assuming the src is a string representing the image path
-  energyUsage: string; // Energy usage in percentage
+  energyUsage: string; 
+  energyTag: string;// Energy usage in percentage
 }
 
 // CardSection Props Type
 interface CardSectionProps {
   title: string;
   description: string;
+  para: string;
   imageSrc: string;
   energyUsage: string;
+  energyTag: string;// Energy usage in percentage
+
 }
 
 // CardSection Component
-const CardSection: React.FC<CardSectionProps> = ({ title, description, imageSrc, energyUsage }) => {
+const CardSection: React.FC<CardSectionProps> = ({ title, description, para, imageSrc, energyUsage, energyTag }) => {
   const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -37,7 +42,7 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, imageSrc,
 
   return (
     <div
-      className="flex flex-col md:flex-row py-5 space-x-0 md:space-x-32 items-center mt-16 p-12 pt-16 pb-16 "
+      className="flex flex-col md:flex-row py-5 space-x-0 md:space-x-32 items-center mt-16 p-4  md:p-12 pt-16 pb-16 "
       onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
       onMouseEnter={() => setIsHovered(true)}
       style={{
@@ -60,18 +65,16 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, imageSrc,
       </div>
 
       <div className="text-start mt-8 md:mt-0">
-        <p className="text-center text-xl font-medium bg-gradient-to-r from-[#1C5A04] to-[#68A541] w-[180px] rounded-2xl py-2">
+        <p className=" inline-block text-center text-md md:text-xl font-medium bg-gradient-to-r from-[#1C5A04] to-[#68A541] px-4 md:px-8 rounded-2xl py-2 truncate ">
           {title}
         </p>
         <p className="text-2xl font-semibold pt-4">{description}</p>
         <p className="text-[#a7a4a4] pt-2 text-md font-medium">
-          With EVM/Wasm compatibility, easily deploy Solidity smart contracts on
-          the 5ireEVM chain and leverage WASM environment for future-proofing
-          and high performance.
+        {para}
         </p>
-        <div className="flex flex-row items-center space-x-4 pt-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-4 pt-4">
           <p className="text-2xl font-bold text-[#68A541]">{energyUsage}</p>
-          <p className="text-xl font-semibold">Less Energy Usage</p>
+          <p className="text-lg md:text-xl font-semibold ">{energyTag}</p>
         </div>
       </div>
     </div>
@@ -84,37 +87,47 @@ const Evolution = () => {
     {
       id: "Sustain",
       title: "SUSTAINABLE",
-      description: "Positioned for Scalability",
+      description: "Driving Eco-Conscious Blockchain Solutions",
+      para: "PolluxChain leverages a unique proof-of-stake mechanism and innovative consensus algorithms to promote energy efficiency, reducing environmental impact while delivering unmatched blockchain performance.",
       imageSrc: Img,
       energyUsage: "50%",
+      energyTag: "Reduction in Energy Consumption",
+    },
+    {
+      id: "Scalable",
+      title: "SCALABLE",
+      description: "Ready for Infinite Growth",
+      para: "Designed to scale effortlessly, PolluxChain supports thousands of transactions per second without sacrificing reliability. Its modular infrastructure paves the way for sustainable growth and high adaptability in expanding markets.",
+      imageSrc: Img,
+      energyUsage: "30%",
+      energyTag: "Seamless Scaling Without Performance Trade-Offs",
+    },
+    {
+      id: "defi",
+      title: "DEFI-OPTIMIZED",
+      description: "Transformative Infrastructure for DeFi",
+      para: "Built to power the next wave of decentralized finance, PolluxChain integrates a suite of features that supports DeFi applications with low latency, high liquidity, and secure operations, enabling endless opportunities for innovation.",
+      imageSrc: Img,
+      energyUsage: "20%",
+      energyTag: "Enhanced Smart Contract Interoperability",
+    },
+    {
+      id: "Secure",
+      title: "SECURE",
+      description: "Uncompromised Security Protocols",
+      para: "PolluxChain incorporates multi-layered encryption and zero-trust architecture to fortify the platform against emerging threats, ensuring a resilient and trustworthy ecosystem for users and developers.",
+      imageSrc: Img,
+      energyUsage: "40%",
+      energyTag: "State-of-the-Art Cryptographic Safeguards",
     },
     {
       id: "Fast",
-      title: "FAST",
-      description: "Optimized for Speed",
+      title: "Fast",
+      description: "Engineered for Lightning-Speed Performance",
+      para: "PolluxChain is optimized for speed with native EVM and WASM compatibility, enabling developers to deploy smart contracts swiftly. This ensures seamless transactions and high processing power to meet the demands of an evolving decentralized ecosystem.",
       imageSrc: Img,
-      energyUsage: "30%",
-    },
-    {
-      id: "Focused",
-      title: "RWA FOCUSED",
-      description: "Designed for Real-World Applications",
-      imageSrc: Img,
-      energyUsage: "20%",
-    },
-    {
-      id: "Future",
-      title: "FUTURE PROOF",
-      description: "Built for Longevity",
-      imageSrc: Img,
-      energyUsage: "40%",
-    },
-    {
-      id: "Demand",
-      title: "ON DEMANDING",
-      description: "Scalable to Meet Demands",
-      imageSrc: Img,
-      energyUsage: "35%",
+      energyUsage: "Up to 2x ",
+      energyTag: " Faster Transaction Speeds",
     },
   ];
 
@@ -151,19 +164,19 @@ const Evolution = () => {
   );
 
   return (
-    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-40 mt-20">
-      <p className="text-5xl font-semibold leading-snug">
+    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-40 mt-16">
+      <p className="text-3xl md:text-4xl xl:text-5xl  font-semibold leading-snug">
         Designed for
         <br />
         Sustainable Evolution
       </p>
 
-      <div className="mt-12">
-        <ul className="flex flex-col md:flex-row space-x-0 md:space-x-8 justify-center ">
+      <div className="mt-6">
+        <ul className="flex flex-col md:flex-row space-x-0 md:space-x-3 lg:space-x-8 justify-center ">
           {sections.map((section) => (
             <li
               key={section.id}
-              className={`text-[#ffffff] border-[1px] border-[#72a861] text-lg lg:text-xl font-medium cursor-pointer px-8 py-2 rounded-full mt-4 md:mt-0
+              className={`text-[#ffffff] border-[1px] border-[#72a861] text-nowrap text-md  md:text-sm lg:text-lg xl:text-xl font-medium cursor-pointer px-8 py-2 md:px-6 md:py-2 lg:px-8 lg:py-2 rounded-full mt-4 md:mt-0
                 hover:scale-105 transition-all duration-300 ease-in-out ${
                   activeSection === section.id
                     ? "bg-gradient-to-r from-[#1C5A04] to-[#68A541]"
@@ -182,8 +195,10 @@ const Evolution = () => {
         <CardSection
           title={activeSectionContent.title}
           description={activeSectionContent.description}
+          para={activeSectionContent.para}
           imageSrc={activeSectionContent.imageSrc}
           energyUsage={activeSectionContent.energyUsage}
+          energyTag={activeSectionContent.energyTag}
         />
       )}
     </div>

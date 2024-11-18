@@ -1,12 +1,9 @@
 'use client';
-
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 import PerformanceGraph from './PerformanceGraph';
 import { getBlockHeight, getPriceChart } from '@/app/utils/axios';
 import { formatNumberWithCommas } from '@/app/utils/formatNumberWithCommas';
-
-// Define the types for the API responses
 interface BlockHeightData {
   poxMarketCap: string;
   poxRank: string;
@@ -15,17 +12,10 @@ interface BlockHeightData {
   txnVol24: string;
   txCount24: string;
 }
-
 interface PriceChartDataItem {
-  time: string;  // Assuming `time` is a string (e.g., ISO date string)
-  price: number; // Assuming `price` is a number
+  date: number;  // Assuming `time` is a string (e.g., ISO date string)
+  value: number; // Assuming `price` is a number
 }
-
-// interface PriceChartResponse {
-//   message: PriceChartDataItem[]; // The response contains an array of PriceChartDataItem
-// }
-
-// Define the DataItem type expected by PerformanceGraph
 interface DataItem {
   date: number;  // Date as a timestamp (number)
   value: number; // The price or other numerical value
@@ -56,8 +46,8 @@ const Performance = () => {
       try {
         const response = await getPriceChart();
         const mappedData = response?.message.map((item: PriceChartDataItem) => ({
-          date: new Date(item.time).getTime(),  // Convert string to timestamp (number)
-          value: item.price,                    // Assuming `price` is the value you want
+          date: new Date(item.date).getTime(),  // Convert string to timestamp (number)
+          value: item.value,                    // Assuming `price` is the value you want
         }));
         setChartData(mappedData || []);  // Ensure chartData is set correctly
       } catch (error) {
@@ -67,40 +57,35 @@ const Performance = () => {
 
     fetchBlockHeightData();
     getChartData();
-  }, []); // Empty dependency array ensures this effect runs once when the component mounts
+  }, []); 
 
   return (
     <div
-      className={`min-h-screen text-center px-2 md:px-4 lg:px-6 xl:px-40 mt-0 md:mt-32 ${inView ? 'animate-slideInFromLeft' : ''}`}
+      className={`min-h-screen text-center px-0 md:px-4 lg:px-6 xl:px-40 mt-0 md:mt-32  ${inView ? 'animate-slideInFromLeft' : ''}`}
       ref={ref} // Attach the ref to trigger the inView hook
     >
       {/* Title */}
-      <p className="text-3xl md:text-7xl lg:text-7xl xl:text-7xl 2xl:text-5xl md:h-28 lg:h-28 font-semibold">
-        POX Market Performance
+      <p className="text-3xl md:text-5xl lg:text-5xl xl:text-7xl 2xl:text-5xl md:h-28 lg:h-28 font-semibold">
+        Market Performance
       </p>
-      <p className="text-[#a7a4a4] text-center pb-12 text-xl font-semibold -mt-10">
-        Our Token (POX) is listed on Coinstore, kkoinbx, Lbank exchanges, POX, one of the most promising cryptos,<br />
-        connects millions of value investors across the globe.
-      </p>
-
       {/* Performance graph and stats */}
-      <div className="whitespace-nowrap flex flex-col md:flex-row lg:flex-row md:space-x-6 lg:space-x-6">
+      <div className="whitespace-nowrap flex flex-col md:flex-row lg:flex-row space-x-0 md:space-x-6 lg:space-x-6">
         <PerformanceGraph data={chartData} />
         <div className="flex flex-col space-y-6 md:space-y-0 lg:space-y-0 justify-around text-white">
-          <div className="mt-6 md:mt-0 lg:mt-0 flex flex-col border-[1px] border-gray-700 rounded-3xl px-16 py-9 bg-gradient-to-r from-[#25351f] to-[#77af54]">
-            <p className="font-bold text-3xl">
+          <div className="mt-6 md:mt-0 lg:mt-0 flex flex-col items-center rounded-3xl px-12 py-8 bg-black shadow-inner shadow-green-500">
+            <p className="font-bold text-xl md:text-3xl">
               ${blockHeightData?.poxMarketCap && formatNumberWithCommas(parseInt(blockHeightData.poxMarketCap))}
             </p>
             <p className="font-semibold text-xl whitespace-nowrap">Total Market Cap</p>
           </div>
-          <div className="flex flex-col border-[1px] border-gray-700 rounded-3xl px-16 py-9 bg-gradient-to-r from-[#25351f] to-[#77af54]">
-            <p className="font-bold text-3xl">
+          <div className="flex flex-col items-center border-[1px] border-gray-700 rounded-3xl px-12 py-8 bg-black shadow-inner shadow-green-500">
+            <p className="font-bold text-xl md:text-3xl">
               {blockHeightData?.poxRank && formatNumberWithCommas(parseInt(blockHeightData.poxRank))}
             </p>
             <p className="font-semibold text-xl">Global Rank</p>
           </div>
-          <div className="flex flex-col border-[1px] border-gray-700 rounded-3xl px-16 py-9 bg-gradient-to-r from-[#25351f] to-[#77af54]">
-            <p className="font-bold text-3xl">
+          <div className="flex flex-col items-center border-[1px] border-gray-700 rounded-3xl px-12 py-8 bg-black shadow-inner shadow-green-500">
+            <p className="font-bold text-xl md:text-3xl">
               {blockHeightData?.AccountHolder && formatNumberWithCommas(parseInt(blockHeightData.AccountHolder))}
             </p>
             <p className="font-semibold text-xl whitespace-nowrap">Accounts holding POX</p>
@@ -109,19 +94,19 @@ const Performance = () => {
       </div>
 
       {/* Additional stats */}
-      <div className="w-full flex flex-col md:flex-row lg:flex-row justify-between text-white py-6 space-y-4 md:space-y-0 md:space-x-4">
-        <div className="flex-1 flex flex-col border-y-[1px] border-gray-700 border-l-[1px] rounded-3xl md:rounded-r-none lg:rounded-r-none px-4 py-9 md:px-16 bg-gradient-to-r from-[#25351f] to-[#77af54]">
-          <p className="font-bold text-3xl">{blockHeightData?.poxPrice && blockHeightData.poxPrice}</p>
+      <div className="w-full flex flex-col item-center md:flex-row lg:flex-row justify-between text-white py-6 space-y-4 md:space-y-0 md:space-x-4">
+        <div className="flex-1 flex flex-col border-y-[1px] border-gray-700 border-l-[1px] rounded-3xl md:rounded-r-none lg:rounded-r-none px-4 py-8 md:px-12 lg:px-16 bg-black shadow-inner shadow-green-500">
+          <p className="font-bold text-xl md:text-3xl">{blockHeightData?.poxPrice && blockHeightData.poxPrice}</p>
           <p className="font-semibold text-xl">Current Price</p>
         </div>
-        <div className="flex-1 flex flex-col border-y-[1px] border-gray-700 px-4 py-9 rounded-3xl md:rounded-none lg:rounded-none md:px-16 bg-gradient-to-b from-[#25351f] to-[#77af54]">
-          <p className="font-bold text-3xl">
+        <div className="flex-1 flex flex-col items-center border-y-[1px] border-gray-700 px-4 py-8 rounded-3xl md:rounded-none lg:rounded-none md:px-12 lg:px-16 bg-black shadow-inner shadow-green-500">
+          <p className="font-bold text-xl md:text-3xl">
             {blockHeightData?.txnVol24 && formatNumberWithCommas(parseInt(blockHeightData.txnVol24))}
           </p>
           <p className="font-semibold text-xl">Transaction Volume (24hr)</p>
         </div>
-        <div className="flex-1 flex flex-col border-y-[1px] border-gray-700 border-r-[1px] rounded-3xl md:rounded-l-none lg:rounded-l-none px-4 py-9 md:px-16 bg-gradient-to-l from-[#25351f] to-[#77af54]">
-          <p className="font-bold text-3xl">
+        <div className="flex-1 flex flex-col items-center border-y-[1px] border-gray-700 border-r-[1px] rounded-3xl md:rounded-l-none lg:rounded-l-none px-4 py-8 md:px-12 lg:px-16 bg-black shadow-inner shadow-green-500">
+          <p className="font-bold text-xl md:text-3xl">
             {blockHeightData?.txCount24 && formatNumberWithCommas(parseInt(blockHeightData.txCount24))}
           </p>
           <p className="font-semibold text-xl">Transaction Count (24hr)</p>

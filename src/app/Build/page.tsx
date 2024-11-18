@@ -6,6 +6,7 @@ import { RiBuilding2Fill } from "react-icons/ri";
 import { SiVagrant } from "react-icons/si";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaArrowUpRightDots } from "react-icons/fa6";
+import { PulseBeams } from "../components/ui/PulseBeam";
 
 type CardProps = {
   title: string;
@@ -216,7 +217,11 @@ const page = () => {
         </div>
 
       </div>
-
+  
+  {/* pulsebeams */}
+  <div>
+    <PulseBeams />
+  </div>
       {/*Quick Links */}
       <div className="mt-16 md:mt-32 mb-8 md:mb-16">
         <p className="text-3xl font-semibold">Quick Links</p>
