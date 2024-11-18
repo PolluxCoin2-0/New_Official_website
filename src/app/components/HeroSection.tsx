@@ -152,7 +152,7 @@ export default function HeroSection() {
           }}
         >
           <Image
-            src="/token3.png"
+            src="/token3.svg"
             alt="Polluxcoin Logo"
             width={320}
             height={320}
