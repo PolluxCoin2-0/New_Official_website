@@ -42,7 +42,7 @@ export default function ThreeDCardsSection() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-8 lg:gap-6 w-full">
       {cards.map((card, index) => (
         <CardContainer key={index} className="inter-var w-full h-full">
-          <CardBody className="text-center relative group/card bg-black shadow-inner shadow-[#8af969] w-full h-full rounded-2xl p-6 md:p-8 lg:p-6 flex flex-col">
+          <CardBody className="text-center relative group/card bg-black border-[1px] border-[#818080] w-full h-full rounded-2xl p-6 md:p-8 lg:p-6 flex flex-col">
             <div className="flex justify-center">
               <CardItem translateZ={50} className="text-xl font-semibold text-white">
                 {card.title}

@@ -101,17 +101,17 @@ const Slider = () => {
           <div className="flex flex-row space-x-2 justify-end -mt-6">
             <button
               onClick={prevSlide}
-              className="px-1 py-1 md:px-2 md:py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
+              className="px-1 py-1 md:px-2 md:py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-[#8af969]  transition-all duration-300"
             >
-              <span className="text-white text-2xl font-bold">
+              <span className="text-white hover:text-black text-2xl font-bold">
                 <FaLongArrowAltLeft />
               </span>
             </button>
             <button
               onClick={nextSlide}
-              className="px-1 py-1 md:px-2 md:py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
+              className="px-1 py-1 md:px-2 md:py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-[#8af969] transition-all duration-300"
             >
-              <span className="text-white text-2xl font-bold">
+              <span className="text-white hover:text-black  text-2xl font-bold">
                 <FaLongArrowAltRight />
               </span>
             </button>
