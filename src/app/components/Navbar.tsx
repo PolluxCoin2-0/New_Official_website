@@ -45,7 +45,7 @@ export default function Navbar() {
     {
       title: "Developers",
       dropdown: [
-        { title: "Documentation", href: "https://docpolluxchain.netlify.app/" },
+        { title: "Documentation →", href: "https://docpolluxchain.netlify.app/" },
         { title: "Grant Program", href: "/Grant" },
         { title: "Build", href: "/Build" },
       ],
@@ -53,10 +53,10 @@ export default function Navbar() {
     {
       title: "Networks",
       dropdown: [
-        { title: "Validator App", href: "" },
-        { title: "Nominator App", href: "" },
-        { title: "Pollux Explorer", href: "" },
-        { title: "Pollux Staking", href: "" },
+        { title: "Validator App →", href: "" },
+        { title: "Nominator App →", href: "" },
+        { title: "Pollux Explorer →", href: "" },
+        { title: "Pollux Staking →", href: "" },
       ],
     },
     {
@@ -64,7 +64,7 @@ export default function Navbar() {
       dropdown: [
         { title: "Community", href: "/Community" },
         { title: "Partner With Us", href: "" },
-        { title: "Blog", href: "" },
+        { title: "Blog →", href: "" },
         { title: "News & Events", href: "/Events" },
       ],
     },
