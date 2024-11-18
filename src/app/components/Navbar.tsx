@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 
 
 
 // // // "use client";
-=======
-// // "use client";
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
 
 // // // import React, { useState, useCallback } from "react";
 
-<<<<<<< HEAD
 
 // // // import MobileNavbar from "./MobileNavbar";
 // // // import Link from "next/link";
@@ -25,22 +20,6 @@
 // // // import { ChevronDown } from "lucide-react";
 // // // import Image from "next/image"; // Import the Image component
 // // // // import { PopupWidget } from "react-calendly";
-=======
-// // import MobileNavbar from "./MobileNavbar";
-// // import Link from "next/link";
-// // import { Button } from "@/app/components/ui/button";
-// // import {
-// //   NavigationMenu,
-// //   NavigationMenuItem,
-// //   NavigationMenuList,
-// //   NavigationMenuTrigger,
-// //   NavigationMenuContent,
-// //   NavigationMenuLink,
-// // } from "@radix-ui/react-navigation-menu";
-// // import { ChevronDown } from "lucide-react";
-// // import Image from "next/image"; // Import the Image component
-// // // import { PopupWidget } from "react-calendly";
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
 
 // // // export default function Navbar() {
 // // //   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -68,7 +47,6 @@
 // // //   //   setShowCalendly(true); // Show Calendly popup on contact click
 // // //   // };
 
-<<<<<<< HEAD
 // // //   const menuItems = [
 // // //     { title: "Home", href: "/" },
 // // //     {
@@ -113,52 +91,6 @@
 // // //       ],
 // // //     },
 // // //   ];
-=======
-// //   const menuItems = [
-// //     { title: "Home", href: "/" },
-// //     {
-// //       title: "Developers",
-// //       dropdown: [
-// //         { title: "Documentation", href: "" },
-// //         { title: "Grant Program", href: "/Grant" },
-// //         { title: "Build", href: "" },
-// //       ],
-// //     },
-// //     {
-// //       title: "Networks",
-// //       dropdown: [
-// //         { title: "Validator App", href: "" },
-// //         { title: "Nominator App", href: "" },
-// //         { title: "Pollux Explorer", href: "" },
-// //         { title: "Pollux Staking", href: "" },
-// //       ],
-// //     },
-// //     {
-// //       title: "Community",
-// //       dropdown: [
-// //         { title: "Community", href: "/Community" },
-// //         { title: "Partner With Us", href: "" },
-// //         { title: "Blog", href: "" },
-// //         { title: "News & Events", href: "X" },
-// //       ],
-// //     },
-// //     { title: "Ecosystem",
-// //       dropdown: [
-// //         { title: "Wallet", href: "/Community" },
-// //         { title: "Explorer", href: "" },
-// //         { title: "Extension", href: "" },
-// //         { title: "Uvi Mining", href: "",  },
-// //       ],
-// //      },
-// //     {
-// //       title: "About",
-// //       dropdown: [
-// //         { title: "About Us", href: "/AboutUs" },
-// //         { title: "Contact", href: "" },
-// //       ],
-// //     },
-// //   ];
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
 
 // // //   return (
 // // //     <nav className="fixed top-0 left-0 w-full z-50">
@@ -179,7 +111,6 @@
 
 // // //         </div>
 
-<<<<<<< HEAD
 // // //         {/* Center: Navigation Menu */}
 // // //         <NavigationMenu className="flex space-x-6">
 // // //           <NavigationMenuList className="flex space-x-14">
@@ -201,29 +132,6 @@
 // // //                     />
 // // //                   )}
 // // //                 </NavigationMenuTrigger>
-=======
-// //         {/* Center: Navigation Menu */}
-// //         <NavigationMenu className="flex space-x-6">
-// //           <NavigationMenuList className="flex space-x-14">
-// //             {menuItems.map((item, index) => (
-// //               <NavigationMenuItem
-// //                 key={index}
-// //                 className="relative group"
-// //                 onMouseEnter={() => handleMouseEnter(index)}
-// //                 onMouseLeave={handleMouseLeave}
-// //               >
-// //                 <NavigationMenuTrigger className="flex items-center space-x-1 text-white hover:text-[#8af969]">
-// //                   <span>{item.title}</span>
-// //                   {item.dropdown && (
-// //                     <ChevronDown
-// //                       className={`transition-transform duration-300 ${
-// //                         openDropdownIndex === index ? "rotate-180" : ""
-// //                       }`}
-// //                       size={16}
-// //                     />
-// //                   )}
-// //                 </NavigationMenuTrigger>
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
 
 // // //                 {/* Dropdown Menu */}
 // // //                 {item.dropdown && openDropdownIndex === index && (
@@ -296,12 +204,8 @@
 // // //   );
 // // // }
 
-<<<<<<< HEAD
 
 // // // "use client";
-=======
-// // "use client";
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
 
 // // // import React, { useState, useCallback } from "react";
 // // // import MobileNavbar from "./MobileNavbar";
@@ -486,16 +390,12 @@
 // // //   );
 // // // }
 
-<<<<<<< HEAD
 
 
 
 
 
 // // // "use client";
-=======
-// // "use client";
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
 
 // // // import React, { useState, useCallback } from "react";
 // // // import MobileNavbar from "./MobileNavbar";
@@ -952,11 +852,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-2 md:px-4 lg:px-6 xl:px-64 ">
       {/* Desktop Navbar (lg and larger) */}
-<<<<<<< HEAD
       <div className="hidden lg:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 py-2">
-=======
-      <div className="hidden lg:flex flex-row items-center justify-between bg-black backdrop-blur-sm bg-opacity-30 py-2 ">
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
         {/* Left: Logo */}
         <div className="cursor-pointer">
           <Link href="/">
@@ -1032,7 +928,6 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-<<<<<<< HEAD
         {/* Right: Social Media Icons and Get $POLLUX Button */}
         <div className="flex items-center space-x-4">
           {/* Social Media Icons */}
@@ -1066,35 +961,6 @@ export default function Navbar() {
             )}
           </Button>
         </div>
-=======
-        
-
-        {/* Right: Get $POLLUX Button */}
-        <Button
-          variant="primary"
-          className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-10 w-36 px-4"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {isHovered ? (
-            <Image
-              src="/polluxicon.png"
-              alt="Pollux Icon"
-              width={24}
-              height={24}
-              className="h-6 w-6"
-            />
-          ) : (
-            <div className="flex flex-row items-center">
-              <p className="text-md font-bold">Get</p>
-              <p>
-                <CgDollar />
-              </p>
-              <p className="text-md font-bold">POX</p>
-            </div>
-          )}
-        </Button>
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
       </div>
 
       {/* Mobile Navbar (For 1024px and 768px screens) */}
