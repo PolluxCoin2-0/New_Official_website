@@ -3,7 +3,7 @@ import Image from "next/image";
 import polluxLogo from "../../../public/polluxlogowhite.png";
 import { BsTwitterX } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
-import { SiDiscord } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -56,7 +56,7 @@ export default function Footer() {
             <FaTelegramPlane size={28} />
           </a>
           <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-            <SiDiscord size={28} />
+            <SiInstagram size={28} />
           </a>
         </div>
       </div>

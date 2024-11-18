@@ -37,7 +37,7 @@ export default function ThreeDCardsSection() {
   ];
 
   return (
-    <section className="my-12 px-2 md:px-4 lg:px-6 xl:px-40 flex flex-col justify-center items-center w-full">
+    <section className="my-12 px-2 md:px-4 lg:px-6 xl:px-20 flex flex-col justify-center items-center w-full">
         <p className="text-3xl lg:text-4xl font-semibold text-center mt-8 mb-8 leading-snug">Empowering developers and communities <br/>to build, connect, and thrive.</p>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-8 lg:gap-6 w-full">
       {cards.map((card, index) => (

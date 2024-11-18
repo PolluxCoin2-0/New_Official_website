@@ -61,7 +61,7 @@ const Performance = () => {
 
   return (
     <div
-      className={`min-h-screen text-center px-0 md:px-4 lg:px-6 xl:px-40 mt-0 md:mt-32  ${inView ? 'animate-slideInFromLeft' : ''}`}
+      className={`min-h-screen text-center px-0 md:px-4 lg:px-6 xl:px-20 mt-0 md:mt-32  ${inView ? 'animate-slideInFromLeft' : ''}`}
       ref={ref} // Attach the ref to trigger the inView hook
     >
       {/* Title */}
