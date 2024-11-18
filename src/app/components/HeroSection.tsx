@@ -185,7 +185,7 @@ export default function HeroSection() {
 
 
 
-        <Link href="/Build" passHref>
+        <Link href="https://docpolluxchain.netlify.app/" passHref>
         <button className=" flex items-center justify-center text-lg border-[1px] border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black w-full sm:w-auto">
           <MdDocumentScanner className="mr-2" size={20} /> EXPLORE DOCS
         </button>
