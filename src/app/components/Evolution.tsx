@@ -164,7 +164,7 @@ const Evolution = () => {
   );
 
   return (
-    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-40 mt-16 2xl:mt-0">
+    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-40 mt-16 2xl:mt-16">
       <p className="text-3xl md:text-4xl xl:text-5xl  font-semibold leading-snug">
         Designed for
         <br />
