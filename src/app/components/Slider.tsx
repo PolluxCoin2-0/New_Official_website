@@ -70,7 +70,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="mt-24 mb-24 px-2 md:px-4 lg:px-6 xl:px-40 relative bg-gradient-to-r from-black/30 to-black/60  overflow-hidden shadow-lg"
+    <div className="mt-24 mb-24 px-2 md:px-4 lg:px-6 xl:px-40 relative bg-gradient-to-r from-black/30 to-black/60  overflow-hidden shadow-lg pt-4 pb-4"
     >
       {/* Slider Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center p-4 md:p-8 border border-[#5a5858] w-full"
@@ -96,12 +96,12 @@ const Slider = () => {
         </div>
 
         {/* Content */}
-        <div className="w-full lg:w-[60%] p-0 md:p-6 text-white rounded-lg shadow-lg mt-8 md:mt-6 lg:mt-0 ">
+        <div className="w-full lg:w-[60%] p-0 md:p-6 text-white rounded-lg shadow-lg mt-12 mb-8 md:mt-6 lg:mt-0 ">
           {/* Navigation Arrows inside the border */}
           <div className="flex flex-row space-x-2 justify-end -mt-6">
             <button
               onClick={prevSlide}
-              className="px-2 py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
+              className="px-1 py-1 md:px-2 md:py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
             >
               <span className="text-white text-2xl font-bold">
                 <FaLongArrowAltLeft />
@@ -109,7 +109,7 @@ const Slider = () => {
             </button>
             <button
               onClick={nextSlide}
-              className="px-2 py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
+              className="px-1 py-1 md:px-2 md:py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-green-400 transition-all duration-300"
             >
               <span className="text-white text-2xl font-bold">
                 <FaLongArrowAltRight />
@@ -121,7 +121,7 @@ const Slider = () => {
           <p className="text-md md:text-lg text-[#a7a4a4] mb-6">{slides[currentSlide].description}</p>
           <a
             href={slides[currentSlide].buttonLink}
-            className="text-center text-lg font-medium bg-gradient-to-r from-[#1C5A04] to-[#68A541] px-12 rounded-2xl py-2 "
+            className="text-center text-lg font-medium bg-[#8af969] text-black px-12 rounded-2xl py-2 "
           >
             {slides[currentSlide].buttonText}
           </a>

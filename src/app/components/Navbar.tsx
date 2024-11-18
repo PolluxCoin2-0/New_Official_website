@@ -404,7 +404,7 @@ export default function Navbar() {
           {/* Get $POLLUX Button */}
           <Button
             variant="primary"
-            className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all duration-300 relative flex items-center justify-center h-10 w-36 px-4"
+            className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all rounded-xl duration-300 relative flex items-center justify-center h-10 w-36 px-4"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >

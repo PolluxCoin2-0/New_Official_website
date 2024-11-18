@@ -123,7 +123,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center space-y-4 px-0 sm:px-8 md:px-16 bg-transparent">
+    <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center space-y-4 px-0 sm:px-8 md:px-4 bg-transparent">
       {/* Logo with Tilt Effect */}
 
       {/* Logo with Continuous Rotation and Gradient Hover Effect */}
