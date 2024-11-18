@@ -10,17 +10,18 @@ type Stat = {
   icon: string;
 };
 
+
+
 const initialStats: Stat[] = [
   { label: "No. of Nodes", value: "", icon: "/nodes.svg" },
-  { label: "Avg Block Time", value: "26 Sec", icon: "/avgtime.svg" },
+  { label: "Avg Block Time", value: "3.00 Sec", icon: "/avgtime.svg" },
   { label: "TPS", value: "500+", icon: "/tpc.svg" },
   // { label: "Latest Block", value: "3,777,402", icon: "/blocks.svg" },
 ];
 
 export default function StatsGrid() {
   const [stats, setStats] = useState<Stat[]>(initialStats); // Using state for stats
-  const [data, setData] = useState<any>(null);
-
+  // const [data, setData] = useState<NodeStatusData | null>(null); // State to store the fetched data, or null initially
   // Fetch block height data from API
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +39,7 @@ export default function StatsGrid() {
           });
         });
 
-        setData(data?.message); // Storing full response if needed
+        // setData(data?.message); // Storing full response if needed
       } catch (error) {
         console.error(error);
       }

@@ -8,54 +8,54 @@ import { MdOutlineRestartAlt } from "react-icons/md";
 import { MdDocumentScanner } from "react-icons/md";
 import Link from "next/link"; // Import Link
 
-const AnimatedText = () => {
-  const words = ["POLLUXCHAIN", "REDEFINING", "DECENTRALIZED", "SOLUTION"];
-  const colors = [
-    "text-[#8af969]",
-    "text-[#8af969]",
-    "text-[#8af969]",
-    "text-[#8af969]",
-    "text-[#8af969]",
-  ];
-  const [index, setIndex] = useState(0);
-  const [scale, setScale] = useState(1);
-  const [opacity, setOpacity] = useState(1);
+// const AnimatedText = () => {
+//   const words = [ "REDEFINING", "DECENTRALIZED", "SOLUTION"];
+//   const colors = [
+//     "text-[#8af969]",
+//     "text-[#8af969]",
+//     "text-[#8af969]",
+//     "text-[#8af969]",
+//     "text-[#8af969]",
+//   ];
+//   const [index, setIndex] = useState(0);
+//   const [scale, setScale] = useState(1);
+//   const [opacity, setOpacity] = useState(1);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000);
+//   useEffect(() => {
+//     const intervalId = setInterval(() => {
+//       setIndex((prevIndex) => (prevIndex + 1) % words.length);
+//     }, 2000);
 
-    return () => clearInterval(intervalId);
-  }, [words.length]);
+//     return () => clearInterval(intervalId);
+//   }, [words.length]);
 
-  useEffect(() => {
-    setOpacity(0);
-    setScale(0.8);
+//   useEffect(() => {
+//     setOpacity(0);
+//     setScale(0.8);
 
-    const fadeIn = setTimeout(() => {
-      setOpacity(1);
-      setScale(1);
-    }, 400);
+//     const fadeIn = setTimeout(() => {
+//       setOpacity(1);
+//       setScale(1);
+//     }, 400);
 
-    return () => clearTimeout(fadeIn);
-  }, [index]);
+//     return () => clearTimeout(fadeIn);
+//   }, [index]);
 
-  return (
-    <p className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-6">
-      {" "}
-      <span
-        className={`${colors[index]} transition-all duration-500 inline-block`}
-        style={{
-          transform: `scale(${scale})`,
-          opacity: opacity,
-        }}
-      >
-        {words[index]}
-      </span>{" "}
-    </p>
-  );
-};
+//   return (
+//     <p className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-6">
+//       {" "}
+//       <span
+//         className={`${colors[index]} transition-all duration-500 inline-block`}
+//         style={{
+//           transform: `scale(${scale})`,
+//           opacity: opacity,
+//         }}
+//       >
+//         {words[index]}
+//       </span>{" "}
+//     </p>
+//   );
+// };
 
 const AnimatedText2 = () => {
   const words = ["SCALABILITY", "INNOVATION", "SEAMLESS", "WEB3 INTEGRATION"];
@@ -121,6 +121,10 @@ export default function HeroSection() {
     {
       text: "OF",
     },
+    {
+      text: "POLLUXCHAIN",
+      className: "text-[#8af969]",
+    },
   ];
 
   return (
@@ -158,16 +162,16 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Typewriter effect for nn BUILD AWESOME WITH POLLUX */}
-      <div className="flex flex-col 2xl:flex-row items-center">
+     
         <TypewriterEffect
           words={words}
           className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-6"
         />
-        <AnimatedText />
-      </div>
+        {/* <AnimatedText /> */}
+     
 
       {/* Headline: Decentralize the web */}
-      <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-[#fff] mt-12">
+      <h2 className="text-xl sm:text-2xl lg:text-xl font-medium text-[#fff] mt-12">
         Your gateway to a hybrid Layer 1 blockchain designed for{" "}
       </h2>
       <AnimatedText2 />

@@ -25,7 +25,7 @@ const Slider = () => {
       description:
         "The Pollux Ecosystem is on the cusp of a significant milestone as Pollux Mainnet Beta goes live. This event marks a crucial step in the evolution of Pollux vision.",
       buttonText: "More →",
-      buttonLink: "/learn-more",
+      buttonLink: "/Grant",
     },
     {
       imageSrc: "/banner.jpg", // Replace with your image path
@@ -34,7 +34,7 @@ const Slider = () => {
       description:
         "As Pollux Mainnet Beta progresses, we will see the emergence of new decentralized applications that align with the sustainable ethos of Pollux.",
       buttonText: "More →",
-      buttonLink: "/explore-more",
+      buttonLink: "/Grant",
     },
     {
       imageSrc: "/banner.jpg", // Replace with your image path
@@ -43,7 +43,7 @@ const Slider = () => {
       description:
         "With Pollux focus on sustainability, the upcoming mainnet will pave the way for a decentralized future with a positive environmental impact.",
       buttonText: "More →",
-      buttonLink: "/join-us",
+      buttonLink: "/Grant",
     },
   ];
 
