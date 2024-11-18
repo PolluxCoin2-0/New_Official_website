@@ -97,20 +97,16 @@ import HeroSection from './components/HeroSection';
 import StatsGrid from './components/StatsGrid';
 import ThreeDCardsSection from './components/ThreeDCardsSection';
 // import ImageCarousel from './components/ui/ImageCarousel';
-<<<<<<< HEAD
 // import { Preview } from "./components/Preview";
 import { PulseBeams } from "@/app/components/ui/PulseBeam";  // Adjust the path as necessary
-=======
 import Evolution from './components/Evolution';
 import Performance from './components/Performance';
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
 import Slider from "./components/Slider";
 
 export default function Home() {
   return (
     <div className="px-4 sm:px-12 lg:px-24">
       <HeroSection />
-<<<<<<< HEAD
       
       {/* Stats Grid Section */}
       <div className="mt-12">
@@ -145,14 +141,6 @@ export default function Home() {
       {/* <div className="mt-12">
         <ImageCarousel />
       </div> */}
-=======
-      <StatsGrid />
-      <ThreeDCardsSection />
-      <Evolution/>
-      <Performance />
-      <Slider />
-      {/* <ImageCarousel /> */}
->>>>>>> e79cbae308139e600e828d082f2d708574d4db93
     </div>
   );
 }
