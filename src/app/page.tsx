@@ -99,6 +99,8 @@ import ThreeDCardsSection from './components/ThreeDCardsSection';
 // import ImageCarousel from './components/ui/ImageCarousel';
 // import { Preview } from "./components/Preview";
 import { PulseBeams } from "@/app/components/ui/PulseBeam";  // Adjust the path as necessary
+import Evolution from './components/Evolution';
+import Performance from './components/Performance';
 import Slider from "./components/Slider";
 
 export default function Home() {
@@ -126,8 +128,8 @@ export default function Home() {
       <div className="mt-12">
         <PulseBeams />
       </div>
-
-
+       <Evolution/>
+       <Performance/>
       {/* Preview Section */}
       {/* <div className="mt-12">
         <Preview />
