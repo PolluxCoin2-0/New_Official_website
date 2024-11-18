@@ -32,7 +32,7 @@ export default function StatsGrid() {
   };
 
   return (
-    <div className="px-0 md:px-4 lg:px-6 xl:px-40 py-4 mt-8">
+    <div className="px-0 md:px-4 lg:px-6 xl:px-20 py-4 mt-8">
     
       {/* Grid layout with responsive classes */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-12 ">

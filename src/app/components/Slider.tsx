@@ -70,7 +70,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="mt-24 mb-24 px-2 md:px-4 lg:px-6 xl:px-40 relative bg-gradient-to-r from-black/30 to-black/60  overflow-hidden shadow-lg pt-4 pb-4"
+    <div className="mt-24 mb-24 px-2 md:px-4 lg:px-6 xl:px-20 relative bg-gradient-to-r from-black/30 to-black/60  overflow-hidden shadow-lg pt-4 pb-4"
     >
       {/* Slider Content */}
       <div className="flex flex-col lg:flex-row items-center justify-center p-4 md:p-8 border border-[#5a5858] w-full"
