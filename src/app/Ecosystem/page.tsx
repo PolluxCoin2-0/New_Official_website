@@ -35,8 +35,8 @@ const page = () => {
             const translateX = distances[index]; // Use the adjusted distance
 
             // Line style to create a radial line from the center to each image
-            const lineStyle = {
-              position: "absolute",
+            const lineStyle: React.CSSProperties = {
+              position: "absolute", // Explicitly specify position as 'absolute'
               top: "50%",
               left: "50%",
               width: "2px", // Line thickness
@@ -52,9 +52,7 @@ const page = () => {
             };
 
             // Image transform to place it at the tip of the line
-            const imageTransform = `rotate(${
-              angle - 90
-            }deg) translateX(${translateX}px)`;
+            const imageTransform = `rotate(${angle - 90}deg) translateX(${translateX}px)`;
 
             return (
               <React.Fragment key={index}>

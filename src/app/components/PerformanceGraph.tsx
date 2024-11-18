@@ -24,10 +24,14 @@ interface PerformanceGraphProps {
 const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ data }) => {
  useEffect(() => {
     // Root element
-    const root = am5.Root.new("chartdiv");
-    root._logo.dispose();
-    root.setThemes([am5themes_Animated.new(root), am5themes_Responsive.new(root)]);
-    root.interfaceColors.set("grid", am5.color("#FFFFFF"));
+    // Root element
+const root = am5.Root.new("chartdiv");
+if (root._logo) {
+  root._logo.dispose(); // Only call dispose if _logo exists
+}
+root.setThemes([am5themes_Animated.new(root), am5themes_Responsive.new(root)]);
+root.interfaceColors.set("grid", am5.color("#FFFFFF"));
+
 
     // Chart setup
     const chart = root.container.children.push(
