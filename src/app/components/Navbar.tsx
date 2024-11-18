@@ -18,7 +18,6 @@ import { BsTwitterX } from "react-icons/bs";
 
 // Importing social media icons from react-icons
 import Image from "next/image";
-import { CgDollar } from "react-icons/cg";
 
 export default function Navbar() {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
