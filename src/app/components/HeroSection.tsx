@@ -174,7 +174,7 @@ export default function HeroSection() {
 
       {/* Buttons Section */}
       <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center items-center">
-        
+      <Link href="/Build" passHref>
         <button className="flex items-center justify-center text-lg font-semibold px-6 py-3 rounded-xl bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] transition-all w-full sm:w-auto">
           <MdOutlineRestartAlt className="mr-2" size={24} /> GET STARTED
         </button>
