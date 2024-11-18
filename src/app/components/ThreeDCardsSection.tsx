@@ -11,28 +11,28 @@ export default function ThreeDCardsSection() {
       tag: "Reimagine blockchain potential",
       description: "Transform ideas into impactful dApps with PolluxChain developer-friendly ecosystem.",
       image: "/ele2.svg", // Relative path from the public directory
-      link: "https://example.com/innovate",
+      link: "/Events",
     },
     {
       title: "Protect	",
       tag: "Strengthen your applications",
       description: "Integrate advanced security measures to protect your users and data.",
       image: "/ele1.svg", // Relative path from the public directory
-      link: "https://example.com/secure",
+      link:"/Events",
     },
     {
       title: "Expand	",
       tag: "Expand without limits",
       description: "Build on a platform designed to support your growth, no matter the scale. ",
       image: "/ele3.svg", // Relative path from the public directory
-      link: "https://example.com/scale",
+      link: "/Events",
     },
     {
       title: "Optimize",
       tag: "Achieve peak performance",
       description: "Harness PolluxChain’s speed and efficiency to power high-performance decentralized solutions. ",
       image: "/ele3.svg", // Relative path from the public directory
-      link: "https://example.com/scale",
+      link: "/Events",
     },
   ];
 
@@ -41,7 +41,7 @@ export default function ThreeDCardsSection() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-8 lg:gap-6 w-full">
       {cards.map((card, index) => (
         <CardContainer key={index} className="inter-var w-full h-full">
-          <CardBody className="text-center relative group/card bg-black shadow-inner shadow-green-500 w-full h-full rounded-2xl p-6 md:p-8 lg:p-6 flex flex-col">
+          <CardBody className="text-center relative group/card bg-black shadow-inner shadow-[#8af969] w-full h-full rounded-2xl p-6 md:p-8 lg:p-6 flex flex-col">
             <div className="flex justify-center">
               <CardItem translateZ={50} className="text-xl font-semibold text-white">
                 {card.title}

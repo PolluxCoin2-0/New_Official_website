@@ -65,7 +65,7 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, para, ima
       </div>
 
       <div className="text-start mt-8 md:mt-0">
-        <p className=" inline-block text-center text-md md:text-xl font-medium bg-gradient-to-r from-[#1C5A04] to-[#68A541] px-4 md:px-8 rounded-2xl py-2 truncate ">
+        <p className=" inline-block text-center text-md md:text-xl font-medium bg-[#8af969] px-4 md:px-8 rounded-2xl py-2 truncate text-black ">
           {title}
         </p>
         <p className="text-2xl font-semibold pt-4">{description}</p>
@@ -164,7 +164,7 @@ const Evolution = () => {
   );
 
   return (
-    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-40 mt-16">
+    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-40 mt-16 2xl:mt-0">
       <p className="text-3xl md:text-4xl xl:text-5xl  font-semibold leading-snug">
         Designed for
         <br />
@@ -176,10 +176,10 @@ const Evolution = () => {
           {sections.map((section) => (
             <li
               key={section.id}
-              className={`text-[#ffffff] border-[1px] border-[#72a861] text-nowrap text-md  md:text-sm lg:text-lg xl:text-xl font-medium cursor-pointer px-8 py-2 md:px-6 md:py-2 lg:px-8 lg:py-2 rounded-full mt-4 md:mt-0
+              className={`text-[#ffffff] border-[1px] border-[#72a861] text-nowrap text-md   md:text-sm lg:text-lg xl:text-xl font-medium cursor-pointer px-8 py-2 md:px-6 md:py-2 lg:px-8 lg:py-2 rounded-full mt-4 md:mt-0
                 hover:scale-105 transition-all duration-300 ease-in-out ${
                   activeSection === section.id
-                    ? "bg-gradient-to-r from-[#1C5A04] to-[#68A541]"
+                    ? "bg-[#8af969] text-black "
                     : ""
                 }`}
               onClick={() => toggleSection(section.id)}
