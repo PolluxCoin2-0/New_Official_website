@@ -1,7 +1,8 @@
 'use client';
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image'; // Import Image from next/image
+import { getNodeStatusData } from "../utils/axios";
 
 type Stat = {
   label: string;
@@ -9,14 +10,42 @@ type Stat = {
   icon: string;
 };
 
-const stats: Stat[] = [
-  { label: "No. of Nodes", value: "19", icon: "/nodes.svg" },
-  { label: "Avg Block Time", value: "3.00 Sec", icon: "/avgtime.svg" },
-  { label: "TPS", value: "1,500+", icon: "/tpc.svg" },
-  { label: "Latest Block", value: "3,777,402", icon: "/blocks.svg" },
+const initialStats: Stat[] = [
+  { label: "No. of Nodes", value: "", icon: "/nodes.svg" },
+  { label: "Avg Block Time", value: "26 Sec", icon: "/avgtime.svg" },
+  { label: "TPS", value: "500+", icon: "/tpc.svg" },
+  // { label: "Latest Block", value: "3,777,402", icon: "/blocks.svg" },
 ];
 
 export default function StatsGrid() {
+  const [stats, setStats] = useState<Stat[]>(initialStats); // Using state for stats
+  const [data, setData] = useState<any>(null);
+
+  // Fetch block height data from API
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getNodeStatusData();
+        console.log("nodeData: ", data);
+
+        // Dynamically update the "No. of Nodes" based on the API response
+        setStats((prevStats) => {
+          return prevStats.map((stat) => {
+            if (stat.label === "No. of Nodes") {
+              return { ...stat, value: data?.message?.nodes || "N/A" }; // Safely accessing nodes from API
+            }
+            return stat;
+          });
+        });
+
+        setData(data?.message); // Storing full response if needed
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array to run the effect once on component mount
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, element: HTMLDivElement) => {
     const { offsetWidth: width, offsetHeight: height } = element;
     const { clientX: mouseX, clientY: mouseY } = e;
@@ -35,7 +64,7 @@ export default function StatsGrid() {
     <div className="px-0 md:px-4 lg:px-6 xl:px-20 py-4 mt-8">
     
       {/* Grid layout with responsive classes */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-12 ">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 ">
         {stats.map((stat, idx) => (
           <div
             key={idx}

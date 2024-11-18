@@ -18,3 +18,12 @@ export const getPriceChart=async()=>{
         console.log(error);
     }
 }
+
+export const getNodeStatusData = async() => {
+    try {
+        const response = await axios.get("https://node.poxscan.io/api/status");
+        return response?.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
