@@ -7,6 +7,7 @@ import banner2Img from "../../../public/banner 2.jpg";
 import Image from "next/image";
 import Calendly from "../Calendly/page";
 import JoinUs from "../components/ui/JoinUs";
+import applyImg from "../../../public/apply.png";
 
 const Page = () => {
   const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
@@ -64,7 +65,7 @@ const Page = () => {
             Pollux Grant Program 
 
             </p>
-            <p className="text-md lg:text-lg font-medium mt-6 text-justify text-[#a7a4a4]">
+            <p className="text-md lg:text-lg font-medium mt-6 text-justify text-[#ccc7c7]">
             The $5 Million Pollux Grants Program is designed to support and fund groundbreaking projects within the PolluxChain ecosystem. Our mission is to empower developers to create and launch applications on PolluxChain, accelerating the adoption and growth of decentralized technologies. This program seeks to cultivate a dynamic community of developers and innovators by providing the resources and support essential for their success.
 
 
@@ -111,9 +112,11 @@ const Page = () => {
             The Application Journey 
 
             </p>
-            <p className="text-start text-md lg:text-lg font-medium mt-6 text-[#8d8b8b]">
+            <p className="text-md lg:text-lg font-medium mt-6 text-[#ccc7c7] text-justify leading-relaxed">
             PolluxChain grant program offers prospective projects a comprehensive  and thorough application process. With grant amounts ranging from $50,000 to $5,000,000, 
-            the program is designed to support projects at different stages of growth and innovation. What makes PolluxChain initiative unique is the flexibility of 
+            the program is designed to support projects at different stages of growth and innovation. <br/>
+            <br/>
+            What makes PolluxChain initiative unique is the flexibility of 
             receiving grants in the native $POX Token, allowing applicants to choose the option that best fits their strategic needs and objectives.
             </p>
           </div>
@@ -121,12 +124,20 @@ const Page = () => {
       </div>
 
       <div className="flex flex-col md:flex-row  space-x-0 md:space-x-8 justify-between items-baseline  pb-12 border-b-[1px] border-[#504f4f] w-full overflow-hidden">
-        <div className="w-full md:w-[30%] flex justify-start">
-          <p className="text-2xl lg:text-3xl font-semibold">How To Apply ?          </p>
+        <div className="w-full md:w-[30%] flex flex-col items-start">
+          <p className="text-2xl lg:text-4xl font-semibold">How To Apply ? </p>
+          <Image
+              src={applyImg}
+              alt="banner-image"
+              width={0}
+              height={0}
+              style={{ width: "60%" }} // Set default width to 100% for mobile
+              className="rounded-2xl w-full md:w-[70%] mt-20" // Use Tailwind's responsive width utilities
+            />
         </div>
 
         <div className="flex flex-col justify-start items-start w-full lg:w-[70%] ">
-          <div className="text-start text-md lg:text-lg font-medium mt-6 text-[#ccc7c7]">
+          <div className="text-md lg:text-lg font-medium mt-6 md:mt-0 text-[#ccc7c7] text-justify leading-relaxed">
             <p>
             Applicants can seamlessly navigate the grant application process through our dedicated PolluxChain portal. Visit today to get started. Comprehensive guidelines and eligibility criteria are provided to help you prepare your submission effectively.
 
@@ -136,7 +147,7 @@ const Page = () => {
 
             </p>
             <p className="mt-5">
-              *Explore our milestone-based funding strategy for more details.
+              Explore our milestone-based funding strategy for more details.
 
             </p>
           </div>

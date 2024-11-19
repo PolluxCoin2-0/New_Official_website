@@ -64,16 +64,7 @@ const events = [
     category: "Twitter Space",
     link: "/event/ama",
   },
-  {
-    image: banner1Img,
-    title: "Mainnet Launch Celebration",
-    description:
-      "We are gearing up for our highly anticipated Mainnet launch and would love for you to join us in celebrating this exciting milestone.",
-    dateStart: "15/11/2024",
-    dateEnd: "16/11/2024",
-    category: "Launch Event",
-    link: "/event/mainnet-launch",
-  },
+  
 ];
 
 interface CardData {
@@ -169,7 +160,7 @@ const Page = () => {
         scale={1.04}
       >
         <div
-          className="flex flex-col md:flex-row justify-start items-center w-full mt-8 md:mt-16 p-2 md:p-4 lg:p-10 "
+          className="flex flex-col md:flex-row justify-start items-center w-full mt-8 md:mt-12 p-2 md:p-4 lg:p-10 "
           onMouseMove={(e: React.MouseEvent<HTMLDivElement>) =>
             handleMouseMove(e)
           }
@@ -241,7 +232,7 @@ const Page = () => {
 
 
        {/* Blogs Section */}
-       <p className="mt-16 md:mt-20 lg:mt-32 mb-8 md:mb-16 text-start text-4xl font-semibold">
+       <p className="mt-16 md:mt-24  mb-8 md:mb-16 text-start text-4xl font-semibold">
         Blogs
       </p>
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-6 lg:space-x-12 w-full">
@@ -249,7 +240,7 @@ const Page = () => {
       </div>
 
     {/* Events Section */}
-    <p className="mt-16 md:mt-20 lg:mt-32 mb-8 md:mb-16 text-start text-4xl font-semibold">
+    <p className="mt-16 md:mt-24 mb-8 md:mb-16 text-start text-4xl font-semibold">
         Events
       </p>
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-6 lg:space-x-12 w-full">

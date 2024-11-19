@@ -80,14 +80,15 @@ export default function ThreeDCardsSection() {
             </div>
   
             <CardItem translateZ={100} className="w-full h-48 mt-6 flex justify-center items-center">
-              <Image
-                src={card.image}
-                alt={`${card.title} image`}
-                width={250}
-                height={150}
-                className="h-65 w-40 object-cover rounded-xl group-hover/card:shadow-xl"
-              />
-            </CardItem>
+  <Image
+    src={card.image}
+    alt={`${card.title} image`}
+    width={250}
+    height={150}
+    className="h-65 w-40 object-cover rounded-xl group-hover/card:scale-105 group-hover/card:shadow-xl transition-transform duration-200"
+  />
+</CardItem>
+
   
             <CardItem translateZ={60} className="text-lg text-neutral-500 mt-2 break-words overflow-hidden text-md font-medium">
               {card.description}

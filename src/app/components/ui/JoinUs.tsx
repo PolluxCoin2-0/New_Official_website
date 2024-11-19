@@ -15,16 +15,16 @@ const JoinUs = () => {
         </p>
 
         <div className="flex flex-col lg:flex-row justify-between  space-x-0 lg:space-x-24 mt-8 md:mt-16 w-full">
-          <div className="rounded-2xl text-start p-4 md:p-6 w-full lg:w-[50%] transform transition-transform duration-200 hover:scale-105 bg-black border-[1px] ">
+          <div className="rounded-2xl text-start p-4 md:p-6 w-full lg:w-[50%] transform transition-transform duration-200 hover:scale-105 bg-black border-[1px] border-[#504f4f] ">
             <Image
               src={connectImg}
               alt="banner-image"
               width={0}
               height={0}
-              style={{ width: "8%" }}
+              style={{ width: "10%" }}
               className="rounded-2xl"
             />
-            <p className="text-2xl font-semibold pt-4">Reach Out</p>
+            <p className="text-2xl font-semibold pt-3">Reach Out</p>
             <p className="text-lg font-medium pt-2 text-[#a7a4a4]">
               Lorem ipsum, dolor sit amet adipisicing elit. Praesentium,
               dolores.
@@ -40,16 +40,16 @@ const JoinUs = () => {
             </button>
           </div>
 
-          <div className="border-[1px] bg-black rounded-2xl  text-start p-4 md:p-6 w-full lg:w-[50%] transform transition-transform duration-200 hover:scale-105 mt-10 md:mt-5 lg:mt-0">
+          <div className="border-[1px] border-[#504f4f] bg-black rounded-2xl  text-start p-4 md:p-6 w-full lg:w-[50%] transform transition-transform duration-200 hover:scale-105 mt-10 md:mt-5 lg:mt-0">
             <Image
               src={documentImg}
               alt="banner-image"
               width={0}
               height={0}
-              style={{ width: "8%" }}
+              style={{ width: "10%" }}
               className="rounded-2xl"
             />
-            <p className="text-2xl font-semibold pt-4">Start Building</p>
+            <p className="text-2xl font-semibold pt-3">Start Building</p>
             <p className="text-lg font-medium pt-2 text-[#a7a4a4]">
               Lorem ipsum, dolor sit amet adipisicing elit. Praesentium,
               dolores.
@@ -67,16 +67,16 @@ const JoinUs = () => {
         </div>
 
         <div className="w-full  flex justify-center mt-10 md:mt-5 lg:mt-12 xl:mt-12 2xl:mt-16">
-          <div className="border-[1px] bg-black rounded-2xl text-start p-4 md:p-6 w-full lg:w-[44%] transform transition-transform duration-200 hover:scale-105">
+          <div className="border-[1px] bg-black rounded-2xl text-start p-4 md:p-6 w-full lg:w-[44%] transform transition-transform duration-200 hover:scale-105 border-[#504f4f]">
             <Image
               src={communityImg}
               alt="banner-image"
               width={0}
               height={0}
-              style={{ width: "8%" }}
+              style={{ width: "12%" }}
               className="rounded-2xl"
             />
-            <p className="text-2xl font-semibold pt-4">Join the Community</p>
+            <p className="text-2xl font-semibold pt-3">Join the Community</p>
             <p className="text-lg font-medium pt-2 text-[#a7a4a4]">
               Lorem ipsum, dolor sit amet adipisicing elit. Praesentium,
               dolores.

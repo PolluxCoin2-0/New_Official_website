@@ -35,6 +35,7 @@ const Performance = () => {
     const fetchBlockHeightData = async () => {
       try {
         const data = await getBlockHeight();
+        console.log(data);
         setBlockHeightData(data?.message);  // Assuming the API response is an object with a "message" key
       } catch (error) {
         console.error('Error fetching block height:', error);
@@ -45,6 +46,7 @@ const Performance = () => {
     const getChartData = async () => {
       try {
         const response = await getPriceChart();
+        console.log(response);
         const mappedData = response?.message.map((item: PriceChartDataItem) => ({
           date: new Date(item.date).getTime(),  // Convert string to timestamp (number)
           value: item.value,                    // Assuming `price` is the value you want
