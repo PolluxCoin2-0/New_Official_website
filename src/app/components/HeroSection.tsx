@@ -85,7 +85,7 @@ export default function HeroSection() {
 
       {/* Logo with Continuous Rotation and Gradient Hover Effect */}
       <motion.div
-        className="relative mt-10 sm:mt-14 md:mt-20"
+        className="relative mt-20 sm:mt-14 md:mt-20"
         transition={{
           type: "spring",
           stiffness: 200,

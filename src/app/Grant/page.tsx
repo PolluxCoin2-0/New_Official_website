@@ -24,7 +24,7 @@ const Page = () => {
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-64 mt-32  ">
       <div className="flex flex-col justify-center items-center space-y-4 ">
         <p
-          className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
+          className="mt-0 lg:mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
               group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
         >
@@ -47,7 +47,7 @@ const Page = () => {
         scale={1.04}
       >
         <div
-          className="flex flex-col md:flex-row justify-between items-center  space-x-0 md:space-x-6 p-2 md:p-4 lg:p-10 mt-0 md:mt-16 w-full  rounded-2xl pt-12 pb-12"
+          className="flex flex-col md:flex-row justify-between items-center  space-x-0 md:space-x-6 p-2 md:p-4 lg:p-10 mt-6 md:mt-16 w-full  rounded-2xl pt-12 pb-12"
           onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
           onMouseEnter={() => setIsHovered(true)}
           style={{
@@ -64,7 +64,7 @@ const Page = () => {
             Pollux Grant Program 
 
             </p>
-            <p className="text-md lg   :text-lg font-medium mt-6 text-justify text-[#a7a4a4]">
+            <p className="text-md lg:text-lg font-medium mt-6 text-justify text-[#a7a4a4]">
             The $5 Million Pollux Grants Program is designed to support and fund groundbreaking projects within the PolluxChain ecosystem. Our mission is to empower developers to create and launch applications on PolluxChain, accelerating the adoption and growth of decentralized technologies. This program seeks to cultivate a dynamic community of developers and innovators by providing the resources and support essential for their success.
 
 
@@ -93,7 +93,7 @@ const Page = () => {
         </div>
       </Tilt>
 
-      <div className="flex flex-col md:flex-row  justify-between space-x-8 items-center w-full   pt-12 pb-12 mt-16 mb-16 border-b-[1px] border-[#504f4f]">
+      <div className="flex flex-col md:flex-row  justify-between space-x-0 md:space-x-8 items-center w-full   pt-12 pb-12 mt-16 mb-16 border-b-[1px] border-[#504f4f]">
         <div className="w-full md:w-[30%] flex justify-center md:justify-start">
           <Image
             src={banner2Img}
@@ -105,9 +105,9 @@ const Page = () => {
           />
         </div>
 
-        <div className=" flex flex-col justify-start items-start w-full lg:w-[70%]  ">
-          <div className=" flex flex-col justify-start items-start">
-            <p className="text-start text-2xl lg:text-3xl font-semibold">
+        <div className="flex flex-col justify-start items-start w-full lg:w-[70%] overflow-hidden">
+          <div className="flex flex-col justify-start items-start">
+            <p className="mt-4 md:mt-0 text-start text-2xl lg:text-3xl font-semibold">
             The Application Journey 
 
             </p>
@@ -120,9 +120,9 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row  space-x-8 justify-between items-baseline  pb-12 border-b-[1px] border-[#504f4f] w-full">
+      <div className="flex flex-col md:flex-row  space-x-0 md:space-x-8 justify-between items-baseline  pb-12 border-b-[1px] border-[#504f4f] w-full overflow-hidden">
         <div className="w-full md:w-[30%] flex justify-start">
-          <p className="text-3xl font-semibold">How To Apply ?          </p>
+          <p className="text-2xl lg:text-3xl font-semibold">How To Apply ?          </p>
         </div>
 
         <div className="flex flex-col justify-start items-start w-full lg:w-[70%] ">

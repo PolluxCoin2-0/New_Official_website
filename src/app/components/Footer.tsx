@@ -1,5 +1,6 @@
 'use Client'
 import Image from "next/image";
+import Link from "next/link";
 import polluxLogo from "../../../public/polluxlogowhite.png";
 import { BsTwitterX } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -22,8 +23,12 @@ export default function Footer() {
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Company</p>
-          <a href="/" className="text-lg font-semibold pt-4 block">About Us</a>
-          <a href="/" className="text-lg font-semibold pt-2 block">Contact</a>
+          <Link href="/">
+          <p  className="text-lg font-semibold pt-4 block">About Us</p>
+          </Link>
+          <Link href="/">
+          <p className="text-lg font-semibold pt-2 block">Contact</p>
+          </Link>
         </div>
 
         {/* <div className="text-start mt-5 md:mt-0">
@@ -35,17 +40,31 @@ export default function Footer() {
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Explore</p>
-          <a href="/" className="text-lg font-semibold pt-4 block">Ecosystem</a>
-          <a href="/" className="text-lg font-semibold pt-2 block">Blog</a>
-          <a href="/" className="text-lg font-semibold pt-2 block">Community</a>
-          <a href="/" className="text-lg font-semibold pt-2 block">Brand Kit</a>
+          <Link href="/">
+          <p className="text-lg font-semibold pt-4 block">Ecosystem</p>
+          </Link>
+          <Link href="/">
+          <p  className="text-lg font-semibold pt-2 block">Blog</p>
+          </Link>
+          <Link href="/">
+          <p  className="text-lg font-semibold pt-2 block">Community</p>
+          </Link>
+          <Link href="/">
+          <p  className="text-lg font-semibold pt-2 block">Brand Kit</p>
+          </Link>
         </div>
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Learn</p>
-          <a href="/" className="text-lg font-semibold pt-4 block">Documentation</a>
-          <a href="/" className="text-lg font-semibold pt-2 block">Whitepaper</a>
-          <a href="/" className="text-lg font-semibold pt-2 block">Become an Ambassador</a>
+          <Link href="/">
+          <p  className="text-lg font-semibold pt-4 block">Documentation</p>
+          </Link>
+          <Link href="/">
+          <p className="text-lg font-semibold pt-2 block">Whitepaper</p>
+          </Link>
+          <Link href="/">
+          <p  className="text-lg font-semibold pt-2 block">Become an Ambassador</p>
+          </Link>
         </div>
 
         <div className="flex flex-row space-x-3 mt-5 md:mt-0">
