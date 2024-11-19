@@ -30,14 +30,14 @@ export default function ThreeDCardsSection() {
       title: "Create",
       tag: "Reimagine blockchain potential",
       description: "Transform ideas into impactful dApps with PolluxChain developer-friendly ecosystem.",
-      image: "/ele2.svg", // Relative path from the public directory
+      image: "/create.png", // Relative path from the public directory
       link: "",
     },
     {
       title: "Protect	",
       tag: "Strengthen your applications",
       description: "Integrate advanced security measures to protect your users and data.",
-      image: "/ele1.svg", // Relative path from the public directory
+      image: "/protect.png", // Relative path from the public directory
       link:"",
     },
     {
