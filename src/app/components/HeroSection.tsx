@@ -3,7 +3,7 @@
 import { TypewriterEffect } from "./ui/Typewriter-effect";
 import { motion } from "framer-motion";
 import Image from "next/image"; 
-import polluxLogo from "../../../public/polluxLogo (2).png";
+import polluxLogo from "../../../public/Group 481820.svg";
 import { useEffect, useState } from "react";
 import { MdOutlineRestartAlt } from "react-icons/md";
 import { MdDocumentScanner } from "react-icons/md";
