@@ -2,29 +2,29 @@
 import React from "react";
 import { CardContainer, CardBody, CardItem } from "@/app/components/ui/3d-card";
 import Image from "next/image";
-import { TypewriterEffect } from "./ui/Typewriter-effect";
-import Typewriter from "../utils/typewriter";
+// import { TypewriterEffect } from "./ui/Typewriter-effect";
+// import Typewriter from "../utils/typewriter";
 // import Link from "next/link";
 
 
 
 export default function ThreeDCardsSection() {
-  const words = [
-    {
-      text: "BUILD",
-      className: "text-[#8af969]",
-    },
-    {
-      text: "CONNECT",
-      className: "text-[#8af969]",
-    },
-    {
-      text: "THRIVE",
-      className: "text-[#8af969]",
-    },
+  // const words = [
+  //   {
+  //     text: "BUILD",
+  //     className: "text-[#8af969]",
+  //   },
+  //   {
+  //     text: "CONNECT",
+  //     className: "text-[#8af969]",
+  //   },
+  //   {
+  //     text: "THRIVE",
+  //     className: "text-[#8af969]",
+  //   },
     
   
-  ];
+  // ];
   const cards = [
     {
       title: "Create",
