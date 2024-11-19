@@ -113,13 +113,13 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      {/* Typewriter effect for nn BUILD AWESOME WITH POLLUX */}
+   
      
         <TypewriterEffect
           words={words}
           className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-6"
         />
-        {/* <AnimatedText /> */}
+  
      
 
       {/* Headline: Decentralize the web */}
@@ -135,11 +135,6 @@ export default function HeroSection() {
           <MdOutlineRestartAlt className="mr-2" size={24} /> GET STARTED
         </button>
         </Link>
-
-
-
-
-
 
         <Link href="https://docpolluxchain.netlify.app/" passHref>
         <button className=" flex items-center justify-center text-lg border-[1px] border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black w-full sm:w-auto">

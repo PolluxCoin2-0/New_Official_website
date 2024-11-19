@@ -258,37 +258,37 @@ export default function Navbar() {
     {
       title: "Developers",
       dropdown: [
-        { title: "Documentation ➚", href: "https://docpolluxchain.netlify.app/" },
-        { title: "Grant Program", href: "/Grant" },
-        { title: "Build", href: "/Build" },
+        { title: "Documentation ➚", href: "/" },
+        { title: "Grant Program", href: "/" },
+        { title: "Build", href: "/" },
       ],
     },
-    {
-      title: "Networks",
-      dropdown: [
-        { title: "Validator App ➚", href: "" },
-        { title: "Nominator App ➚", href: "" },
-        { title: "Pollux Explorer ➚", href: "" },
-        { title: "Pollux Staking ➚", href: "" },
-      ],
-    },
+    // {
+    //   title: "Networks",
+    //   dropdown: [
+    //     { title: "Validator App ➚", href: "" },
+    //     { title: "Nominator App ➚", href: "" },
+    //     { title: "Pollux Explorer ➚", href: "" },
+    //     { title: "Pollux Staking ➚", href: "" },
+    //   ],
+    // },
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/Community" },
+        { title: "Community", href: "/" },
         { title: "Partner With Us", href: "" },
         { title: "Blog ➚", href: "" },
-        { title: "News & Events", href: "/Events" },
+        { title: "News & Events", href: "/" },
       ],
     },
     {
       title: "Ecosystem",
-      href: "/Ecosystem",
+      href: "/",
     },
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/AboutUs" },
+        { title: "About Us", href: "/" },
         { title: "Contact", href: "" },
       ],
     },
@@ -312,8 +312,8 @@ export default function Navbar() {
         </div>
 
         {/* Center: Navigation Menu */}
-        <NavigationMenu className="flex space-x-4">
-          <NavigationMenuList className="flex space-x-4">
+        <NavigationMenu className="flex space-x-6">
+          <NavigationMenuList className="flex space-x-6">
             {menuItems.map((item, index) => (
               <NavigationMenuItem
                 key={index}

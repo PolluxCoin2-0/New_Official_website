@@ -22,34 +22,34 @@ export default function Footer() {
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Company</p>
-          <a href="/AboutUs" className="text-lg font-semibold pt-4 block">About Us</a>
-          <a href="/Contact" className="text-lg font-semibold pt-2 block">Contact</a>
+          <a href="/" className="text-lg font-semibold pt-4 block">About Us</a>
+          <a href="/" className="text-lg font-semibold pt-2 block">Contact</a>
         </div>
 
-        <div className="text-start mt-5 md:mt-0">
+        {/* <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Quick Links</p>
           <a href="/explorer" className="text-lg font-semibold pt-4 block">Pollux Explorer</a>
           <a href="/staking" className="text-lg font-semibold pt-2 block">Pollux Staking</a>
           <a href="/validator" className="text-lg font-semibold pt-2 block">Validator</a>
-        </div>
+        </div> */}
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Explore</p>
-          <a href="/Ecosystem" className="text-lg font-semibold pt-4 block">Ecosystem</a>
-          <a href="/Blog" className="text-lg font-semibold pt-2 block">Blog</a>
-          <a href="/Community" className="text-lg font-semibold pt-2 block">Community</a>
-          <a href="/Brandkit" className="text-lg font-semibold pt-2 block">Brand Kit</a>
+          <a href="/" className="text-lg font-semibold pt-4 block">Ecosystem</a>
+          <a href="/" className="text-lg font-semibold pt-2 block">Blog</a>
+          <a href="/" className="text-lg font-semibold pt-2 block">Community</a>
+          <a href="/" className="text-lg font-semibold pt-2 block">Brand Kit</a>
         </div>
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Learn</p>
-          <a href="https://docpolluxchain.netlify.app/" className="text-lg font-semibold pt-4 block">Documentation</a>
-          <a href="/whitepaper" className="text-lg font-semibold pt-2 block">Whitepaper</a>
-          <a href="/ambassador" className="text-lg font-semibold pt-2 block">Become an Ambassador</a>
+          <a href="/" className="text-lg font-semibold pt-4 block">Documentation</a>
+          <a href="/" className="text-lg font-semibold pt-2 block">Whitepaper</a>
+          <a href="/" className="text-lg font-semibold pt-2 block">Become an Ambassador</a>
         </div>
 
         <div className="flex flex-row space-x-3 mt-5 md:mt-0">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
             <BsTwitterX size={28} />
           </a>
           <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
