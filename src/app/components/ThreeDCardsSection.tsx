@@ -3,6 +3,7 @@ import React from "react";
 import { CardContainer, CardBody, CardItem } from "@/app/components/ui/3d-card";
 import Image from "next/image";
 import { TypewriterEffect } from "./ui/Typewriter-effect";
+import Typewriter from "../utils/typewriter";
 // import Link from "next/link";
 
 
@@ -58,10 +59,10 @@ export default function ThreeDCardsSection() {
   return (
     <section className="my-12 px-2 md:px-4 lg:px-6 xl:px-20 flex flex-col justify-center items-center w-full">
         <p className="text-3xl lg:text-4xl font-semibold text-center mt-12 mb-8 leading-snug">EMPOWERING DEVELOPERS AND COMMUNITIES TO </p>
-        <TypewriterEffect
+        {/* <TypewriterEffect
           words={words}
           className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-0"
-        />
+        /> */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-8 lg:gap-6 w-full">
       {cards.map((card, index) => (
         <CardContainer key={index} className="inter-var w-full h-full">

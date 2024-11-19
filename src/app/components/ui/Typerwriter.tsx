@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 const Typewriter = () => {
-  const words = ["Hello, World!", "Welcome to my website!", "This is a typewriter effect."];
+  const words = ["BUILD,", "CONNECT", "THRIVE"];
   const [currentWord, setCurrentWord] = useState('');
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
