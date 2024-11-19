@@ -63,6 +63,8 @@ export default function ThreeDCardsSection() {
           words={words}
           className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-0"
         /> */}
+
+        {/* <Typewriter/> */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-8 lg:gap-6 w-full">
       {cards.map((card, index) => (
         <CardContainer key={index} className="inter-var w-full h-full">
