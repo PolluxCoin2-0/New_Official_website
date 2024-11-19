@@ -44,14 +44,14 @@ export default function ThreeDCardsSection() {
       title: "Expand	",
       tag: "Expand without limits",
       description: "Build on a platform designed to support your growth, no matter the scale. ",
-      image: "/ele3.svg", // Relative path from the public directory
+      image: "/expand.png", // Relative path from the public directory
       link: "",
     },
     {
       title: "Optimize",
       tag: "Achieve peak performance",
       description: "Harness PolluxChain’s speed and efficiency to power high-performance decentralized solutions. ",
-      image: "/optimize.svg", // Relative path from the public directory
+      image: "/optimize.png", // Relative path from the public directory
       link: "",
     },
   ];
