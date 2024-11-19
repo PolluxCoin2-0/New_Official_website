@@ -313,7 +313,7 @@ export default function Navbar() {
 
         {/* Center: Navigation Menu */}
         <NavigationMenu className="flex space-x-6">
-          <NavigationMenuList className="flex space-x-6">
+          <NavigationMenuList className="flex space-x-12">
             {menuItems.map((item, index) => (
               <NavigationMenuItem
                 key={index}
@@ -343,7 +343,7 @@ export default function Navbar() {
                       <NavigationMenuContent
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={handleMouseLeave}
-                        className="absolute left-0 mt-2 w-max bg-black text-white rounded-lg shadow-lg"
+                        className="absolute left-0 mt-4 w-max bg-black text-white rounded-lg shadow-lg"
                       >
                         <ul className="p-2">
                           {item.dropdown.map((subItem, subIndex) => (

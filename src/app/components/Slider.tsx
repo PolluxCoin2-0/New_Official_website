@@ -2,8 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import protectImg from "../../../public/protectBanner.png";
+import createImg from "../../../public/createBanner.png";
+import expandImg from "../../../public/expandBanner.png";
+import optimizeImg from "../../../public/optimizeBanner.png";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const Slider = () => {
   const [bgPosition, setBgPosition] = useState({ x: 0, y: 0 });
@@ -19,31 +24,40 @@ const Slider = () => {
 
   const slides = [
     {
-      imageSrc: "/banner.jpg", // Replace with your image path
-      title: "Sustainable",
-      heading: "What To Expect From The Pollux Mainnet",
+      imageSrc: protectImg, // Replace with your image path
+      title: "PROTECT",
+      heading: "Security You Can Trust with PolluxChain!",
       description:
-        "The Pollux Ecosystem is on the cusp of a significant milestone as Pollux Mainnet Beta goes live. This event marks a crucial step in the evolution of Pollux vision.",
+        "In the blockchain industry, performance is the difference between success and stagnation. Whether it’s transaction speed, energy efficiency, or network reliability.",
       buttonText: "More →",
-      buttonLink: "/Grant",
+      link: "https://medium.com/@PolluxDao/security-you-can-trust-with-polluxchain-b51da3cb0388",
     },
     {
-      imageSrc: "/banner.jpg", // Replace with your image path
-      title: "Sustainable",
-      heading: "The Road to Pollux's Mainnet",
+      imageSrc: expandImg, // Replace with your image path
+      title: "EXPAND",
+      heading: "Scale Your Solutions to Global Heights!",
       description:
-        "As Pollux Mainnet Beta progresses, we will see the emergence of new decentralized applications that align with the sustainable ethos of Pollux.",
+        "Scalability is the cornerstone of successful blockchain projects. As blockchain adoption grows, so does the need for networks that can handle increasing demands.",
       buttonText: "More →",
-      buttonLink: "/Grant",
+      link: "https://medium.com/@PolluxDao/expand-grow-without-limits-4e8bf5d97759",
     },
     {
-      imageSrc: "/banner.jpg", // Replace with your image path
-      title: "Sustainable",
-      heading: "Building a Green Future with Pollux",
+      imageSrc: optimizeImg, // Replace with your image path
+      title: "OPTIMIZE",
+      heading: "Experience Next-Level Blockchain Performance!",
       description:
-        "With Pollux focus on sustainability, the upcoming mainnet will pave the way for a decentralized future with a positive environmental impact.",
+        "In the digital era, security is paramount. Blockchain promises decentralized trust, but achieving true security demands robust infrastructure. ",
       buttonText: "More →",
-      buttonLink: "/Grant",
+      link: "https://medium.com/@PolluxDao/experience-next-level-blockchain-performance-1fae5d621083",
+    },
+    {
+      imageSrc: createImg, // Replace with your image path
+      title: "CREATE",
+      heading: "Unleash Your Creativity with PolluxChain!",
+      description:
+        "Innovation is the driving force behind groundbreaking solutions. For developers and businesses looking to make their mark in blockchain technology, ",
+      buttonText: "More →",
+      link: "https://medium.com/@PolluxDao/create-unlock-endless-possibilities-with-polluxchain-288f41ef59e0",
     },
   ];
 
@@ -63,7 +77,7 @@ const Slider = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       nextSlide(); // Change to the next slide
-    }, 2000); // Change slide every 2 seconds
+    }, 5000); // Change slide every 2 seconds
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(intervalId);
@@ -116,15 +130,23 @@ const Slider = () => {
               </span>
             </button>
           </div>
-          {/* <p className="text-md md:text-lg font-medium mb-4 text-nowrap">{slides[currentSlide].title}</p> */}
-          <h2 className="text-2xl font-bold mb-4">{slides[currentSlide].heading}</h2>
+          <p className="text-lg md:text-lg font-bold mb-4 text-nowrap inline-block bg-[#8af969] px-4 md:px-8 rounded-2xl py-2 text-black">{slides[currentSlide].title}</p>
+          <h2 className="text-2xl font-bold mt-2 mb-4">{slides[currentSlide].heading}</h2>
           <p className="text-md md:text-lg text-[#a7a4a4] mb-6">{slides[currentSlide].description}</p>
-          <a
+          {/* <a
             href={slides[currentSlide].buttonLink}
             className="text-center text-lg font-medium bg-[#8af969] text-black px-12 rounded-2xl py-2 "
           >
             {slides[currentSlide].buttonText}
-          </a>
+          </a> */}
+          <div className="flex flex-row items-center pt-4">
+        <a href={slides[currentSlide].link} className="text-[#8AF969] text-lg font-medium">
+          Read More
+        </a>
+        <p>
+          <MdOutlineKeyboardArrowRight size={24} color="#8AF969" />
+        </p>
+      </div>
 
         
         </div>

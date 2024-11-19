@@ -34,4 +34,18 @@ body {
   scroll-behavior: smooth;
 } */
 
+/* Add this to your global CSS file or component-specific styles */
+.truncate-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limit to 5 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.am5-layer-30{
+  fill: red;
+}
+
+
 

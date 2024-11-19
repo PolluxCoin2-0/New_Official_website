@@ -3,7 +3,7 @@ import StatsGrid from "./components/StatsGrid";
 import ThreeDCardsSection from "./components/ThreeDCardsSection";
 import Performance from "./components/Performance";
 import Evolution from "./components/Evolution";
-// import Slider from "./components/Slider";
+import Slider from "./components/Slider";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <ThreeDCardsSection />
       <Performance />
       <Evolution />
-      {/* <Slider /> */}
+      <Slider />
       
 
     </div>

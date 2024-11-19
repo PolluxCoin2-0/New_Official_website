@@ -1,8 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import Img from "../../../public/ele2.svg";
+import Image, { StaticImageData }from "next/image";
+import sustainImg from "../../../public/sustain.png";
+import scalableImg from "../../../public/scalable.png";
+import defiImg from "../../../public/defi.png";
+import secureImg from "../../../public/secure.png";
+import fastImg from "../../../public/fast.png";
 
 // Define the type for each section object
 interface Section {
@@ -10,7 +14,7 @@ interface Section {
   title: string;
   description: string;
   para: string;
-  imageSrc: string; // Assuming the src is a string representing the image path
+  imageSrc: StaticImageData; // Assuming the src is a string representing the image path
   energyUsage: string; 
   energyTag: string;// Energy usage in percentage
 }
@@ -20,7 +24,7 @@ interface CardSectionProps {
   title: string;
   description: string;
   para: string;
-  imageSrc: string;
+  imageSrc: StaticImageData;
   energyUsage: string;
   energyTag: string;// Energy usage in percentage
 
@@ -42,7 +46,7 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, para, ima
 
   return (
     <div
-      className="flex flex-col md:flex-row py-5 space-x-0 md:space-x-32 items-center mt-16 p-4  md:p-12 pt-16 pb-16 "
+      className="flex flex-col md:flex-row py-5 space-x-0 md:space-x-32 items-center mt-16 p-4  md:p-12 pt-16 pb-16 h-[400px]"
       onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
       onMouseEnter={() => setIsHovered(true)}
       style={{
@@ -54,18 +58,18 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, para, ima
           : "transparent",
       }}
     >
-      <div>
+      <div className="w-[20%] ml-20">
         <Image
           src={imageSrc}
           alt={title}
-          width={320}
-          height={320}
-          className="w-64"
+          width={350}
+          height={350}
+          className="w-80"
         />
       </div>
 
-      <div className="text-start mt-8 md:mt-0">
-        <p className=" inline-block text-center text-md md:text-xl font-medium bg-[#8af969] px-4 md:px-8 rounded-2xl py-2 truncate text-black ">
+      <div className="text-start mt-8 md:mt-0 w-[80%]">
+        <p className=" inline-block text-center text-md md:text-xl bg-[#8af969] px-4 md:px-8 rounded-2xl py-2 truncate text-black font-bold">
           {title}
         </p>
         <p className="text-2xl font-semibold pt-4">{description}</p>
@@ -74,7 +78,7 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, para, ima
         </p>
         <div className="flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-4 pt-4">
           <p className="text-2xl font-bold text-[#68A541]">{energyUsage}</p>
-          <p className="text-lg md:text-xl font-semibold ">{energyTag}</p>
+          <p className="text-md lg:text-xl font-semibold ">{energyTag}</p>
         </div>
       </div>
     </div>
@@ -89,7 +93,7 @@ const Evolution = () => {
       title: "SUSTAINABLE",
       description: "Driving Eco-Conscious Blockchain Solutions",
       para: "PolluxChain leverages a unique proof-of-stake mechanism and innovative consensus algorithms to promote energy efficiency, reducing environmental impact while delivering unmatched blockchain performance.",
-      imageSrc: Img,
+      imageSrc: sustainImg,
       energyUsage: "50%",
       energyTag: "Reduction in Energy Consumption",
     },
@@ -98,7 +102,7 @@ const Evolution = () => {
       title: "SCALABLE",
       description: "Ready for Infinite Growth",
       para: "Designed to scale effortlessly, PolluxChain supports thousands of transactions per second without sacrificing reliability. Its modular infrastructure paves the way for sustainable growth and high adaptability in expanding markets.",
-      imageSrc: Img,
+      imageSrc: scalableImg,
       energyUsage: "30%",
       energyTag: "Seamless Scaling Without Performance Trade-Offs",
     },
@@ -107,7 +111,7 @@ const Evolution = () => {
       title: "DEFI-OPTIMIZED",
       description: "Transformative Infrastructure for DeFi",
       para: "Built to power the next wave of decentralized finance, PolluxChain integrates a suite of features that supports DeFi applications with low latency, high liquidity, and secure operations, enabling endless opportunities for innovation.",
-      imageSrc: Img,
+      imageSrc: defiImg,
       energyUsage: "20%",
       energyTag: "Enhanced Smart Contract Interoperability",
     },
@@ -116,7 +120,7 @@ const Evolution = () => {
       title: "SECURE",
       description: "Uncompromised Security Protocols",
       para: "PolluxChain incorporates multi-layered encryption and zero-trust architecture to fortify the platform against emerging threats, ensuring a resilient and trustworthy ecosystem for users and developers.",
-      imageSrc: Img,
+      imageSrc: secureImg,
       energyUsage: "40%",
       energyTag: "State-of-the-Art Cryptographic Safeguards",
     },
@@ -125,7 +129,7 @@ const Evolution = () => {
       title: "Fast",
       description: "Engineered for Lightning-Speed Performance",
       para: "PolluxChain is optimized for speed with native EVM and WASM compatibility, enabling developers to deploy smart contracts swiftly. This ensures seamless transactions and high processing power to meet the demands of an evolving decentralized ecosystem.",
-      imageSrc: Img,
+      imageSrc:  fastImg,
       energyUsage: "Up to 2x ",
       energyTag: " Faster Transaction Speeds",
     },
@@ -135,9 +139,9 @@ const Evolution = () => {
   const [activeSection, setActiveSection] = useState<string>("Sustain");
 
   // Handle section click (manual navigation)
-  const toggleSection = (sectionId: string) => {
-    setActiveSection(sectionId); // Set the active section when clicked
-  };
+  // const toggleSection = (sectionId: string) => {
+  //   setActiveSection(sectionId); // Set the active section when clicked
+  // };
 
   // Set up automatic cycling of sections every 5 seconds
   useEffect(() => {
@@ -171,24 +175,23 @@ const Evolution = () => {
         Sustainable Evolution
       </p>
 
-      <div className="mt-6">
-        <ul className="flex flex-col md:flex-row space-x-0 md:space-x-3 lg:space-x-8 justify-center ">
-          {sections.map((section) => (
-            <li
-              key={section.id}
-              className={`text-[#ffffff] border-[1px] border-[#72a861] text-nowrap text-md   md:text-sm lg:text-lg xl:text-xl font-medium cursor-pointer px-8 py-2 md:px-6 md:py-2 lg:px-8 lg:py-2 rounded-full mt-4 md:mt-0
-                hover:scale-105 transition-all duration-300 ease-in-out ${
-                  activeSection === section.id
-                    ? "bg-[#8af969] text-black "
-                    : ""
-                }`}
-              onClick={() => toggleSection(section.id)}
-            >
-              {section.title}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* <div className="mt-6">
+  <ul className="flex flex-col md:flex-row space-x-0 md:space-x-3 lg:space-x-8 justify-center">
+    {sections.map((section) => (
+      <li
+        key={section.id}
+        className={`text-[#ffffff] font-bold border-[1px] border-[#72a861] text-nowrap text-md md:text-sm lg:text-lg xl:text-xl cursor-pointer px-8 py-2 md:px-6 md:py-2 lg:px-8 lg:py-2 rounded-full mt-4 md:mt-0
+          hover:scale-105 transition-all duration-300 ease-in-out ${
+            activeSection === section.id ? "bg-[#8af969] text-black" : ""
+          }`}
+        onClick={() => toggleSection(section.id)}
+      >
+        {section.title}
+      </li>
+    ))}
+  </ul>
+</div> */}
+
 
       {/* Conditionally render the CardSection component based on the activeSection */}
       {activeSectionContent && (

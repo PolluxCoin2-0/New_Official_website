@@ -110,8 +110,9 @@ root.interfaceColors.set("grid", am5.color("#FFFFFF"));
     areaSeries.strokes.template.setAll({
       strokeWidth: 2,
     });
-
+    
     areaSeries.fills.template.setAll({
+      fill: am5.color("#8af969"),
       fillOpacity: 0.5,
       visible: true,
     });
