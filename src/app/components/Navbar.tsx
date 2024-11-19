@@ -259,8 +259,8 @@ export default function Navbar() {
       title: "Developers",
       dropdown: [
         { title: "Documentation ➚", href: "/" },
-        { title: "Grant Program", href: "/" },
-        { title: "Build", href: "/" },
+        { title: "Grant Program", href: "/Grant" },
+        { title: "Build", href: "/Build" },
       ],
     },
     // {
@@ -275,20 +275,20 @@ export default function Navbar() {
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/" },
+        { title: "Community", href: "/Community" },
         { title: "Partner With Us", href: "" },
         { title: "Blog ➚", href: "" },
-        { title: "News & Events", href: "/" },
+        { title: "News & Events", href: "/Events" },
       ],
     },
     {
       title: "Ecosystem",
-      href: "/",
+      href: "/Ecosystem",
     },
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/" },
+        { title: "About Us", href: "/AboutUs" },
         { title: "Contact", href: "" },
       ],
     },
