@@ -67,14 +67,14 @@ export default function ThreeDCardsSection() {
         <CardContainer key={index} className="inter-var w-full h-full">
           <CardBody className="text-center relative group/card bg-black border-[1px] border-[#818080] w-full h-full rounded-2xl p-6 md:p-8 lg:p-6 flex flex-col">
             <div className="flex justify-center">
-              <CardItem translateZ={50} className="text-xl font-semibold text-white">
+              <CardItem translateZ={50} className="text-[#8af969] text-2xl font-bold ">
                 {card.title}
               </CardItem>
             </div>
             
             
             <div className="flex justify-center">
-              <CardItem translateZ={60} className="text-lg mt-2 break-words overflow-hidden text-md font-medium">
+              <CardItem translateZ={60} className="text-lg mt-2 break-words overflow-hidden font-semibold">
                 {card.tag}
               </CardItem>
             </div>

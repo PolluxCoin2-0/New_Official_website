@@ -15,7 +15,7 @@ type Stat = {
 const initialStats: Stat[] = [
   { label: "No. of Nodes", value: "", icon: "/nodes.svg" },
   { label: "Avg Block Time", value: "3.00 Sec", icon: "/avgtime.svg" },
-  { label: "TPS", value: "500+", icon: "/tpc.svg" },
+  { label: "TPS", value: "10,000+", icon: "/tpc.svg" },
   // { label: "Latest Block", value: "3,777,402", icon: "/blocks.svg" },
 ];
 
@@ -69,7 +69,7 @@ export default function StatsGrid() {
         {stats.map((stat, idx) => (
           <div
             key={idx}
-            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969c2] p-4 rounded-2xl transition transform 
+            className="bg-gradient-to-r from-transparent via-transparent to-[#8bf969] p-4 rounded-2xl transition transform 
             flex items-center space-x-3 border border-gray-500 hover:border-white hover:bg-gradient-to-r hover:from-transparent
              hover:via-transparent hover:to-[#8bf969] hover:scale-105"
             style={{ boxShadow: "none", transformStyle: "flat" }}

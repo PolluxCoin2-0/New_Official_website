@@ -24,6 +24,11 @@ body {
   }
 }
 
+body {
+  font-family: 'Poppins', 'Montserrat', sans-serif; /* Fallback to Montserrat if Poppins isn't available */
+}
+
+
 /* This ensures smooth scrolling for the entire page */
 /* html {
   scroll-behavior: smooth;

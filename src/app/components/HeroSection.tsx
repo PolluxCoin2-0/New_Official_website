@@ -2,60 +2,12 @@
 
 import { TypewriterEffect } from "./ui/Typewriter-effect";
 import { motion } from "framer-motion";
-import Image from "next/image"; // Import Image from next/image
+import Image from "next/image"; 
+import polluxLogo from "../../../public/polluxLogo (2).png";
 import { useEffect, useState } from "react";
 import { MdOutlineRestartAlt } from "react-icons/md";
 import { MdDocumentScanner } from "react-icons/md";
-import Link from "next/link"; // Import Link
-
-// const AnimatedText = () => {
-//   const words = [ "REDEFINING", "DECENTRALIZED", "SOLUTION"];
-//   const colors = [
-//     "text-[#8af969]",
-//     "text-[#8af969]",
-//     "text-[#8af969]",
-//     "text-[#8af969]",
-//     "text-[#8af969]",
-//   ];
-//   const [index, setIndex] = useState(0);
-//   const [scale, setScale] = useState(1);
-//   const [opacity, setOpacity] = useState(1);
-
-//   useEffect(() => {
-//     const intervalId = setInterval(() => {
-//       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-//     }, 2000);
-
-//     return () => clearInterval(intervalId);
-//   }, [words.length]);
-
-//   useEffect(() => {
-//     setOpacity(0);
-//     setScale(0.8);
-
-//     const fadeIn = setTimeout(() => {
-//       setOpacity(1);
-//       setScale(1);
-//     }, 400);
-
-//     return () => clearTimeout(fadeIn);
-//   }, [index]);
-
-//   return (
-//     <p className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-6">
-//       {" "}
-//       <span
-//         className={`${colors[index]} transition-all duration-500 inline-block`}
-//         style={{
-//           transform: `scale(${scale})`,
-//           opacity: opacity,
-//         }}
-//       >
-//         {words[index]}
-//       </span>{" "}
-//     </p>
-//   );
-// };
+import Link from "next/link"; 
 
 const AnimatedText2 = () => {
   const words = ["SCALABILITY", "INNOVATION", "SEAMLESS", "WEB3 INTEGRATION"];
@@ -152,11 +104,11 @@ export default function HeroSection() {
           }}
         >
           <Image
-            src="/token3.png"
+          src={polluxLogo}
             alt="Polluxcoin Logo"
-            width={320}
-            height={320}
-            className="w-48 sm:w-64 md:w-72 lg:w-80"
+            width={300}
+            height={300}
+            className="w-48 sm:w-64 md:w-72 lg:w-60"
           />
         </motion.div>
       </motion.div>
@@ -171,8 +123,8 @@ export default function HeroSection() {
      
 
       {/* Headline: Decentralize the web */}
-      <h2 className="text-xl sm:text-2xl lg:text-xl font-medium text-[#fff] mt-12">
-        Your gateway to a hybrid Layer 1 blockchain designed for{" "}
+      <h2 className="text-xl sm:text-2xl lg:text-xl font-medium text-[#fff] mt-20">
+        Your gateway to a Hybrid Layer 1 Blockchain designed for{" "}
       </h2>
       <AnimatedText2 />
 
