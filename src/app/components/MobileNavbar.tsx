@@ -607,32 +607,32 @@ export default function MobileNavbar() {
       dropdown: [
         { title: "Documentation", href: "/documentation" },
         { title: "Grant Program", href: "/Grant" },
-        { title: "Build", href: "/build" },
+        { title: "Build", href: "/Build" },
       ],
     },
-    {
-      title: "Networks",
-      dropdown: [
-        { title: "Validator App", href: "/validator" },
-        { title: "Nominator App", href: "/nominator" },
-        { title: "Pollux Explorer", href: "/explorer" },
-        { title: "Pollux Staking", href: "/staking" },
-      ],
-    },
+    // {
+    //   title: "Networks",
+    //   dropdown: [
+    //     { title: "Validator App", href: "/validator" },
+    //     { title: "Nominator App", href: "/nominator" },
+    //     { title: "Pollux Explorer", href: "/explorer" },
+    //     { title: "Pollux Staking", href: "/staking" },
+    //   ],
+    // },
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/community" },
+        { title: "Community", href: "/Community" },
         { title: "Partner With Us", href: "/partner" },
         { title: "Blog", href: "/blog" },
-        { title: "News & Events", href: "/news" },
+        { title: "News & Events", href: "/Events" },
       ],
     },
-    { title: "Ecosystem", href: "/ecosystem" },
+    { title: "Ecosystem", href: "/Ecosystem" },
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/about-us" },
+        { title: "About Us", href: "/Aboutus" },
         { title: "Contact", href: "/contact" },
       ],
     },
