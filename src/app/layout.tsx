@@ -45,26 +45,39 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
 
-      <head>
-        <Head>
-          <script type="application/ld+json">
-            {`
-            {
-              "@context": "http://schema.org",
-              "@type": "WebPage",
-              "name": "PolluxChain - Get Started",
-              "url": "https://www.polluxchain.com/",
-              "description": "Start your journey with PolluxChain, the hybrid Layer 1 blockchain platform with scalability, staking, and seamless governance.",
-              "potentialAction": {
-                "@type": "Action",
-                "name": "Get Started",
-                "target": "https://www.polluxchain.com/"
-              }
+<Head>
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@PolluxChain" /> {/* Replace with your Twitter handle */}
+        <meta name="twitter:title" content="PolluxChain - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization." />
+        <meta name="twitter:description" content="Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance." />
+        <meta name="twitter:image" content="favicon.png" /> {/* Replace with your image URL */}
+
+        {/* OpenGraph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="PolluxChain - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization." />
+        <meta property="og:description" content="Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance." />
+        <meta property="og:url" content="https://polluxchain.com/" />
+        <meta property="og:image" content="/favicon.png" />
+
+        {/* JSON-LD Schema Markup for WebPage */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "http://schema.org",
+            "@type": "WebPage",
+            "name": "PolluxChain - Get Started",
+            "url": "https://www.polluxchain.com/",
+            "description": "Start your journey with PolluxChain, the hybrid Layer 1 blockchain platform with scalability, staking, and seamless governance.",
+            "potentialAction": {
+              "@type": "Action",
+              "name": "Get Started",
+              "target": "https://www.polluxchain.com/"
             }
-            `}
-          </script>
-        </Head>
-      </head>
+          }
+          `}
+        </script>
+      </Head>
       
       
       <body >
