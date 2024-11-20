@@ -89,7 +89,7 @@ root.interfaceColors.set("grid", am5.color("#FFFFFF"));
 
     columnSeries.columns.template.setAll({
       width: am5.percent(50),
-      fill: am5.color("#8FA0C5"),
+      fill: am5.color("#58A3FB"),
     });
     
     columnSeries.data.setAll(data);  // Ensure data is passed here
@@ -112,7 +112,7 @@ root.interfaceColors.set("grid", am5.color("#FFFFFF"));
     });
     
     areaSeries.fills.template.setAll({
-      fill: am5.color("#8af969"),
+      fill: am5.color("#58A3FB"),
       fillOpacity: 0.5,
       visible: true,
     });
