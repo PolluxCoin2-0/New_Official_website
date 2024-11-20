@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import polluxLogo from "../../../public/polluxlogowhite.png";
 import { BsTwitterX } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 
@@ -76,6 +77,9 @@ export default function Footer() {
           </a>
           <a href="https://www.instagram.com/polluxchainofficial/" target="_blank" rel="noopener noreferrer">
             <SiInstagram size={28} />
+          </a>
+          <a href="https://www.linkedin.com/company/polluxchain/" target="_blank" rel="noopener noreferrer">
+            <BsLinkedin size={28} />
           </a>
         </div>
       </div>
