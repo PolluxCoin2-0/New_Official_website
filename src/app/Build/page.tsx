@@ -41,7 +41,7 @@ const data = [
 
 // Reusable Card Component
 const Card: React.FC<CardProps> = ({ title, description }) => (
-  <div className="text-start w-full sm:w-[48%] md:w-[100%] lg:w-[48%] xl:w-[48%] border-[1px] border-[#72a861] p-4 md:p-8 rounded-3xl">
+  <div className="text-start w-full sm:w-[48%] md:w-[100%] lg:w-[48%] xl:w-[48%] shadow-inner shadow-[#8af969] p-4 md:p-8 rounded-3xl">
     <div className="flex flex-row justify-between">
       <p className="text-xl md:text-2xl font-semibold">{title}</p>
       <Image
@@ -49,7 +49,7 @@ const Card: React.FC<CardProps> = ({ title, description }) => (
         alt="build-icon"
         width={40} // Specify a fixed width for the icon
         height={40} // Keep the aspect ratio intact
-        className=""
+        className="object-contain"
       />
     </div>
     <p className="text-md font-medium text-[#a7a4a4] pt-8">{description}</p>
@@ -58,7 +58,7 @@ const Card: React.FC<CardProps> = ({ title, description }) => (
 
 const page = () => {
   return (
-    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-64 mt-24 lg:mt-32 xl:mt-48">
+    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-24 lg:mt-32 xl:mt-48">
       {/* Sustainable Development */}
       <div className="flex flex-col lg:flex-row justify-between items-center border-b-[1px]  border-[#464545] pb-8 md:pb-24">
         <div className="text-start w-full lg:w-[60%]">
@@ -69,13 +69,13 @@ const page = () => {
               width={0}
               height={0}
               style={{ width: "4%" }} // Set default width to 100% for mobile
-              className="" // Use Tailwind's responsive width utilities
+              className="w-10" // Use Tailwind's responsive width utilities
             />
-            <p className="text-md md:text-3xl font-semibold">
+            <p className="text-sm md:text-3xl font-semibold">
               Sustainable Development Starts Here
             </p>
           </div>
-          <p className="mt-8 text-sm md:text-md lg:text-lg font-medium text-[#ccc7c7] text-justify leading-relaxed">
+          <p className="mt-4 md:mt-8 text-sm md:text-md lg:text-lg font-medium text-[#ccc7c7] text-justify leading-relaxed">
             Pollux enables developers to build scalable, eco-friendly dApps
             using the <br />
             Sustainable Proof of Stake (SPoS) consensus mechanism. This unique{" "}
@@ -129,13 +129,13 @@ const page = () => {
         </div>
 
         {/* image */}
-        <div className="w-full lg:w-[40%]">
+        <div className="w-full lg:w-[40%] ml-20 md:ml-0">
           <Image
             src={buildImg}
             alt="banner-image"
             width={0}
             height={0}
-            style={{ width: "70%" }} // Set default width to 100% for mobile
+            style={{ width: "60%" }} // Set default width to 100% for mobile
             className="" // Use Tailwind's responsive width utilities
           />
         </div>
@@ -194,7 +194,7 @@ const page = () => {
         </div>
 
         {/* image */}
-        <div className="w-full lg:w-[40%]">
+        <div className="w-full lg:w-[40%] ml-16 md:ml-0 mt-4 md:mt-0">
           <Image
             src={proofStakeImg}
             alt="banner-image"
@@ -229,11 +229,11 @@ const page = () => {
             className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] transform transition-transform duration-200 hover:scale-105
           md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-b-2 md:rounded-b-[48px] p-4 lg:p-6"
           >
-            <p className="border-[1px] border-[#72a861] h-8 w-8  rounded-full ">
+            <p className="shadow-inner shadow-[#8af969] h-10 pt-1 w-8  rounded-full ">
               {" "}
               01
             </p>
-            <div className="border-[1px] border-[#72a861] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"
@@ -251,11 +251,11 @@ const page = () => {
             className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] mt-0 md:-mt-48 transform transition-transform duration-200 hover:scale-105
           md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-t-2 md:rounded-t-[48px] p-4 lg:p-6"
           >
-            <p className="block md:hidden border-[1px] border-[#72a861] h-8 w-8 rounded-full ">
+            <p className="block md:hidden shadow-inner shadow-[#8af969] h-10 pt-1 w-8 rounded-full ">
               {" "}
               02
             </p>
-            <div className="border-[1px] border-[#72a861] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"
@@ -267,7 +267,7 @@ const page = () => {
                 Get Pollux
               </p>
             </div>
-            <p className="hidden md:block border-[1px] border-[#72a861] h-8 w-8 rounded-full ">
+            <p className="hidden md:block shadow-inner shadow-[#8af969] h-10 pt-1 w-8 rounded-full ">
               {" "}
               02
             </p>
@@ -277,11 +277,11 @@ const page = () => {
             className="flex flex-col space-y-4 items-center justify-between   w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] transform transition-transform duration-200 hover:scale-105
             md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-b-2 md:rounded-b-[48px] p-4 lg:p-6"
           >
-            <p className="border-[1px] border-[#72a861] h-8 w-8 rounded-full ">
+            <p className="shadow-inner shadow-[#8af969] h-10 w-8 rounded-full pt-1">
               {" "}
               03
             </p>
-            <div className="border-[1px] border-[#72a861] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969] w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"
@@ -299,11 +299,11 @@ const page = () => {
             className="flex flex-col space-y-4 items-center justify-between  w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] mt-0 md:-mt-48  transform transition-transform duration-200 hover:scale-105
           md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-t-2 md:rounded-t-[48px] p-4 lg:p-6"
           >
-            <p className="block md:hidden border-[1px] border-[#72a861] h-8 w-8 rounded-full ">
+            <p className="block md:hidden shadow-inner shadow-[#8af969] h-10 w-8 rounded-full pt-1 ">
               {" "}
               04
             </p>
-            <div className="border-[1px] border-[#72a861]  w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969]  w-full rounded-3xl md:rounded-[48px] p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"
@@ -315,7 +315,7 @@ const page = () => {
                 Bridge Assests{" "}
               </p>
             </div>
-            <p className="hidden md:block border-[1px] border-[#72a861] h-8 w-8 rounded-full ">
+            <p className="hidden md:block shadow-inner shadow-[#8af969] h-10 pt-1 w-8 rounded-full ">
               {" "}
               04
             </p>
@@ -325,17 +325,18 @@ const page = () => {
 
       {/* pulsebeams */}
       <div>
+        <p className="text-4xl font-bold mt-32">Key Features</p>
         <PulseBeams />
       </div>
       {/*Quick Links */}
-      <div className="mt-16 md:mt-32 mb-8 md:mb-16">
+      <div className="mt-16 md:mt-16 mb-8 md:mb-16">
         <p className="text-3xl font-semibold">Quick Links</p>
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-6 lg:space-x-8 mt-16 ">
           <div
             className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px] transform transition-transform duration-200 hover:scale-105
          "
           >
-            <div className="border-[1px] border-[#72a861] w-full rounded-3xl p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969] w-full rounded-3xl p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"
@@ -353,7 +354,7 @@ const page = () => {
             className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px] mt-6 md:mt-0 transform transition-transform duration-200 hover:scale-105
          "
           >
-            <div className="border-[1px] border-[#72a861] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"
@@ -371,7 +372,7 @@ const page = () => {
             className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px]  mt-6 md:mt-0 transform transition-transform duration-200 hover:scale-105
          "
           >
-            <div className="border-[1px] border-[#72a861] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"
@@ -388,7 +389,7 @@ const page = () => {
             className="flex flex-col sitems-center justify-between w-full md:w-[25%] h-[200px]  mt-6 md:mt-0 transform transition-transform duration-200 hover:scale-105
          "
           >
-            <div className="border-[1px] border-[#72a861] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
+            <div className="shadow-inner shadow-[#8af969] w-full rounded-3xl  p-4 md:p-6 flex flex-col justify-between h-full">
               <Image
                 src={arrowImg}
                 alt="build-icon"

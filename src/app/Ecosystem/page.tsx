@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import img from "../../../public/ele2.svg";
+import polluxLogo from "../../../public/pollux logo.svg";
 import { GiConcentricCrescents } from "react-icons/gi";
 import { GrProjects } from "react-icons/gr";
 
@@ -10,7 +11,7 @@ const page = () => {
   const distances = [350, 350, 350, 350, 350, 350];
 
   return (
-    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-64 mt-24 pb-64">
+    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-64">
       {/* Animated Rockets Background */}
       <div className="absolute inset-0 z-0">
         {[...Array(20)].map((_, index) => (
@@ -100,11 +101,11 @@ const page = () => {
           <div className="relative flex justify-center items-center w-[400px] h-[400px] border-dashed border-2 border-white rounded-full">
             <div className="absolute flex justify-center items-center w-[320px] h-[320px] rounded-full">
               <Image
-                src="/token3.png"
+                src={ polluxLogo}
                 alt="Polluxcoin Logo"
-                width={320}
-                height={320}
-                className="w-48 sm:w-64 md:w-72 lg:w-80"
+                width={200}
+                height={200}
+                className="w-48 sm:w-64 md:w-72 lg:w-52"
               />
             </div>
 

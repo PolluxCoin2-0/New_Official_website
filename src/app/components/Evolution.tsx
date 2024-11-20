@@ -46,7 +46,7 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, para, ima
 
   return (
     <div
-      className="flex flex-col md:flex-row py-5 space-x-0 md:space-x-32 items-center mt-16 p-4  md:p-12 pt-16 pb-16 h-[400px]"
+      className="flex flex-col lg:flex-row py-5 space-x-0 lg:space-x-32 items-center mt-16 p-0 lg:p-12  h-auto"
       onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
       onMouseEnter={() => setIsHovered(true)}
       style={{
@@ -58,7 +58,7 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, para, ima
           : "transparent",
       }}
     >
-      <div className="w-[20%] ml-20">
+      <div className="w-[80%] md:w-[0%] lg:w-[20%] ml-0 lg:ml-20">
         <Image
           src={imageSrc}
           alt={title}
@@ -168,7 +168,7 @@ const Evolution = () => {
   );
 
   return (
-    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-20 mt-16 2xl:mt-16">
+    <div className="text-center px-2 md:px-4 lg:px-6 xl:px-20 mt-16 xl:mt-6 2xl:mt-12">
       <p className="text-3xl md:text-4xl xl:text-5xl  font-semibold leading-snug">
         Designed for
         <br />
@@ -190,7 +190,7 @@ const Evolution = () => {
       </li>
     ))}
   </ul>
-</div> */}
+      </div> */}
 
 
       {/* Conditionally render the CardSection component based on the activeSection */}

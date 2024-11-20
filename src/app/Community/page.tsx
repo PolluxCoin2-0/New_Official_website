@@ -30,7 +30,7 @@ const Page = () => {
   
 
   return (
-    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-64 mt-48">
+    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-48">
       <Tilt
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
@@ -136,7 +136,7 @@ const Page = () => {
             alt="banner-image"
             width={0}
             height={0}
-            style={{ width: "90%" }}
+            style={{ width: "100%" }}
             className="rounded-2xl "
           />
         </div>

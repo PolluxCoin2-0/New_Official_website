@@ -22,7 +22,7 @@ const Page = () => {
   };
 
   return (
-    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-64 mt-32  ">
+    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-32  ">
       <div className="flex flex-col justify-center items-center space-y-4 ">
         <p
           className="mt-0 lg:mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
@@ -60,7 +60,7 @@ const Page = () => {
               : "transparent",
           }}
         >
-          <div className="text-start w-full lg:w-[40%]">
+          <div className="text-start w-full lg:w-[60%]">
             <p className="text-2xl lg:text-3xl font-semibold">
             Pollux Grant Program 
 
@@ -72,7 +72,7 @@ const Page = () => {
             </p>
 
             <button
-              className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
+              className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium ml-8 md:ml-0
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
               group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
             >
@@ -81,7 +81,7 @@ const Page = () => {
               </span>
             </button>
           </div>
-          <div className="flex justify-center  md:justify-end w-full md:w-[60%] mt-6 md:mt-0">
+          <div className="flex justify-center  md:justify-end w-full md:w-[40%] mt-6 md:mt-0">
             <Image
               src={bannerImg}
               alt="banner-image"
@@ -124,15 +124,15 @@ const Page = () => {
       </div>
 
       <div className="flex flex-col md:flex-row  space-x-0 md:space-x-8 justify-between items-baseline  pb-12 border-b-[1px] border-[#504f4f] w-full overflow-hidden">
-        <div className="w-full md:w-[30%] flex flex-col items-start">
-          <p className="text-2xl lg:text-4xl font-semibold">How To Apply ? </p>
+        <div className="w-full md:w-[30%] flex flex-col item-center md:items-start">
+          <p className="text-2xl md:text-xl lg:text-4xl font-semibold ">How To Apply ? </p>
           <Image
               src={applyImg}
               alt="banner-image"
               width={0}
               height={0}
               style={{ width: "60%" }} // Set default width to 100% for mobile
-              className="rounded-2xl w-full md:w-[70%] mt-20" // Use Tailwind's responsive width utilities
+              className="rounded-2xl w-full md:w-[70%] mt-5 md:mt-10 lg:mt-20 ml-16 md:ml-0" // Use Tailwind's responsive width utilities
             />
         </div>
 
@@ -153,7 +153,7 @@ const Page = () => {
           </div>
           <div>
             <button
-              className=" mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
+              className=" mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium ml-10 md:ml-0
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
               group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
             >

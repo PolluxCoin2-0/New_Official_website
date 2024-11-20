@@ -52,10 +52,10 @@ const page = () => {
     </div>
   );
   return (
-    <div className=" min-h-screen px-2 md:px-4 lg:px-6 xl:px-64 mt-32  ">
+    <div className=" min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-32  ">
     
       {/* About us  */}
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-between">
         <div>
         <p className="text-4xl font-semibold ">About Pollux</p>
         <p className="text-[#a7a4a4] mt-5 text-lg font-medium">
@@ -92,7 +92,7 @@ const page = () => {
 
       {/* Mission, Vision */}
       <div className="flex flex-row space-x-10 w-full mt-16">
-        <div className="w-[50%] border-[1px] rounded-2xl p-6 transform transition-transform duration-200 hover:scale-105">
+        <div className="w-[50%] shadow-inner shadow-[#8af969] rounded-2xl p-6 transform transition-transform duration-200 hover:scale-105">
           <div className="flex flex-row justify-start space-x-2 items-center">
            
             <Image
@@ -118,7 +118,7 @@ const page = () => {
           </p>
         </div>
 
-        <div className="w-[50%] border-[1px] rounded-2xl p-6 transform transition-transform duration-200 hover:scale-105">
+        <div className="w-[50%] shadow-inner shadow-[#8af969] rounded-2xl p-6 transform transition-transform duration-200 hover:scale-105">
           <div className="flex flex-row justify-start space-x-2 items-center">
            
             <Image
