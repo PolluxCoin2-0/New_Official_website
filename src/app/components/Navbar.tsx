@@ -226,6 +226,7 @@ import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { HiOutlineShare } from "react-icons/hi"; // Social dropdown icon
 import Image from "next/image";
+import polluxBlackLogo from "../../../public/polluxBlackLogo.png";
 
 export default function Navbar() {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -415,7 +416,7 @@ export default function Navbar() {
             onMouseLeave={() => setIsHovered(false)}
           >
             {isHovered ? (
-              <Image src="/polluxicon.png" alt="Pollux Icon" width={24} height={24} className="h-6 w-6" />
+              <Image src={polluxBlackLogo} alt="Pollux Icon" width={24} height={24} className="h-6 w-6" />
             ) : (
               <p className="font-semibold text-sm">GET $POX</p>
             )}
