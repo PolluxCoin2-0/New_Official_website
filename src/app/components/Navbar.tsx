@@ -380,13 +380,13 @@ export default function Navbar() {
             <div className="absolute top-10 right-0 mt-2 w-max bg-black text-white rounded-lg shadow-lg">
               <ul className="p-2">
                 <li>
-                  <Link href="https://x.com/polluxcoin1" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link href="https://x.com/Polluxchain" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
                     <BsTwitterX size={18} />
                     <span>Twitter</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://t.me/Polluxchaindev" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link href="https://t.me/polluxchainDAO" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
                     <FaTelegramPlane size={20} />
                     <span>Telegram</span>
                   </Link>
