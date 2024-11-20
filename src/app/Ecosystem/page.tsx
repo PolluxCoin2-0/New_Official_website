@@ -92,20 +92,20 @@ const page = () => {
 
       {/* Main Content */}
       <div className="relative z-10 text-white pb-64">
-        <p className="text-4xl font-bold">Our Diverse Ecosystem</p>
-        <p className="text-lg font-semibold pt-4 text-gray-300">
+        <p className="text-2xl md:text-4xl font-bold">Our Diverse Ecosystem</p>
+        <p className="text-md md:text-lg font-semibold pt-4 text-gray-300">
           Integrated Excellence with Pollux Chain
         </p>
 
-        <div className="flex justify-center mt-60">
-          <div className="relative flex justify-center items-center w-[400px] h-[400px] border-dashed border-2 border-white rounded-full">
+        <div className="hidden md:flex justify-center md:mt-72 lg:mt-60">
+          <div className="relative flex justify-center items-center md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] border-dashed border-2 border-white rounded-full">
             <div className="absolute flex justify-center items-center w-[320px] h-[320px] rounded-full">
               <Image
                 src={ polluxLogo}
                 alt="Polluxcoin Logo"
                 width={200}
                 height={200}
-                className="w-48 sm:w-64 md:w-72 lg:w-52"
+                className="w-48 sm:w-64 md:w-48 lg:w-52"
               />
             </div>
 
@@ -187,12 +187,12 @@ const page = () => {
       </div>
 
       {/* Our Projects */}
-      <div className="mt-16">
+      <div className="-mt-60 md:mt-16">
         <div className="flex flex-row space-x-2 items-center">
-          <p>
+          <p className="hidden md:block">
             <GiConcentricCrescents size={32} />
           </p>
-          <p className="text-4xl font-semibold">Discover our Ecosystem</p>
+          <p className="hidden md:block text-4xl font-semibold">Discover our Ecosystem</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">

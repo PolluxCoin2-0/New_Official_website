@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image, { StaticImageData }from "next/image";
 import sustainImg from "../../../public/sustain.png";
 import scalableImg from "../../../public/scalable.png";
-import defiImg from "../../../public/defi.png";
+import defiImg from "../../../public/defi (2).png";
 import secureImg from "../../../public/secure.png";
 import fastImg from "../../../public/fast.png";
 
