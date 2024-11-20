@@ -2,7 +2,7 @@
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 import PerformanceGraph from './PerformanceGraph';
-import { getBlockHeight, getPriceChart } from '@/app/utils/axios';
+import { getBlockHeight, getNodeStatusData, getPriceChart, getPriceData } from '@/app/utils/axios';
 import { formatNumberWithCommas } from '@/app/utils/formatNumberWithCommas';
 interface BlockHeightData {
   poxMarketCap: string;
@@ -12,6 +12,16 @@ interface BlockHeightData {
   txnVol24: string;
   txCount24: string;
 }
+
+interface NodeStatusData {
+  last24hourvol: number; // Volume from the last 24 hours, expected to be a number
+  message: string;       // 'message' could be any additional data related to node status, so we use 'string' or define it more specifically if needed
+}
+
+interface PriceData {
+  message: number; // Message seems to be a numeric value, likely price-related
+}
+
 interface PriceChartDataItem {
   date: number;  // Assuming `time` is a string (e.g., ISO date string)
   value: number; // Assuming `price` is a number
@@ -29,13 +39,34 @@ const Performance = () => {
 
   const [blockHeightData, setBlockHeightData] = useState<BlockHeightData | null>(null);
   const [chartData, setChartData] = useState<DataItem[]>([]);
-
+   const [priceData, setPriceData] = useState<PriceData | null>(null);
+  const [nodeData, setNodeData] = useState<NodeStatusData | null>(null);
   // Fetch block height data from API
+
   useEffect(() => {
+    const priceData = async () => {
+      try {
+        const priceData = await getPriceData();
+        console.log(priceData);
+        setPriceData(priceData?.message);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    const nodeStatusData = async() => {
+      try {
+        const nodeData = await getNodeStatusData();
+        console.log(nodeData);
+        setNodeData(nodeData?.message);
+      } catch (error) {
+        console.log(error);
+      }
+    }
     const fetchBlockHeightData = async () => {
       try {
         const data = await getBlockHeight();
-        console.log(data);
+        // console.log(data);
         setBlockHeightData(data?.message);  // Assuming the API response is an object with a "message" key
       } catch (error) {
         console.error('Error fetching block height:', error);
@@ -46,7 +77,7 @@ const Performance = () => {
     const getChartData = async () => {
       try {
         const response = await getPriceChart();
-        console.log(response);
+        // console.log(response);
         const mappedData = response?.message.map((item: PriceChartDataItem) => ({
           date: new Date(item.date).getTime(),  // Convert string to timestamp (number)
           value: item.value,                    // Assuming `price` is the value you want
@@ -59,6 +90,8 @@ const Performance = () => {
 
     fetchBlockHeightData();
     getChartData();
+    priceData();
+    nodeStatusData();
   }, []); 
 
   return (
@@ -103,15 +136,17 @@ const Performance = () => {
         </div>
         <div className="flex-1 flex flex-col items-center border-y-[1px] border-gray-700 px-4 py-8 rounded-3xl md:rounded-none lg:rounded-none md:px-12 lg:px-16 bg-black shadow-inner shadow-[#8af969]">
           <p className="font-bold text-xl md:text-3xl">
-            {blockHeightData?.txnVol24 && formatNumberWithCommas(parseInt(blockHeightData.txnVol24))}
+          {nodeData  ? (priceData && priceData.message ? nodeData.last24hourvol * priceData.message : 0) : 0}
+            
+            {/* {blockHeightData?.txnVol24 && formatNumberWithCommas(parseInt(blockHeightData.txnVol24))} */}
           </p>
-          <p className="font-semibold text-lg md:text-xl">Transaction Volume <span className="text-gray-500">(24hr)</span></p>
+          <p className="font-semibold text-lg md:text-xl">Transaction Volume <span className="text-[#F71302] font-normal text-lg">(24hr)</span></p>
         </div>
         <div className="flex-1 flex flex-col items-center border-y-[1px] border-gray-700 border-r-[1px] rounded-3xl md:rounded-l-none lg:rounded-l-none px-4 py-8 md:px-12 lg:px-16 bg-black shadow-inner shadow-[#8af969]">
           <p className="font-bold text-xl md:text-3xl">
             {blockHeightData?.txCount24 && formatNumberWithCommas(parseInt(blockHeightData.txCount24))}
           </p>
-          <p className="font-semibold text-lg md:text-xl">Transaction Count <span className="text-gray-500">(24hr)</span></p>
+          <p className="font-semibold text-lg md:text-xl">Transaction Count <span className="text-[#F71302] font-normal text-lg">(24hr)</span></p>
         </div>
       </div>
     </div>

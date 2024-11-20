@@ -27,3 +27,12 @@ export const getNodeStatusData = async() => {
         console.log(error);
     }
 }
+
+export const getPriceData = async() => {
+    try {
+        const response = await axios.get("https://node.poxscan.io/api/getPrice")
+        return response?.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
