@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta property="og:image" content="/favicon.png" />
 
         {/* JSON-LD Schema Markup for WebPage */}
-        {/* <script type="application/ld+json">
+        <script type="application/ld+json">
           {`
           {
             "@context": "http://schema.org",
@@ -76,7 +76,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             }
           }
           `}
-        </script> */}
+        </script>
       </Head>
       
       
