@@ -624,7 +624,7 @@ export default function MobileNavbar() {
       dropdown: [
         { title: "Community", href: "/" },
         { title: "Partner With Us", href: "/" },
-        { title: "Blog", href: "/" },
+        { title: "Blog", href: "https://medium.com/@PolluxDao" },
         { title: "News & Events", href: "/" },
       ],
     },
