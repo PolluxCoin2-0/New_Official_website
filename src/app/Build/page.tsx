@@ -60,7 +60,7 @@ const page = () => {
   return (
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-24 lg:mt-32 xl:mt-48">
       {/* Sustainable Development */}
-      <div className="flex flex-col lg:flex-row justify-between items-center border-b-[1px]  border-[#464545] pb-8 md:pb-24">
+      <div className="flex flex-col md:flex-row justify-between space-x-0 md:space-x-8  items-center border-b-[1px]  border-[#464545] pb-8 md:pb-24">
         <div className="text-start w-full lg:w-[60%]">
           <div className="flex flex-row items-center space-x-2 ">
             <Image
@@ -71,18 +71,14 @@ const page = () => {
               style={{ width: "4%" }} // Set default width to 100% for mobile
               className="w-10" // Use Tailwind's responsive width utilities
             />
-            <p className="text-sm md:text-3xl font-semibold">
+            <p className="text-sm md:text-xl lg:text-3xl font-semibold">
               Sustainable Development Starts Here
             </p>
           </div>
           <p className="mt-4 md:mt-8 text-sm md:text-md lg:text-lg font-medium text-[#ccc7c7] text-justify leading-relaxed">
             Pollux enables developers to build scalable, eco-friendly dApps
-            using the <br />
-            Sustainable Proof of Stake (SPoS) consensus mechanism. This unique{" "}
-            <br />
-            approach incentivizes projects prioritising sustainability and
-            making a <br />
-            positive real-world impact.
+            using the Sustainable Proof of Stake (SPoS) consensus mechanism. This unique{" "}
+            approach incentivizes projects prioritising sustainability and making a positive real-world impact.
           </p>
 
           <div className="flex flex-col md:flex-row  items-center mt-4 lg:mt-6">
@@ -129,7 +125,7 @@ const page = () => {
         </div>
 
         {/* image */}
-        <div className="w-full lg:w-[40%] ml-20 md:ml-0">
+        <div className="w-[80%] md:w-[100%] lg:w-[40%] ml-20 md:ml-0">
           <Image
             src={buildImg}
             alt="banner-image"
@@ -148,28 +144,21 @@ const page = () => {
           <p className="text-2xl md:text-3xl font-semibold">
             Sustainable Proof Of Stake (SPoS)
           </p>
-          <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-8">
-            The 5ire ecosystem embarks on a holistic journey towards
-            sustainability. <br />
-            Its very foundation lies in sustainability, entrenched within its
-            core via <br />
-            the Sustainable Proof of Stake (SPoS) consensus mechanism.
+          <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-8 text-justify">
+            The 5ire ecosystem embarks on a holistic journey towards sustainability.  Its very foundation lies in sustainability, entrenched within its core via the Sustainable Proof of Stake (SPoS) consensus mechanism.
           </p>
-          <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-4">
-            Sustainable Proof of Stake is the world’s first ESG compliance-based
-            reward <br />
-            distribution mechanism that emerges as a governance-based system
-            powering
+          <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-4 text-justify">
+            Sustainable Proof of Stake is the world’s first ESG compliance-based reward distribution mechanism that emerges as a governance-based system powering
           </p>
-          <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-4">
+          <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-4 text-justify">
             SPoS lays a strong foundation for building the next generation of
-            dApps, <br />
+            dApps,
             prioritising both security and real-world impact. It operates a
-            dual-chain <br />
+            dual-chain 
             architecture that empowers developers to choose the chain that best
-            suits their <br />
+            suits their 
             the high-performance 5ire Native chain or the widely compatible 5ire
-            EVM chain. <br />
+            EVM chain.
             This ensures seamless migration for existing Ethereum dApps.
           </p>
           <div className="flex flex-col md:flex-row mt-8">
@@ -194,7 +183,7 @@ const page = () => {
         </div>
 
         {/* image */}
-        <div className="w-full lg:w-[40%] ml-16 md:ml-0 mt-4 md:mt-0">
+        <div className="w-full md:w-[50%]  lg:w-[40%] ml-16 md:ml-16 lg:ml-0 mt-4 lg:mt-0">
           <Image
             src={proofStakeImg}
             alt="banner-image"
@@ -324,7 +313,7 @@ const page = () => {
       </div>
 
       {/* pulsebeams */}
-      <div>
+      <div className="hidden lg:block">
         <p className="text-4xl font-bold mt-32">Key Features</p>
         <PulseBeams />
       </div>
