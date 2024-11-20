@@ -60,7 +60,7 @@ const page = () => {
   return (
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-24 lg:mt-32 xl:mt-48">
       {/* Sustainable Development */}
-      <div className="flex flex-col md:flex-row justify-between space-x-0 md:space-x-8  items-center border-b-[1px]  border-[#464545] pb-8 md:pb-24">
+      <div className="flex flex-col md:flex-row justify-between space-x-0 md:space-x-8  items-center pb-8 md:pb-24">
         <div className="text-start w-full lg:w-[60%]">
           <div className="flex flex-row items-center space-x-2 ">
             <Image
@@ -125,7 +125,7 @@ const page = () => {
         </div>
 
         {/* image */}
-        <div className="w-[80%] md:w-[100%] lg:w-[40%] ml-20 md:ml-0">
+        <div className="flex justify-center lg:justify-normal w-full md:w-[100%] lg:w-[40%] mt-8 md:mt-0">
           <Image
             src={buildImg}
             alt="banner-image"
@@ -138,7 +138,7 @@ const page = () => {
       </div>
 
       {/* Sustainable Proof of Stake */}
-      <div className="flex flex-col lg:flex-row justify-between items-center w-full shadow-inner shadow-[#8af969] mt-16 p-4 md:p-8 rounded-3xl pt-16 pb-16 ">
+      <div className="flex flex-col lg:flex-row justify-between items-center w-full shadow-inner shadow-[#8af969] mt-10 p-4 md:p-8 rounded-3xl  ">
         <div className="text-start w-full lg:w-[60%] ">
           {/* SPOs */}
           <p className="text-2xl md:text-3xl font-semibold">
@@ -183,7 +183,7 @@ const page = () => {
         </div>
 
         {/* image */}
-        <div className="w-full md:w-[50%]  lg:w-[40%] ml-16 md:ml-16 lg:ml-0 mt-4 lg:mt-0">
+        <div className="flex justify-center md:justify-normal w-full md:w-[50%]  lg:w-[40%] mt-8 md:mt-0 ">
           <Image
             src={proofStakeImg}
             alt="banner-image"
