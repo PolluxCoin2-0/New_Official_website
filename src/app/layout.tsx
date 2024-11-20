@@ -11,7 +11,7 @@ export const metadata = {
   robots: 'index, follow',
   keywords: 'PolluxCoin, blockchain, cryptocurrency, decentralized web, developers',
   openGraph: {
-    title: 'PolluxCoin - Your gateway to a Hybrid Layer 1 Blockchain',
+    title: 'PolluxCoin - Your gateway to a Hybrid Layer-1 Blockchain',
     description: 'Empower your blockchain journey with PolluxCoin\'s cutting-edge technology.',
     url: 'https://poxcoindev.netlify.app/',
     images: '/favicon.png',
