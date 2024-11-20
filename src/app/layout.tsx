@@ -11,6 +11,7 @@ export const metadata = {
   robots: 'index, follow',
   keywords: 'PolluxCoin, blockchain, cryptocurrency, decentralized web, developers',
   openGraph: {
+    card: '/favicon.png',
     title: 'PolluxCoin - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
     description: 'Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance.',
     url: 'https://polluxchain.com/',
