@@ -748,21 +748,21 @@ export default function MobileNavbar() {
                     <BsTwitterX size={20} />
                   </Link>
                   <Link
-                    href="https://t.me/"
+                    href="https://t.me/polluxchainDAO"
                     target="_blank"
                     className="text-white hover:text-[#8af969]"
                   >
                     <FaTelegramPlane size={20} />
                   </Link>
                   <Link
-                    href="https://instagram.com/"
+                    href="https://www.instagram.com/polluxchainofficial/"
                     target="_blank"
                     className="text-white hover:text-[#8af969]"
                   >
                     <FaInstagram size={20} />
                   </Link>
                   <Link
-                    href="https://linkedin.com/"
+                    href="https://www.linkedin.com/company/polluxchain/"
                     target="_blank"
                     className="text-white hover:text-[#8af969]"
                   >
