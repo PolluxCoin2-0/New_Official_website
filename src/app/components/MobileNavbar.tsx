@@ -732,7 +732,7 @@ export default function MobileNavbar() {
                 <div className="mt-4 w-full flex justify-center">
                   <Button
                     variant="primary"
-                    className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] w-full max-w-xs"
+                    className="bg-[#8af969] text-black w-full max-w-xs"
                   >
                     Get $POLLUX
                   </Button>
