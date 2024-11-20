@@ -17,10 +17,10 @@ export const metadata = {
     images: '/favicon.png',
   },
   twitter: {
-    card: '/favicon.png',
+    card: '/xcard.png',
     title: 'PolluxChain - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
     description: 'Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance.',
-    images: '/xcard.png',
+    images: '/favicon.png',
   },
 };
 
