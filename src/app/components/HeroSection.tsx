@@ -118,7 +118,7 @@ export default function HeroSection() {
         />
   
        {/* Headline: Decentralize the web */}
-      <h2 className="text-lg sm:text-2xl lg:text-xl font-medium text-[#fff] mt-20">
+      <h2 className="text-lg sm:text-2xl lg:text-xl xl:text-2xl font-medium text-[#fff] mt-20">
         Your gateway to a Hybrid Layer 1 Blockchain designed for{" "}
       </h2>
       <AnimatedText2 />

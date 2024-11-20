@@ -59,7 +59,7 @@ export default function Footer() {
           <Link href="/">
           <p  className="text-lg font-medium pt-4 block">Documentation</p>
           </Link>
-          <Link href="/">
+          <Link href="/Whitepaper.pdf">
           <p className="text-lg font-medium pt-2 block">Whitepaper</p>
           </Link>
           <Link href="/">
@@ -68,13 +68,13 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-row space-x-3 mt-5 md:mt-0">
-          <a href="https://x.com/polluxcoin1" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/Polluxchain" target="_blank" rel="noopener noreferrer">
             <BsTwitterX size={28} />
           </a>
-          <a href="https://t.me/Polluxchaindev" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/polluxchainDAO" target="_blank" rel="noopener noreferrer">
             <FaTelegramPlane size={28} />
           </a>
-          <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/polluxchainofficial/" target="_blank" rel="noopener noreferrer">
             <SiInstagram size={28} />
           </a>
         </div>
