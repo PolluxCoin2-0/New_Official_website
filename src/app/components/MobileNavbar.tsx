@@ -605,9 +605,9 @@ export default function MobileNavbar() {
     {
       title: "Developers",
       dropdown: [
-        { title: "Documentation", href: "/documentation" },
-        { title: "Grant Program", href: "/Grant" },
-        { title: "Build", href: "/Build" },
+        { title: "Documentation", href: "/" },
+        { title: "Grant Program", href: "/" },
+        { title: "Build", href: "/" },
       ],
     },
     // {
@@ -622,18 +622,18 @@ export default function MobileNavbar() {
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/Community" },
-        { title: "Partner With Us", href: "/partner" },
-        { title: "Blog", href: "/blog" },
-        { title: "News & Events", href: "/Events" },
+        { title: "Community", href: "/" },
+        { title: "Partner With Us", href: "/" },
+        { title: "Blog", href: "/" },
+        { title: "News & Events", href: "/" },
       ],
     },
-    { title: "Ecosystem", href: "/Ecosystem" },
+    { title: "Ecosystem", href: "/" },
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/Aboutus" },
-        { title: "Contact", href: "/contact" },
+        { title: "About Us", href: "/" },
+        { title: "Contact", href: "/" },
       ],
     },
   ];

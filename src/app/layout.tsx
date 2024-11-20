@@ -5,22 +5,24 @@ import Footer from './components/Footer';
 
 
 export const metadata = {
-  title: 'PolluxChainn - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
+  title: 'PolluxChain - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
   description: 'Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance.',
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   keywords: 'PolluxCoin, blockchain, cryptocurrency, decentralized web, developers',
   openGraph: {
-    title: 'PolluxCoin - Your gateway to a Hybrid Layer-1 Blockchain',
-    description: 'Empower your blockchain journey with PolluxCoin\'s cutting-edge technology.',
+    card: '/favicon.png',
+    title: 'PolluxCoin - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
+    description: 'Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance.',
     url: 'https://polluxchain.com/',
     images: '/favicon.png',
   },
   twitter: {
-    card: '/favicon.png',
+    card: '/summary_large_image',
     title: 'PolluxChain - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
     description: 'Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance.',
-    images: '/xcard.png',
+    url: 'https://polluxchain.com/',
+    images: '/favicon.png',
   },
 };
 
