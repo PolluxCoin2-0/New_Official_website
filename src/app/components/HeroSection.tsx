@@ -125,7 +125,7 @@ export default function HeroSection() {
 
       {/* Buttons Section */}
       <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center items-center">
-      <Link href="/Build" passHref>
+      <Link href="/" passHref>
         <button className="flex items-center space-x-2 justify-center text-lg font-semibold px-6 py-3 rounded-xl bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] transition-all w-full sm:w-auto">
         <Image
           src={getStartImg}
