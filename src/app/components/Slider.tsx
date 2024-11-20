@@ -112,7 +112,7 @@ const Slider = () => {
         {/* Content */}
         <div className="w-full lg:w-[60%] p-0 md:p-6 text-white rounded-lg shadow-lg mt-12 mb-8 md:mt-6 lg:mt-0 ">
           {/* Navigation Arrows inside the border */}
-          <div className="flex flex-row space-x-2 justify-end -mt-6">
+          <div className="flex flex-row space-x-5 justify-end -mt-6">
             <button
               onClick={prevSlide}
               className="px-1 py-1 md:px-2 md:py-2 border-[1px] rounded-full border-white hover:border-green-400 hover:bg-[#8af969]  transition-all duration-300"
