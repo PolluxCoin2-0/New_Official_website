@@ -44,7 +44,7 @@ export default function Footer() {
           <Link href="/">
           <p className="text-lg font-medium pt-4 block">Ecosystem</p>
           </Link>
-          <Link href="/">
+          <Link href="https://medium.com/@PolluxDao">
           <p  className="text-lg font-medium pt-2 block">Blog</p>
           </Link>
           <Link href="/">
