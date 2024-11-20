@@ -140,7 +140,12 @@ const Slider = () => {
             {slides[currentSlide].buttonText}
           </a> */}
           <div className="flex flex-row items-center pt-4">
-        <a href={slides[currentSlide].link} className="text-[#8AF969] text-lg font-medium">
+        <a 
+        href={slides[currentSlide].link} 
+        className="text-[#8AF969] text-lg font-medium"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
           Read More
         </a>
         <p>
