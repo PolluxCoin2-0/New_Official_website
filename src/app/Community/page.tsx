@@ -30,7 +30,7 @@ const Page = () => {
   
 
   return (
-    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-48">
+    <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-32 lg:mt-48">
       <Tilt
         tiltMaxAngleX={5}
         tiltMaxAngleY={5}
@@ -68,7 +68,7 @@ const Page = () => {
           </div>
 
           <div className="w-full md:w-[60%] text-start">
-            <p className="text-2xl md:text-4xl font-medium ">
+            <p className="text-2xl md:text-4xl font-medium mt-6 md:mt-0">
               Join the Community
             </p>
             <p className="pt-4 text-md md:text-lg font-medium text-[#a7a4a4] justify-content">
@@ -84,7 +84,7 @@ const Page = () => {
         </div>
       </Tilt>
 
-      <div className="flex flex-col md:flex-row justify-between items-center rounded-2xl p-6 mt-0 md:mt-16">
+      <div className="flex flex-col md:flex-row justify-between items-center rounded-2xl  px-12 mt-16">
         <div className="text-start ">
           <p className="text-2xl md:text-3xl font-medium ">
             Become a Pollux Ambassadar

@@ -83,7 +83,7 @@ const renderCards = (data: CardData[]) => {
   return data.map((card, index) => (
     <div
       key={index}
-      className="w-full md:w-[50%] lg:w-[40%] xl:w-[25%] bg-[#0e0d0d] rounded-3xl h-auto p-4 transform transition-transform duration-200 hover:scale-105"
+      className="w-full md:w-[50%] lg:w-[40%] xl:w-[25%] bg-[#0e0d0d] rounded-3xl h-auto p-4 transform transition-transform duration-200 hover:scale-105 mt-10 md:mt-0"
     >
       <div className="w-full ">
         <Image
@@ -232,7 +232,7 @@ const Page = () => {
 
 
        {/* Blogs Section */}
-       <p className="mt-16 md:mt-24  mb-8 md:mb-16 text-start text-4xl font-semibold">
+       <p className="mt-16 lg:mt-24  mb-8 md:mb-16 text-start text-4xl font-semibold">
         Blogs
       </p>
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-6 lg:space-x-12 w-full">

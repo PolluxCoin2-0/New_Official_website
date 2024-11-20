@@ -132,7 +132,7 @@ const Slider = () => {
           </div>
           <p className="text-lg md:text-lg font-bold mb-4 text-nowrap inline-block bg-[#8af969] px-4 md:px-8 rounded-2xl py-2 text-black">{slides[currentSlide].title}</p>
           <h2 className="text-2xl font-bold mt-2 mb-4">{slides[currentSlide].heading}</h2>
-          <p className="text-md md:text-lg text-[#a7a4a4] mb-6">{slides[currentSlide].description}</p>
+          <p className="text-md md:text-lg text-[#a7a4a4] mb-6 text-justify leading-relaxed">{slides[currentSlide].description}</p>
           {/* <a
             href={slides[currentSlide].buttonLink}
             className="text-center text-lg font-medium bg-[#8af969] text-black px-12 rounded-2xl py-2 "

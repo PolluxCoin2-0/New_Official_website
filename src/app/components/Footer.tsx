@@ -24,10 +24,10 @@ export default function Footer() {
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Company</p>
           <Link href="/">
-          <p  className="text-lg font-semibold pt-4 block">About Us</p>
+          <p  className="text-lg font-medium pt-4 block">About Us</p>
           </Link>
           <Link href="/">
-          <p className="text-lg font-semibold pt-2 block">Contact</p>
+          <p className="text-lg font-medium pt-2 block">Contact</p>
           </Link>
         </div>
 
@@ -41,29 +41,29 @@ export default function Footer() {
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Explore</p>
           <Link href="/">
-          <p className="text-lg font-semibold pt-4 block">Ecosystem</p>
+          <p className="text-lg font-medium pt-4 block">Ecosystem</p>
           </Link>
           <Link href="/">
-          <p  className="text-lg font-semibold pt-2 block">Blog</p>
+          <p  className="text-lg font-medium pt-2 block">Blog</p>
           </Link>
           <Link href="/">
-          <p  className="text-lg font-semibold pt-2 block">Community</p>
+          <p  className="text-lg font-medium pt-2 block">Community</p>
           </Link>
           <Link href="/">
-          <p  className="text-lg font-semibold pt-2 block">Brand Kit</p>
+          <p  className="text-lg font-medium pt-2 block">Brand Kit</p>
           </Link>
         </div>
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Learn</p>
           <Link href="/">
-          <p  className="text-lg font-semibold pt-4 block">Documentation</p>
+          <p  className="text-lg font-medium pt-4 block">Documentation</p>
           </Link>
           <Link href="/">
-          <p className="text-lg font-semibold pt-2 block">Whitepaper</p>
+          <p className="text-lg font-medium pt-2 block">Whitepaper</p>
           </Link>
           <Link href="/">
-          <p  className="text-lg font-semibold pt-2 block">Become an Ambassador</p>
+          <p  className="text-lg font-medium pt-2 block">Become an Ambassador</p>
           </Link>
         </div>
 

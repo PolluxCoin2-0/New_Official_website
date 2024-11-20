@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image, { StaticImageData }from "next/image";
 import sustainImg from "../../../public/sustain.png";
 import scalableImg from "../../../public/scalable.png";
-import defiImg from "../../../public/defi.png";
+import defiImg from "../../../public/defi (2).png";
 import secureImg from "../../../public/secure.png";
 import fastImg from "../../../public/fast.png";
 
@@ -72,7 +72,7 @@ const CardSection: React.FC<CardSectionProps> = ({ title, description, para, ima
         <p className=" inline-block text-center text-md md:text-xl bg-[#8af969] px-4 md:px-8 rounded-2xl py-2 truncate text-black font-bold">
           {title}
         </p>
-        <p className="text-2xl font-semibold pt-4">{description}</p>
+        <p className="text-2xl font-semibold pt-4 text-justify leading-relaxed">{description}</p>
         <p className="text-[#a7a4a4] pt-2 text-md font-medium">
         {para}
         </p>
