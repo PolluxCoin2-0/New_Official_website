@@ -222,7 +222,7 @@ import {
   NavigationMenuLink,
 } from "@radix-ui/react-navigation-menu";
 import { ChevronDown } from "lucide-react"; // Keep this for the dropdown icon
-import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
+import { FaTelegramPlane, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { HiOutlineShare } from "react-icons/hi"; // Social dropdown icon
 import Image from "next/image";
@@ -380,22 +380,28 @@ export default function Navbar() {
             <div className="absolute top-10 right-0 mt-2 w-max bg-black text-white rounded-lg shadow-lg">
               <ul className="p-2">
                 <li>
-                  <Link href="https://x.com/" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link href="https://x.com/polluxcoin1" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
                     <BsTwitterX size={18} />
                     <span>Twitter</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://t.me/" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link href="https://t.me/Polluxchaindev" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
                     <FaTelegramPlane size={20} />
                     <span>Telegram</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://instagram.com/" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link href="https://www.instagram.com/polluxchainofficial/" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
                     <FaInstagram size={20} />
                     <span>Instagram</span>
                   </Link>
+                  <li>
+                  <Link href="https://www.linkedin.com/company/polluxchain/" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                    <FaLinkedinIn size={20} />
+                    <span>LinkedIn</span>
+                  </Link>
+                </li>
                 </li>
               </ul>
             </div>
