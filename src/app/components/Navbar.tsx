@@ -259,8 +259,8 @@ export default function Navbar() {
       title: "Developers",
       dropdown: [
         { title: "Documentation ➚", href: "/" },
-        { title: "Grant Program", href: "/Grant" },
-        { title: "Build", href: "/Build" },
+        { title: "Grant Program", href: "/" },
+        { title: "Build", href: "/" },
       ],
     },
     // {
@@ -275,21 +275,21 @@ export default function Navbar() {
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/Community" },
-        { title: "Partner With Us", href: "" },
-        { title: "Blog ➚", href: "" },
-        { title: "News & Events", href: "/Events" },
+        { title: "Community", href: "/" },
+        { title: "Partner With Us", href: "/" },
+        { title: "Blog ➚", href: "https://medium.com/@PolluxDao" },
+        { title: "News & Events", href: "/" },
       ],
     },
     {
       title: "Ecosystem",
-      href: "/Ecosystem",
+      href: "/",
     },
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/AboutUs" },
-        { title: "Contact", href: "" },
+        { title: "About Us", href: "/" },
+        { title: "Contact", href: "/" },
       ],
     },
   ];
