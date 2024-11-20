@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: 'PolluxCoin - Your gateway to a Hybrid Layer-1 Blockchain',
     description: 'Empower your blockchain journey with PolluxCoin\'s cutting-edge technology.',
-    url: 'https://poxcoindev.netlify.app/',
+    url: 'https://polluxchain.com/',
     images: '/favicon.png',
   },
   twitter: {
