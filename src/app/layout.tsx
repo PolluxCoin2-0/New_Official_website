@@ -20,6 +20,7 @@ export const metadata = {
     card: '/xcard.png',
     title: 'PolluxChain - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
     description: 'Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance.',
+    url: 'https://polluxchain.com/',
     images: '/favicon.png',
   },
 };
