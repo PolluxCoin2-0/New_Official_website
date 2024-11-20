@@ -11,28 +11,28 @@ export default function ThreeDCardsSection() {
       tag: "Reimagine blockchain potential",
       description: "Transform ideas into impactful dApps with PolluxChain developer-friendly ecosystem.",
       image: "/create.png", // Relative path from the public directory
-      link: "",
+      link: "https://medium.com/@PolluxDao/create-unlock-endless-possibilities-with-polluxchain-288f41ef59e0",
     },
     {
       title: "Protect	",
       tag: "Strengthen your applications",
       description: "Integrate advanced security measures to protect your users and data.",
       image: "/protect.png", // Relative path from the public directory
-      link:"",
+      link:"https://medium.com/@PolluxDao/security-you-can-trust-with-polluxchain-b51da3cb0388",
     },
     {
       title: "Expand	",
       tag: "Expand without limits",
       description: "Build on a platform designed to support your growth, no matter the scale. ",
       image: "/expand.png", // Relative path from the public directory
-      link: "",
+      link: "https://medium.com/@PolluxDao/expand-grow-without-limits-4e8bf5d97759",
     },
     {
       title: "Optimize",
       tag: "Achieve peak performance",
       description: "Harness PolluxChain’s speed and efficiency to power high-performance decentralized solutions. ",
       image: "/optimize.png", // Relative path from the public directory
-      link: "",
+      link: "https://medium.com/@PolluxDao/experience-next-level-blockchain-performance-1fae5d621083",
     },
   ];
 
