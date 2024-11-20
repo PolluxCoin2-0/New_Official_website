@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 
 export const metadata = {
-  title: 'PolluxChainn - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
+  title: 'PolluxChain - The Hybrid Layer 1 Blockchain Revolutionizing Decentralization.',
   description: 'Empowering Blockchain Evolution with Scalability, Staking, and Seamless Governance.',
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
