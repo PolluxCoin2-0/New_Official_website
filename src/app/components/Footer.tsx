@@ -41,29 +41,29 @@ export default function Footer() {
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Explore</p>
-          <Link href="/">
+          <Link href="/" target="_blank">
           <p className="text-lg font-medium pt-4 block">Ecosystem</p>
           </Link>
-          <Link href="https://medium.com/@PolluxDao">
+          <Link href="https://medium.com/@PolluxDao" target="_blank">
           <p  className="text-lg font-medium pt-2 block">Blog</p>
           </Link>
-          <Link href="/">
+          <Link href="/" target="_blank">
           <p  className="text-lg font-medium pt-2 block">Community</p>
           </Link>
-          <Link href="/">
+          <Link href="/" target="_blank">
           <p  className="text-lg font-medium pt-2 block">Brand Kit</p>
           </Link>
         </div>
 
         <div className="text-start mt-5 md:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Learn</p>
-          <Link href="/">
+          <Link href="/" target="_blank">
           <p  className="text-lg font-medium pt-4 block">Documentation</p>
           </Link>
-          <Link href="/Whitepaper.pdf">
+          <Link href="/Whitepaper.pdf" target="_blank">
           <p className="text-lg font-medium pt-2 block">Whitepaper</p>
           </Link>
-          <Link href="/">
+          <Link href="/" target="_blank">
           <p  className="text-lg font-medium pt-2 block">Become an Ambassador</p>
           </Link>
         </div>
