@@ -741,7 +741,7 @@ export default function MobileNavbar() {
                 {/* Social Media Icons */}
                 <div className="mt-4 flex justify-center space-x-4">
                   <Link
-                    href="https://x.com/"
+                    href="https://x.com/PolluxChain"
                     target="_blank"
                     className="text-white hover:text-[#8af969]"
                   >
