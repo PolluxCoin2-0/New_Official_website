@@ -137,7 +137,7 @@ export default function HeroSection() {
         </button>
         </Link>
 
-        <Link href="https://docpolluxchain.netlify.app/" passHref>
+        <Link href="/" passHref>
         <button className=" flex items-center space-x-2 justify-center text-lg border-[1px] border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black w-full sm:w-auto">
         <Image
           src={docsImg}
