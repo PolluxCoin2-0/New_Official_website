@@ -68,10 +68,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-row space-x-3 mt-5 md:mt-0">
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/polluxcoin1" target="_blank" rel="noopener noreferrer">
             <BsTwitterX size={28} />
           </a>
-          <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/Polluxchaindev" target="_blank" rel="noopener noreferrer">
             <FaTelegramPlane size={28} />
           </a>
           <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
