@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { MdNotificationAdd } from "react-icons/md";
 import { HiOutlineMailOpen } from "react-icons/hi";
-import Typewriter1 from "./Typewriter1";
 const Newsletter = () => {
   // State to manage the email input
   const [email, setEmail] = useState<string>("");
