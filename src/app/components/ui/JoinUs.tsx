@@ -25,8 +25,8 @@ const JoinUs = () => {
             />
             <p className="text-xl md:text-2xl font-semibold pt-3">Reach Out </p>
             <p className="text-md md:text-lg font-medium pt-2 text-[#a7a4a4]">
-              Want to partner with us or innovate on PolluxChain? Connect with
-              our core team and start collaborating.
+              Want to partner with us or innovate on PolluxChain? <br/>
+              <span className="font-bold">Connect with our core team and start collaborating.</span>
             </p>
             <button
               className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium

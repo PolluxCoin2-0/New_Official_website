@@ -98,30 +98,30 @@ const Page = () => {
         }}
       >
         <div className="text-start w-full md:w-[60%] pt-4 pb-4 md:pt-8 md:pb-8">
-          <p className="text-2xl md:text-3xl font-medium ">
-            Become a PolluxChain Ambassador!
+          <p className="text-2xl md:text-3xl font-semibold">
+            Become a PolluxChain Ambassador
           </p>
-          <p className="text-md font-medium">
+          <p className="text-md font-medium pt-4">
             Join the PolluxChain ecosystem as an ambassador and help shape the
             future of decentralized technology.
           </p>
-          <p className="text-lg font-semibold pt-4">Why Join?</p>
+          <p className="text-lg font-bold pt-2">Why Join?</p>
 
           <ul className="list-disc mt-4">
             <li className="text-md font-bold">
-              Earn POX Rewards:
+              Earn POX Rewards{" "}:{"  "}
               <span className="text-md font-normal text-[#a7a4a4]">
                 Be rewarded for your efforts in content creation, community building, and spreading the word about PolluxChain.
               </span>{" "}
             </li>
             <li className="text-md font-bold pt-2">
-              Exclusive Access:
+              Exclusive Access{" "}:{"  "}
               <span className="text-md font-normal text-[#a7a4a4]">
                 Collaborate directly with our team and gain insights into upcoming developments.
               </span>{" "}
             </li>
             <li className="text-md font-bold pt-2">
-              Recognition & Growth:
+              Recognition & Growth{" "}:{"  "}
               <span className="text-md font-normal text-[#a7a4a4]">
                 Build your presence in the blockchain space and grow with the PolluxChain community.
               </span>{" "}
@@ -142,7 +142,7 @@ const Page = () => {
               className="text-white text-md md:text-lg relative text-nowrap px-2 md:px-6 py-2.5 transition-all ease-in duration-75 bg-[#181717] rounded-md group-hover:bg-opacity-0
               "
             >
-              Apply to be an Ambassador today!
+              Apply to be an Ambassador today
             </span>
           </button>
         </div>
