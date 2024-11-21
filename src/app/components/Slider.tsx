@@ -26,7 +26,7 @@ const Slider = () => {
     {
       imageSrc: protectImg, // Replace with your image path
       title: "PROTECT",
-      heading: "Security You Can Trust with PolluxChain!",
+      heading: "Security You Can Trust with PolluxChain",
       description:
         "In the blockchain industry, performance is the difference between success and stagnation. Whether it’s transaction speed, energy efficiency, or network reliability.",
       buttonText: "More →",
@@ -35,7 +35,7 @@ const Slider = () => {
     {
       imageSrc: expandImg, // Replace with your image path
       title: "EXPAND",
-      heading: "Scale Your Solutions to Global Heights!",
+      heading: "Scale Your Solutions to Global Heights",
       description:
         "Scalability is the cornerstone of successful blockchain projects. As blockchain adoption grows, so does the need for networks that can handle increasing demands.",
       buttonText: "More →",
@@ -44,7 +44,7 @@ const Slider = () => {
     {
       imageSrc: optimizeImg, // Replace with your image path
       title: "OPTIMIZE",
-      heading: "Experience Next-Level Blockchain Performance!",
+      heading: "Experience Next-Level Blockchain Performance",
       description:
         "In the digital era, security is paramount. Blockchain promises decentralized trust, but achieving true security demands robust infrastructure. ",
       buttonText: "More →",
@@ -53,7 +53,7 @@ const Slider = () => {
     {
       imageSrc: createImg, // Replace with your image path
       title: "CREATE",
-      heading: "Unleash Your Creativity with PolluxChain!",
+      heading: "Unleash Your Creativity with PolluxChain",
       description:
         "Innovation is the driving force behind groundbreaking solutions. For developers and businesses looking to make their mark in blockchain technology, ",
       buttonText: "More →",
