@@ -207,9 +207,9 @@ const Page = () => {
 
             <div className="flex flex-col md:flex-row justify-center space-x-4 items-center mt-8 md:mt-16">
               <Link href="https://t.me/polluxchainDAO" target="_blank">
-              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
-                  <FaTelegramPlane size={24} />
+                  <FaTelegramPlane size={32} />
                 </p>
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
@@ -226,9 +226,9 @@ const Page = () => {
           {activeButton === "Instagram" && (
             <Link href="https://www.instagram.com/polluxchainofficial/" target="_blank">
             <div className="flex justify-center items-center mt-8 md:mt-16">
-              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
-                  <GrInstagram size={24} />
+                  <GrInstagram size={28} />
                 </p>
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
@@ -239,9 +239,9 @@ const Page = () => {
           {activeButton === "LinkedIn" && (
             <Link href="https://www.linkedin.com/company/polluxchain/" target="_blank">
             <div className="flex justify-center items-center mt-8 md:mt-16">
-              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
-                  <FaLinkedin size={24} />
+                  <FaLinkedin size={28} />
                 </p>
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
@@ -252,9 +252,9 @@ const Page = () => {
           {activeButton === "Medium" && (
             <Link href="https://medium.com/@PolluxDao" target="_blank">
             <div className="flex justify-center items-center mt-8 md:mt-16">
-              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
-                  <BsMedium size={24} />
+                  <BsMedium size={32} />
                 </p>
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
