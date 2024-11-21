@@ -203,10 +203,6 @@
 //   );
 // }
 
-
-
-
-
 "use client";
 
 import React, { useState, useCallback } from "react";
@@ -276,7 +272,7 @@ export default function Navbar() {
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/" },
+        { title: "Community", href: "/Community" },
         { title: "Partner With Us", href: "/" },
         { title: "Blog ➚", href: "https://medium.com/@PolluxDao" },
         { title: "News & Events", href: "/" },
@@ -334,7 +330,9 @@ export default function Navbar() {
                     <NavigationMenuTrigger className="flex items-center text-md font-medium space-x-1 text-white hover:text-[#8af969]">
                       <span>{item.title}</span>
                       <ChevronDown
-                        className={`transition-transform duration-300 ${openDropdownIndex === index ? "rotate-180" : ""}`}
+                        className={`transition-transform duration-300 ${
+                          openDropdownIndex === index ? "rotate-180" : ""
+                        }`}
                         size={16}
                       />
                     </NavigationMenuTrigger>
@@ -348,9 +346,15 @@ export default function Navbar() {
                       >
                         <ul className="p-2">
                           {item.dropdown.map((subItem, subIndex) => (
-                            <li key={subIndex} className="hover:bg-[#8af969] hover:text-black rounded-md transition-all">
+                            <li
+                              key={subIndex}
+                              className="hover:bg-[#8af969] hover:text-black rounded-md transition-all"
+                            >
                               <NavigationMenuLink asChild>
-                                <Link href={subItem.href} className="block px-4 py-2">
+                                <Link
+                                  href={subItem.href}
+                                  className="block px-4 py-2"
+                                >
                                   {subItem.title}
                                 </Link>
                               </NavigationMenuLink>
@@ -381,28 +385,44 @@ export default function Navbar() {
             <div className="absolute top-10 right-0 mt-2 w-max bg-black text-white rounded-lg shadow-lg">
               <ul className="p-2">
                 <li>
-                  <Link href="https://x.com/PolluxChain" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link
+                    href="https://x.com/PolluxChain"
+                    target="_blank"
+                    className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md"
+                  >
                     <BsTwitterX size={18} />
                     <span>Twitter</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://t.me/polluxchainDAO" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link
+                    href="https://t.me/polluxchainDAO"
+                    target="_blank"
+                    className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md"
+                  >
                     <FaTelegramPlane size={20} />
                     <span>Telegram</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://www.instagram.com/polluxchainofficial/" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
+                  <Link
+                    href="https://www.instagram.com/polluxchainofficial/"
+                    target="_blank"
+                    className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md"
+                  >
                     <FaInstagram size={20} />
                     <span>Instagram</span>
                   </Link>
                   <li>
-                  <Link href="https://www.linkedin.com/company/polluxchain/" target="_blank" className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md">
-                    <FaLinkedinIn size={20} />
-                    <span>LinkedIn</span>
-                  </Link>
-                </li>
+                    <Link
+                      href="https://www.linkedin.com/company/polluxchain/"
+                      target="_blank"
+                      className="flex items-center space-x-2 text-sm px-4 py-2 hover:bg-[#8af969] hover:text-black rounded-md"
+                    >
+                      <FaLinkedinIn size={20} />
+                      <span>LinkedIn</span>
+                    </Link>
+                  </li>
                 </li>
               </ul>
             </div>
@@ -416,7 +436,13 @@ export default function Navbar() {
             onMouseLeave={() => setIsHovered(false)}
           >
             {isHovered ? (
-              <Image src={polluxBlackLogo} alt="Pollux Icon" width={24} height={24} className="h-6 w-6" />
+              <Image
+                src={polluxBlackLogo}
+                alt="Pollux Icon"
+                width={24}
+                height={24}
+                className="h-6 w-6"
+              />
             ) : (
               <p className="font-semibold text-sm">GET $POX</p>
             )}
