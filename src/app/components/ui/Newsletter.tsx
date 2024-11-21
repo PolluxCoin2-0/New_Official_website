@@ -40,7 +40,7 @@ const Newsletter = () => {
       <p className="text-2xl md:text-4xl font-medium text-center">
         Discover the PolluxChain Ecosystem
         <br />
-        <span className="text-lg md:text-2xl pt-4 ">
+        <span className="text-lg md:text-2xl pt-4 text-[#a7a4a4]">
          Subscribe to Our Newsletter{" "}
         </span>
         <br />

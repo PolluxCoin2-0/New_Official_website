@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
+import Link from "next/link";
 import communeImg from "../../../public/community.png";
 import ambasImg from "../../../public/Ambas.svg";
 import JoinUs from "../components/ui/JoinUs";
@@ -60,7 +61,7 @@ const Page = () => {
               : "transparent",
           }}
         >
-          <div className="w-full md:w-[40%] flex justify-center item-center md:justify-start">
+          <div className="w-full md:w-[40%] flex justify-center item-center md:justify-start pt-6 md:pt-0">
             <Image
               src={communeImg}
               alt="banner-image"
@@ -75,54 +76,61 @@ const Page = () => {
             <p className="text-2xl md:text-4xl font-medium mt-6 md:mt-0">
               Join the Community
             </p>
-            <p className="pt-4 text-md md:text-lg font-medium text-[#a7a4a4] justify-content">
-              At Pollux, we believe in creating a sustainable and innovative
-              blockchain ecosystem that benefits everyone. Our community is the
-              backbone of this mission, driving forward with passion and
-              collaboration. Whether you&apos;re a developer, a token holder, or
-              simply a blockchain enthusiast, there&apos;s a place for you here.
-              Join us to connect, learn, and grow within our vibrant and diverse
-              community.
+            <p className="pt-8 text-md md:text-lg font-medium text-[#a7a4a4] justify-content text-justify leading-relaxed">
+              At PolluxChain, we are committed to building a cutting-edge
+              blockchain ecosystem that empowers everyone. Our community is the
+              heart of this mission, thriving on passion and collaboration.
+              Whether you’re a developer, token holder, or blockchain
+              enthusiast, you’ll find a home here. Join us to connect, innovate,
+              and grow with a vibrant and inclusive community.
             </p>
           </div>
         </div>
       </Tilt>
 
-      <div className="flex flex-col md:flex-row justify-between items-center mt-16 shadow-inner shadow-[#8AF969] rounded-2xl px-20 md:px-12 "
-      
-      style={{
-        boxShadow: "0 2px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.4)",
-        background: "radial-gradient(circle at 50% 50%, rgba(138, 249, 105, 0.1), transparent)", // Fixed position
-      }}>
-        <div className="text-start">
-          <p className="text-2xl md:text-3xl font-medium pt-4 pb-4">
-            Become a Pollux Ambassador
+      <div
+        className="flex flex-col md:flex-row space-x-0 md:space-x-28 justify-between items-center mt-16 shadow-inner shadow-[#8AF969] rounded-2xl px-5 md:px-12 text-justify leading-relaxed"
+        style={{
+          boxShadow:
+            "0 2px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.4)",
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(138, 249, 105, 0.1), transparent)", // Fixed position
+        }}
+      >
+        <div className="text-start w-full md:w-[60%] pt-4 pb-4 md:pt-8 md:pb-8">
+          <p className="text-2xl md:text-3xl font-medium ">
+            Become a PolluxChain Ambassador!
           </p>
-          <p className="text-lg font-medium pt-4">What You Get:</p>
+          <p className="text-md font-medium">
+            Join the PolluxChain ecosystem as an ambassador and help shape the
+            future of decentralized technology.
+          </p>
+          <p className="text-lg font-semibold pt-4">Why Join?</p>
 
           <ul className="list-disc mt-4">
-            <li className="text-lg font-bold">
-              Earn Rewards:
+            <li className="text-md font-bold">
+              Earn POX Rewards:
               <span className="text-md font-normal text-[#a7a4a4]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-                Delectus, quaerat!
+                Be rewarded for your efforts in content creation, community building, and spreading the word about PolluxChain.
               </span>{" "}
             </li>
-            <li className="text-lg font-bold">
-              Earn Rewards:
+            <li className="text-md font-bold pt-2">
+              Exclusive Access:
               <span className="text-md font-normal text-[#a7a4a4]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-                Delectus, quaerat!
+                Collaborate directly with our team and gain insights into upcoming developments.
               </span>{" "}
             </li>
-            <li className="text-lg font-bold">
-              Earn Rewards:
+            <li className="text-md font-bold pt-2">
+              Recognition & Growth:
               <span className="text-md font-normal text-[#a7a4a4]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br />
-                Delectus, quaerat!
+                Build your presence in the blockchain space and grow with the PolluxChain community.
               </span>{" "}
             </li>
           </ul>
+
+          <p className="text-lg font-semibold pt-4">Who Can Apply?</p>
+          <p className="text-md font-medium text-[#a7a4a4] pt-2"> We are looking for creative minds, community enthusiasts, and blockchain advocates ready to make an impact.
+          </p>
 
           <button
             className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
@@ -131,15 +139,15 @@ const Page = () => {
               transform transition-transform duration-200 hover:scale-105"
           >
             <span
-              className="text-white text-md md:text-xl relative text-nowrap px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717] rounded-md group-hover:bg-opacity-0
+              className="text-white text-md md:text-lg relative text-nowrap px-2 md:px-6 py-2.5 transition-all ease-in duration-75 bg-[#181717] rounded-md group-hover:bg-opacity-0
               "
             >
-              Become a Ambassador
+              Apply to be an Ambassador today!
             </span>
           </button>
         </div>
 
-        <div className="flex justify-end pb-8">
+        <div className="flex justify-end pb-8 w-full md:w-[40%]">
           <Image
             src={ambasImg}
             alt="banner-image"
@@ -155,15 +163,14 @@ const Page = () => {
         <p className="text-3xl md:text-4xl font-medium  rounded-2xl">
           Welcome to our Community
         </p>
-        <p className="text-md md:text-xl font-normal mt-4 text-[#a7a4a4]">
-          Empowering the Future of Decentralization where Innovation<br /> Meets
-          Community on the 
-          Blockchain Frontier.
+        <p className="text-md md:text-xl font-normal mt-4 text-[#a7a4a4] ">
+          Empowering the Future of Decentralization where Innovation
+          <br /> Meets Community on the Blockchain Frontier.
         </p>
 
         <div className="rounded-2xl p-12">
           <div className="flex justify-center ">
-            <div className="flex flex-col md:flex-row space-x-0 lg:space-x-2 justify-between items-center p-2 bg-[#0c0c0c] w-[80%] md:w-[100%] lg:w-[60%] rounded-2xl">
+            <div className="flex flex-col md:flex-row space-x-0 lg:space-x-2 justify-between items-center p-2 bg-[#0c0c0c] w-[80%] md:w-[100%] 2xl:w-[60%] rounded-2xl">
               {["Twitter", "Telegram", "Instagram", "LinkedIn", "Medium"].map(
                 (button) => (
                   <p
@@ -184,34 +191,40 @@ const Page = () => {
 
           {/* Conditionally Render Social Media Content */}
           {activeButton === "Twitter" && (
+            <Link href="https://x.com/Polluxchain" target="_blank">
             <div className="flex justify-center items-center mt-16">
-              <div className="flex justify-center items-center space-x-6 shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <div className="flex justify-center items-center space-x-4 shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
                   <BsTwitterX size={24} />
                 </p>
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
             </div>
+            </Link>
           )}
 
           {activeButton === "Telegram" && (
+
             <div className="flex flex-col md:flex-row justify-center space-x-4 items-center mt-8 md:mt-16">
+              <Link href="https://t.me/polluxchainDAO" target="_blank">
               <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
                   <FaTelegramPlane size={24} />
                 </p>
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
-              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 mt-6 md:mt-0  rounded-xl transform transition-transform duration-200 hover:scale-105 ">
+              </Link>
+              {/* <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 mt-6 md:mt-0  rounded-xl transform transition-transform duration-200 hover:scale-105 ">
                 <p>
                   <FaTelegramPlane size={24} />
                 </p>
                 <p className="text-xl font-medium">Pollux_Announcements</p>
-              </div>
+              </div> */}
             </div>
           )}
 
           {activeButton === "Instagram" && (
+            <Link href="https://www.instagram.com/polluxchainofficial/" target="_blank">
             <div className="flex justify-center items-center mt-8 md:mt-16">
               <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
@@ -220,9 +233,11 @@ const Page = () => {
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
             </div>
+            </Link>
           )}
 
           {activeButton === "LinkedIn" && (
+            <Link href="https://www.linkedin.com/company/polluxchain/" target="_blank">
             <div className="flex justify-center items-center mt-8 md:mt-16">
               <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
@@ -231,9 +246,11 @@ const Page = () => {
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
             </div>
+            </Link>
           )}
 
           {activeButton === "Medium" && (
+            <Link href="https://medium.com/@PolluxDao" target="_blank">
             <div className="flex justify-center items-center mt-8 md:mt-16">
               <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
                 <p>
@@ -242,6 +259,7 @@ const Page = () => {
                 <p className="text-xl font-medium">PolluxChain</p>
               </div>
             </div>
+            </Link>
           )}
         </div>
       </div>

@@ -10,7 +10,7 @@ const JoinUs = () => {
       {/* Ready for next step */}
       <div className="text-center px-2 md:px-6 lg:px-12 2xl:px-32">
         <p className="text-xl md:text-4xl font-semibold">
-          Ready for the next step?
+          Ready for the Next Steps?
         </p>
 
         <div className="flex flex-col lg:flex-row justify-between  space-x-0 lg:space-x-24 mt-8 md:mt-16 w-full">
@@ -23,16 +23,16 @@ const JoinUs = () => {
               style={{ width: "10%" }}
               className="rounded-2xl"
             />
-            <p className="text-2xl font-semibold pt-3">Reach Out</p>
-            <p className="text-lg font-medium pt-2 text-[#a7a4a4]">
-              Lorem ipsum, dolor sit amet adipisicing elit. Praesentium,
-              dolores.
+            <p className="text-xl md:text-2xl font-semibold pt-3">Reach Out </p>
+            <p className="text-md md:text-lg font-medium pt-2 text-[#a7a4a4]">
+              Want to partner with us or innovate on PolluxChain? Connect with
+              our core team and start collaborating.
             </p>
             <button
               className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white  focus:outline-none  "
             >
-              <span className="text-white text-nowrap text-xl relative px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
+              <span className="text-white text-nowrap text-md md:text-xl relative px-6 md:px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
                 Get in Touch
               </span>
             </button>
@@ -47,18 +47,18 @@ const JoinUs = () => {
               style={{ width: "10%" }}
               className="rounded-2xl"
             />
-            <p className="text-2xl font-semibold pt-3">Start Building</p>
-            <p className="text-lg font-medium pt-2 text-[#a7a4a4]">
-              Lorem ipsum, dolor sit amet adipisicing elit. Praesentium,
-              dolores.
+            <p className="text-xl md:text-2xl font-semibold pt-3">Start Building</p>
+            <p className="text-md md:text-lg font-medium pt-2 text-[#a7a4a4]">
+              Access all the tools and resources you need to start developing on
+              PolluxChain today.
             </p>
             <button
               className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
                hover:text-white dark:text-white focus:outline-none "
             >
-              <span className="text-white text-xl text-nowrap relative px-6 md:px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
-                View Documentation
+              <span className="text-white text-md md:text-xl text-nowrap relative px-4 md:px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
+                Explore Developer Resources
               </span>
             </button>
           </div>
@@ -74,18 +74,18 @@ const JoinUs = () => {
               style={{ width: "12%" }}
               className="rounded-2xl"
             />
-            <p className="text-2xl font-semibold pt-3">Join the Community</p>
-            <p className="text-lg font-medium pt-2 text-[#a7a4a4]">
-              Lorem ipsum, dolor sit amet adipisicing elit. Praesentium,
-              dolores.
+            <p className="text-xl md:text-2xl font-semibold pt-3">Join the Community</p>
+            <p className="text-md md:text-lg font-medium pt-2 text-[#a7a4a4]">
+              Engage with a global network of enthusiasts and contributors.
+              Let’s grow together.
             </p>
             <button
               className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
                hover:text-white dark:text-white focus:outline-none "
             >
-              <span className="text-white text-xl relative px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
-                Learn More
+              <span className="text-white text-md md:text-xl relative px-6 md:px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
+                Connect with Us
               </span>
             </button>
           </div>
