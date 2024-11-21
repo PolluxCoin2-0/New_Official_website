@@ -3,11 +3,15 @@
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
-import communeImg from "../../../public/Frame.svg";
+import communeImg from "../../../public/community.png";
 import ambasImg from "../../../public/Ambas.svg";
-import { FaTelegramPlane } from "react-icons/fa";
-import { MdMarkEmailRead } from "react-icons/md";
 import JoinUs from "../components/ui/JoinUs";
+import Newsletter from "../components/ui/Newsletter";
+import { BsTwitterX } from "react-icons/bs";
+import { FaTelegramPlane } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+import { FaLinkedin } from "react-icons/fa6";
+import { BsMedium } from "react-icons/bs";
 
 const Page = () => {
   const [bgPosition, setBgPosition] = useState<{ x: number; y: number }>({
@@ -15,12 +19,10 @@ const Page = () => {
     y: 0,
   });
   const [isHovered, setIsHovered] = useState(false);
-  // State to track which button was clicked
-  const [activeButton, setActiveButton] = useState<string | null>(null);
+  const [activeButton, setActiveButton] = useState<string>("Twitter"); // Set default to Twitter
 
-  // Function to handle button click
   const handleButtonClick = (buttonName: string) => {
-    setActiveButton(buttonName); // Update the active button on click
+    setActiveButton(buttonName);
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -49,16 +51,12 @@ const Page = () => {
             handleMouseMove(e)
           }
           onMouseEnter={() => setIsHovered(true)}
-          // onMouseLeave={() => {
-          //   setIsHovered(false);
-          //   setBgPosition({ x: 0, y: 0 }); // Reset background position on mouse leave
-          // }}
           style={{
             boxShadow: isHovered
               ? "0 2px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.4) "
               : "none",
             background: isHovered
-              ? `radial-gradient(circle at ${bgPosition.x}% ${bgPosition.y}%, rgba(138, 249, 105, 0.2), transparent) `
+              ? `radial-gradient(circle at ${bgPosition.x}% ${bgPosition.y}%, rgba(138, 249, 105, 0.1), transparent) `
               : "transparent",
           }}
         >
@@ -81,23 +79,28 @@ const Page = () => {
               At Pollux, we believe in creating a sustainable and innovative
               blockchain ecosystem that benefits everyone. Our community is the
               backbone of this mission, driving forward with passion and
-              collaboration. Whether you&apos;sre a developer, a token holder,
-              or simply a blockchain enthusiast, there&apos;s a place for you
-              here. Join us to connect, learn, and grow within our vibrant and
-              diverse community.
+              collaboration. Whether you&apos;re a developer, a token holder, or
+              simply a blockchain enthusiast, there&apos;s a place for you here.
+              Join us to connect, learn, and grow within our vibrant and diverse
+              community.
             </p>
           </div>
         </div>
       </Tilt>
 
-      <div className="flex flex-col md:flex-row justify-between items-center rounded-2xl  px-12 mt-16">
-        <div className="text-start ">
-          <p className="text-2xl md:text-3xl font-medium ">
-            Become a Pollux Ambassadar
+      <div className="flex flex-col md:flex-row justify-between items-center mt-16 shadow-inner shadow-[#8AF969] rounded-2xl px-20 md:px-12 "
+      
+      style={{
+        boxShadow: "0 2px 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.4)",
+        background: "radial-gradient(circle at 50% 50%, rgba(138, 249, 105, 0.1), transparent)", // Fixed position
+      }}>
+        <div className="text-start">
+          <p className="text-2xl md:text-3xl font-medium pt-4 pb-4">
+            Become a Pollux Ambassador
           </p>
           <p className="text-lg font-medium pt-4">What You Get:</p>
 
-          <ul className="list-disc  mt-4">
+          <ul className="list-disc mt-4">
             <li className="text-lg font-bold">
               Earn Rewards:
               <span className="text-md font-normal text-[#a7a4a4]">
@@ -124,11 +127,11 @@ const Page = () => {
           <button
             className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
-              group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
+              group-hover:from-purple-600 group-hover:to-green-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
               transform transition-transform duration-200 hover:scale-105"
           >
             <span
-              className="text-white text-xl relative text-nowrap px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717] rounded-md group-hover:bg-opacity-0
+              className="text-white text-md md:text-xl relative text-nowrap px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717] rounded-md group-hover:bg-opacity-0
               "
             >
               Become a Ambassador
@@ -136,7 +139,7 @@ const Page = () => {
           </button>
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex justify-end pb-8">
           <Image
             src={ambasImg}
             alt="banner-image"
@@ -148,25 +151,25 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="mt-12 md:mt-24 mb-16">
-        <p className="text-3xl md:text-4xl font-medium">
+      <div className="mt-12 md:mt-24 mb-6 ">
+        <p className="text-3xl md:text-4xl font-medium  rounded-2xl">
           Welcome to our Community
         </p>
         <p className="text-md md:text-xl font-normal mt-4 text-[#a7a4a4]">
-          Empowering the Future of Decentralization where Innovation Meets
-          Community on the <br />
+          Empowering the Future of Decentralization where Innovation<br /> Meets
+          Community on the 
           Blockchain Frontier.
         </p>
 
-        <div className="border-[1px] border-[#a7a4a4] rounded-2xl p-20">
+        <div className="rounded-2xl p-12">
           <div className="flex justify-center ">
-            <div className="flex flex-row space-x-2 justify-between items-center p-2 bg-[#0c0c0c] w-[60%] rounded-2xl">
+            <div className="flex flex-col md:flex-row space-x-0 lg:space-x-2 justify-between items-center p-2 bg-[#0c0c0c] w-[80%] md:w-[100%] lg:w-[60%] rounded-2xl">
               {["Twitter", "Telegram", "Instagram", "LinkedIn", "Medium"].map(
                 (button) => (
                   <p
                     key={button}
-                    onClick={() => handleButtonClick(button)} // Trigger click handler
-                    className={`text-lg font-medium px-8 py-3 rounded-lg cursor-pointer ${
+                    onClick={() => handleButtonClick(button)}
+                    className={`text-lg font-medium px-12 md:px-6 lg:px-8 py-3 rounded-lg cursor-pointer ${
                       activeButton === button
                         ? "bg-gradient-to-l from-[#1C5A04] to-[#68A541] text-white shadow-sm shadow-[#68A541]"
                         : "hover:bg-[#68A541] hover:shadow-sm hover:shadow-[#68A541]"
@@ -179,88 +182,75 @@ const Page = () => {
             </div>
           </div>
 
-             {/* for for Twitter*/}
-             <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
-            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
-              <p>
-                <FaTelegramPlane size={24} />
-              </p>
-              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+          {/* Conditionally Render Social Media Content */}
+          {activeButton === "Twitter" && (
+            <div className="flex justify-center items-center mt-16">
+              <div className="flex justify-center items-center space-x-6 shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                <p>
+                  <BsTwitterX size={24} />
+                </p>
+                <p className="text-xl font-medium">PolluxChain</p>
+              </div>
             </div>
-            </div>
+          )}
 
-          {/* for for Telegram */}
-          <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
-            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
-              <p>
-                <FaTelegramPlane size={24} />
-              </p>
-              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+          {activeButton === "Telegram" && (
+            <div className="flex flex-col md:flex-row justify-center space-x-4 items-center mt-8 md:mt-16">
+              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                <p>
+                  <FaTelegramPlane size={24} />
+                </p>
+                <p className="text-xl font-medium">PolluxChain</p>
+              </div>
+              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 mt-6 md:mt-0  rounded-xl transform transition-transform duration-200 hover:scale-105 ">
+                <p>
+                  <FaTelegramPlane size={24} />
+                </p>
+                <p className="text-xl font-medium">Pollux_Announcements</p>
+              </div>
             </div>
+          )}
 
-            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105 mt-6 md:mt-0">
-              <p>
-                <FaTelegramPlane size={24} />
-              </p>
-              <p className="text-xl font-semibold">Pollux_Announcements</p>
+          {activeButton === "Instagram" && (
+            <div className="flex justify-center items-center mt-8 md:mt-16">
+              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                <p>
+                  <GrInstagram size={24} />
+                </p>
+                <p className="text-xl font-medium">PolluxChain</p>
+              </div>
             </div>
-          </div>
+          )}
 
-            {/* for Instagram*/}
-            <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
-            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
-              <p>
-                <FaTelegramPlane size={24} />
-              </p>
-              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+          {activeButton === "LinkedIn" && (
+            <div className="flex justify-center items-center mt-8 md:mt-16">
+              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                <p>
+                  <FaLinkedin size={24} />
+                </p>
+                <p className="text-xl font-medium">PolluxChain</p>
+              </div>
             </div>
-             </div>
+          )}
 
-              {/* for LinkedIn*/}
-            <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
-            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
-              <p>
-                <FaTelegramPlane size={24} />
-              </p>
-              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+          {activeButton === "Medium" && (
+            <div className="flex justify-center items-center mt-8 md:mt-16">
+              <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                <p>
+                  <BsMedium size={24} />
+                </p>
+                <p className="text-xl font-medium">PolluxChain</p>
+              </div>
             </div>
-             </div>
-
-              {/* for Medium*/}
-            <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
-            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
-              <p>
-                <FaTelegramPlane size={24} />
-              </p>
-              <p className="text-xl font-semibold">OfficalPolluxChain</p>
-            </div>
-             </div>
+          )}
         </div>
       </div>
 
       {/* Newsletter */}
-      <div className="">
-        <p>Discover the PolluxChain Ecosystem</p>
-        <p>Subscribe to our Newsletter</p>
-        <div className="flex flex-row space-x-8 justify-center items-center">
-          <MdMarkEmailRead />
-          <div>
-            <input
-              type="input"
-              className="border-[1px] border-[#8af969] bg-black px-6 py-3 rounded-2xl"
-              placeholder="Enter E-Mail Address"
-            ></input>
-          </div>
-          <div>
-            <button
-              type="button"
-              className="bg-[#8af969] rounded-2xl px-6 py-3 text-black text-md font-semibold"
-            >
-              Subscribe Now
-            </button>
-          </div>
-        </div>
+      <div className=" rounded-2xl">
+        <Newsletter />
       </div>
+
       {/* Join us Page */}
       <div>
         <JoinUs />
