@@ -72,14 +72,15 @@ export default function Footer() {
           <a href="https://x.com/Polluxchain" target="_blank" rel="noopener noreferrer">
             <BsTwitterX size={28} />
           </a>
-          <a href="https://t.me/polluxchainDAO" target="_blank" rel="noopener noreferrer">
-            <FaTelegramPlane size={28} />
-          </a>
+         
           <a href="https://www.instagram.com/polluxchainofficial/" target="_blank" rel="noopener noreferrer">
             <SiInstagram size={28} />
           </a>
           <a href="https://www.linkedin.com/company/polluxchain/" target="_blank" rel="noopener noreferrer">
             <BsLinkedin size={28} />
+          </a>
+          <a href="https://t.me/polluxchainDAO" target="_blank" rel="noopener noreferrer">
+            <FaTelegramPlane size={32} />
           </a>
         </div>
       </div>
