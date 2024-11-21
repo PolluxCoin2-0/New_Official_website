@@ -139,9 +139,9 @@ const Evolution = () => {
   const [activeSection, setActiveSection] = useState<string>("Sustain");
 
   // Handle section click (manual navigation)
-  // const toggleSection = (sectionId: string) => {
-  //   setActiveSection(sectionId); // Set the active section when clicked
-  // };
+  const toggleSection = (sectionId: string) => {
+    setActiveSection(sectionId); // Set the active section when clicked
+  };
 
   // Set up automatic cycling of sections every 5 seconds
   useEffect(() => {
@@ -175,7 +175,7 @@ const Evolution = () => {
         Sustainable Evolution
       </p>
 
-      {/* <div className="mt-6">
+      <div className="hidden md:block mt-6">
   <ul className="flex flex-col md:flex-row space-x-0 md:space-x-3 lg:space-x-8 justify-center">
     {sections.map((section) => (
       <li
@@ -190,7 +190,7 @@ const Evolution = () => {
       </li>
     ))}
   </ul>
-      </div> */}
+      </div>
 
 
       {/* Conditionally render the CardSection component based on the activeSection */}
