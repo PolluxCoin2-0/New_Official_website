@@ -276,7 +276,7 @@ export default function Navbar() {
     {
       title: "Community",
       dropdown: [
-        { title: "Community", href: "/" },
+        { title: "Community", href: "/Community" },
         { title: "Partner With Us", href: "/" },
         { title: "Blog ➚", href: "https://medium.com/@PolluxDao" },
         { title: "News & Events", href: "/" },

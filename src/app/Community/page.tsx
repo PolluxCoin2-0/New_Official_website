@@ -13,21 +13,32 @@ import mediumImg from "../../../public/medium 1.svg";
 import ambasImg from "../../../public/Ambas.svg";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
+import { MdMarkEmailRead } from "react-icons/md";
+import JoinUs from "../components/ui/JoinUs";
 
 const Page = () => {
-  const [bgPosition, setBgPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-
+  const [bgPosition, setBgPosition] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
+  });
   const [isHovered, setIsHovered] = useState(false);
+  // State to track which button was clicked
+  const [activeButton, setActiveButton] = useState<string | null>(null);
+
+  // Function to handle button click
+  const handleButtonClick = (buttonName: string) => {
+    setActiveButton(buttonName); // Update the active button on click
+  };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isHovered) {
-      const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+      const { left, top, width, height } =
+        e.currentTarget.getBoundingClientRect();
       const x = ((e.clientX - left) / width) * 100;
       const y = ((e.clientY - top) / height) * 100;
       setBgPosition({ x, y });
     }
   };
-  
 
   return (
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-44 mt-32 lg:mt-48">
@@ -41,7 +52,9 @@ const Page = () => {
       >
         <div
           className="flex flex-col md:flex-row justify-between items-center w-full px-4 lg:px-32 pt-0 md:pt-12 pb-12 rounded-2xl "
-          onMouseMove={(e: React.MouseEvent<HTMLDivElement>) => handleMouseMove(e)}
+          onMouseMove={(e: React.MouseEvent<HTMLDivElement>) =>
+            handleMouseMove(e)
+          }
           onMouseEnter={() => setIsHovered(true)}
           // onMouseLeave={() => {
           //   setIsHovered(false);
@@ -75,10 +88,10 @@ const Page = () => {
               At Pollux, we believe in creating a sustainable and innovative
               blockchain ecosystem that benefits everyone. Our community is the
               backbone of this mission, driving forward with passion and
-              collaboration. Whether you&apos;sre a developer, a token holder, or
-              simply a blockchain enthusiast, there&apos;s a place for you here. Join
-              us to connect, learn, and grow within our vibrant and diverse
-              community.
+              collaboration. Whether you&apos;sre a developer, a token holder,
+              or simply a blockchain enthusiast, there&apos;s a place for you
+              here. Join us to connect, learn, and grow within our vibrant and
+              diverse community.
             </p>
           </div>
         </div>
@@ -152,54 +165,112 @@ const Page = () => {
           Blockchain Frontier.
         </p>
 
-        <div className="grid grid-cols-3 gap-y-8 gap-x-4 md:flex md:flex-row md:justify-evenly items-center mt-12">
-          {[
-            { img: telegramImg, label: "Telegram" },
-            { img: twitterImg, label: "Twitter" },
-            { img: linkedinImg, label: "LinkedIn" },
-            { img: discordImg, label: "Discord" },
-            { img: instaImg, label: "Instagram" },
-            { img: mediumImg, label: "Medium" },
-          ].map(({ img, label }, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center space-y-4 text-white"
-            >
-              <div
-                className="flex justify-center items-center bg-white bg-opacity-10 rounded-full 
-                        w-12 h-12 md:w-20 md:h-20 p-3 md:p-5"
-              >
-                <Image
-                  src={img}
-                  alt={`${label} icon`}
-                  width={0}
-                  height={0}
-                  className="object-contain"
-                />
-              </div>
-              <div className="flex flex-row items-center space-x-2">
-                <FaArrowUpRightFromSquare />
-                <p className="text-sm md:text-lg font-medium">{label}</p>
-              </div>
+        <div className="border-[1px] border-[#a7a4a4] rounded-2xl p-20">
+          <div className="flex justify-center ">
+            <div className="flex flex-row space-x-2 justify-between items-center p-2 bg-[#0c0c0c] w-[60%] rounded-2xl">
+              {["Twitter", "Telegram", "Instagram", "LinkedIn", "Medium"].map(
+                (button) => (
+                  <p
+                    key={button}
+                    onClick={() => handleButtonClick(button)} // Trigger click handler
+                    className={`text-lg font-medium px-8 py-3 rounded-lg cursor-pointer ${
+                      activeButton === button
+                        ? "bg-gradient-to-l from-[#1C5A04] to-[#68A541] text-white shadow-sm shadow-[#68A541]"
+                        : "hover:bg-[#68A541] hover:shadow-sm hover:shadow-[#68A541]"
+                    }`}
+                  >
+                    {button}
+                  </p>
+                )
+              )}
             </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
-          <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
-            <p>
-              <FaTelegramPlane size={24} />
-            </p>
-            <p className="text-xl font-semibold">OfficalPolluxChain</p>
           </div>
 
-          <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105 mt-6 md:mt-0">
-            <p>
-              <FaTelegramPlane size={24} />
-            </p>
-            <p className="text-xl font-semibold">Pollux_Announcements</p>
+             {/* for for Twitter*/}
+             <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
+            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <p>
+                <FaTelegramPlane size={24} />
+              </p>
+              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+            </div>
+            </div>
+
+          {/* for for Telegram */}
+          <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
+            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <p>
+                <FaTelegramPlane size={24} />
+              </p>
+              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+            </div>
+
+            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105 mt-6 md:mt-0">
+              <p>
+                <FaTelegramPlane size={24} />
+              </p>
+              <p className="text-xl font-semibold">Pollux_Announcements</p>
+            </div>
+          </div>
+
+            {/* for Instagram*/}
+            <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
+            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <p>
+                <FaTelegramPlane size={24} />
+              </p>
+              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+            </div>
+             </div>
+
+              {/* for LinkedIn*/}
+            <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
+            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <p>
+                <FaTelegramPlane size={24} />
+              </p>
+              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+            </div>
+             </div>
+
+              {/* for Medium*/}
+            <div className="flex flex-col md:flex-row space-x-0 md:space-x-12 justify-center items-center mt-16">
+            <div className="flex flex-row space-x-2 items-center border-[1px] border-[#8AF969] p-4 rounded-xl transform transition-transform duration-200 hover:scale-105">
+              <p>
+                <FaTelegramPlane size={24} />
+              </p>
+              <p className="text-xl font-semibold">OfficalPolluxChain</p>
+            </div>
+             </div>
+        </div>
+      </div>
+
+      {/* Newsletter */}
+      <div className="">
+        <p>Discover the PolluxChain Ecosystem</p>
+        <p>Subscribe to our Newsletter</p>
+        <div className="flex flex-row space-x-8 justify-center items-center">
+          <MdMarkEmailRead />
+          <div>
+            <input
+              type="input"
+              className="border-[1px] border-[#8af969] bg-black px-6 py-3 rounded-2xl"
+              placeholder="Enter E-Mail Address"
+            ></input>
+          </div>
+          <div>
+            <button
+              type="button"
+              className="bg-[#8af969] rounded-2xl px-6 py-3 text-black text-md font-semibold"
+            >
+              Subscribe Now
+            </button>
           </div>
         </div>
+      </div>
+      {/* Join us Page */}
+      <div>
+        <JoinUs />
       </div>
     </div>
   );
