@@ -137,21 +137,16 @@ const Page = () => {
             We are looking for creative minds, community enthusiasts, and
             blockchain advocates ready to make an impact.
           </p>
-           
-           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSee5dvxl7dq0Hei0dq4i7pkeM3iU7u3x46IMR1oDR6Loqc2mw/viewform" target="_blank">
-          <button
-            className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
-             text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
-               hover:text-white dark:text-white  focus:outline-none 
-              transform transition-transform duration-200 hover:scale-105"
+
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSee5dvxl7dq0Hei0dq4i7pkeM3iU7u3x46IMR1oDR6Loqc2mw/viewform"
+            target="_blank"
           >
-            <span
-              className="text-white text-md md:text-lg relative text-nowrap px-2 md:px-6 py-2.5 transition-all ease-in duration-75 bg-[#181717] rounded-md group-hover:bg-opacity-0
-              "
-            >
-              Apply to be an Ambassador today
-            </span>
-          </button>
+            <button className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white  focus:outline-none transform transition-transform duration-200 hover:scale-105">
+              <span className="text-white text-md md:text-lg relative text-nowrap px-2 md:px-6 py-2.5 transition-all ease-in duration-75 bg-[#181717] rounded-md group-hover:bg-opacity-0 ">
+                Apply to be an Ambassador today
+              </span>
+            </button>
           </Link>
         </div>
 
@@ -285,7 +280,7 @@ const Page = () => {
       {/* Join us Page */}
       <div>
         <JoinUs />
-      </div>
+      </div>  
     </div>
   );
 };
