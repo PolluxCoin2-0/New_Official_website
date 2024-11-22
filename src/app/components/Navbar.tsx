@@ -280,12 +280,12 @@ export default function Navbar() {
     },
     {
       title: "Ecosystem",
-      href: "/",
+      href: "/Ecosystem",
     },
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/" },
+        { title: "About Us", href: "/AboutUs" },
         { title: "Contact", href: "/" },
       ],
     },
