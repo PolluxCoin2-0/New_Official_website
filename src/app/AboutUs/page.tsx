@@ -65,7 +65,7 @@ const page = () => {
           <button
             className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
-              group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+               hover:text-white dark:text-white focus:outline-none "
           >
             <span className="text-white text-xl relative px-20 md:px-10 py-2.5 text-nowrap transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
               Contact Us
@@ -146,7 +146,7 @@ const page = () => {
         <div className="w-[80%] h-10 md:h-44 bg-green-600 rounded-2xl bg-gradient-to-b from-[#1C5A04] to-[#68A541] flex flex-row justify-center mx-auto mt-8"></div>
 
         <div className="flex flex-col md:flex-row justify-center space-x-0 md:space-x-16 lg:space-x-24 w-full -mt-28">
-          <div className="flex flex-col items-center w-full md:w-[40%] lg:w-[30%] xl:w-[25%] border-[1px] border-[#575555]  mt-16 md:mt-0 p-4 rounded-4xl bg-[#0e0d0d] rounded-2xl pt-12 pb-12 transform transition-transform duration-200 hover:scale-105">
+          <div className="flex flex-col items-center w-full md:w-[40%] lg:w-[30%] xl:w-[25%] border-[1px] border-[#575555]  mt-16 md:mt-0 p-4  bg-[#0e0d0d] rounded-2xl pt-12 pb-12 transform transition-transform duration-200 hover:scale-105">
             <p className="  bg-white bg-opacity-10 rounded-full w-40 h-40 text-center "></p>
             <p className="pt-5 text-2xl font-semibold">Ram Bilash Rana</p>
             <p className="pt-2 text-[#a7a4a4]">Chief Executive Officers</p>
