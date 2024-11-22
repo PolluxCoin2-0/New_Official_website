@@ -109,29 +109,36 @@ const Page = () => {
 
           <ul className="list-disc mt-4">
             <li className="text-md font-bold">
-              Earn POX Rewards{" "}:{"  "}
+              Earn POX Rewards :{"  "}
               <span className="text-md font-normal text-[#a7a4a4]">
-                Be rewarded for your efforts in content creation, community building, and spreading the word about PolluxChain.
+                Be rewarded for your efforts in content creation, community
+                building, and spreading the word about PolluxChain.
               </span>{" "}
             </li>
             <li className="text-md font-bold pt-2">
-              Exclusive Access{" "}:{"  "}
+              Exclusive Access :{"  "}
               <span className="text-md font-normal text-[#a7a4a4]">
-                Collaborate directly with our team and gain insights into upcoming developments.
+                Collaborate directly with our team and gain insights into
+                upcoming developments.
               </span>{" "}
             </li>
             <li className="text-md font-bold pt-2">
-              Recognition & Growth{" "}:{"  "}
+              Recognition & Growth :{"  "}
               <span className="text-md font-normal text-[#a7a4a4]">
-                Build your presence in the blockchain space and grow with the PolluxChain community.
+                Build your presence in the blockchain space and grow with the
+                PolluxChain community.
               </span>{" "}
             </li>
           </ul>
 
           <p className="text-lg font-semibold pt-4">Who Can Apply?</p>
-          <p className="text-md font-medium text-[#a7a4a4] pt-2"> We are looking for creative minds, community enthusiasts, and blockchain advocates ready to make an impact.
+          <p className="text-md font-medium text-[#a7a4a4] pt-2">
+            {" "}
+            We are looking for creative minds, community enthusiasts, and
+            blockchain advocates ready to make an impact.
           </p>
-
+           
+           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSee5dvxl7dq0Hei0dq4i7pkeM3iU7u3x46IMR1oDR6Loqc2mw/viewform" target="_blank">
           <button
             className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
@@ -145,6 +152,7 @@ const Page = () => {
               Apply to be an Ambassador today
             </span>
           </button>
+          </Link>
         </div>
 
         <div className="flex justify-end pb-8 w-full md:w-[40%]">
@@ -192,27 +200,26 @@ const Page = () => {
           {/* Conditionally Render Social Media Content */}
           {activeButton === "Twitter" && (
             <Link href="https://x.com/Polluxchain" target="_blank">
-            <div className="flex justify-center items-center mt-16">
-              <div className="flex justify-center items-center space-x-4 shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
-                <p>
-                  <BsTwitterX size={24} />
-                </p>
-                <p className="text-xl font-medium">PolluxChain</p>
+              <div className="flex justify-center items-center mt-16">
+                <div className="flex justify-center items-center space-x-4 shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                  <p>
+                    <BsTwitterX size={24} />
+                  </p>
+                  <p className="text-xl font-medium">PolluxChain</p>
+                </div>
               </div>
-            </div>
             </Link>
           )}
 
           {activeButton === "Telegram" && (
-
             <div className="flex flex-col md:flex-row justify-center space-x-4 items-center mt-8 md:mt-16">
               <Link href="https://t.me/polluxchainDAO" target="_blank">
-              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
-                <p>
-                  <FaTelegramPlane size={32} />
-                </p>
-                <p className="text-xl font-medium">PolluxChain</p>
-              </div>
+                <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                  <p>
+                    <FaTelegramPlane size={32} />
+                  </p>
+                  <p className="text-xl font-medium">PolluxChain</p>
+                </div>
               </Link>
               {/* <div className="flex flex-row space-x-2 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 mt-6 md:mt-0  rounded-xl transform transition-transform duration-200 hover:scale-105 ">
                 <p>
@@ -224,41 +231,47 @@ const Page = () => {
           )}
 
           {activeButton === "Instagram" && (
-            <Link href="https://www.instagram.com/polluxchainofficial/" target="_blank">
-            <div className="flex justify-center items-center mt-8 md:mt-16">
-              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
-                <p>
-                  <GrInstagram size={28} />
-                </p>
-                <p className="text-xl font-medium">PolluxChain</p>
+            <Link
+              href="https://www.instagram.com/polluxchainofficial/"
+              target="_blank"
+            >
+              <div className="flex justify-center items-center mt-8 md:mt-16">
+                <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                  <p>
+                    <GrInstagram size={28} />
+                  </p>
+                  <p className="text-xl font-medium">PolluxChain</p>
+                </div>
               </div>
-            </div>
             </Link>
           )}
 
           {activeButton === "LinkedIn" && (
-            <Link href="https://www.linkedin.com/company/polluxchain/" target="_blank">
-            <div className="flex justify-center items-center mt-8 md:mt-16">
-              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
-                <p>
-                  <FaLinkedin size={28} />
-                </p>
-                <p className="text-xl font-medium">PolluxChain</p>
+            <Link
+              href="https://www.linkedin.com/company/polluxchain/"
+              target="_blank"
+            >
+              <div className="flex justify-center items-center mt-8 md:mt-16">
+                <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                  <p>
+                    <FaLinkedin size={28} />
+                  </p>
+                  <p className="text-xl font-medium">PolluxChain</p>
+                </div>
               </div>
-            </div>
             </Link>
           )}
 
           {activeButton === "Medium" && (
             <Link href="https://medium.com/@PolluxDao" target="_blank">
-            <div className="flex justify-center items-center mt-8 md:mt-16">
-              <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
-                <p>
-                  <BsMedium size={32} />
-                </p>
-                <p className="text-xl font-medium">PolluxChain</p>
+              <div className="flex justify-center items-center mt-8 md:mt-16">
+                <div className="flex flex-row space-x-4 items-center shadow-inner shadow-[#8AF969] bg-black p-4 pl-8 pr-8 rounded-xl transform transition-transform duration-200 hover:scale-105">
+                  <p>
+                    <BsMedium size={32} />
+                  </p>
+                  <p className="text-xl font-medium">PolluxChain</p>
+                </div>
               </div>
-            </div>
             </Link>
           )}
         </div>

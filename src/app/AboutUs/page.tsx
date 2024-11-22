@@ -62,11 +62,7 @@ const page = () => {
             benefit economy, where sustainable practices are at the forefront of
             innovation.
           </p>
-          <button
-            className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
-             text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
-               hover:text-white dark:text-white focus:outline-none "
-          >
+          <button className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white focus:outline-none ">
             <span className="text-white text-xl relative px-20 md:px-10 py-2.5 text-nowrap transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
               Contact Us
             </span>
