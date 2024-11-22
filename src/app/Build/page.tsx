@@ -77,17 +77,13 @@ const page = () => {
           </div>
           <p className="mt-4 md:mt-8 text-sm md:text-md lg:text-lg font-medium text-[#ccc7c7] text-justify leading-relaxed">
             Pollux enables developers to build scalable, eco-friendly dApps
-            using the Sustainable Proof of Stake (SPoS) consensus mechanism. This unique{" "}
-            approach incentivizes projects prioritising sustainability and making a positive real-world impact.
+            using the Sustainable Proof of Stake (SPoS) consensus mechanism.
+            This unique approach incentivizes projects prioritising
+            sustainability and making a positive real-world impact.
           </p>
 
           <div className="flex flex-col md:flex-row  items-center mt-4 lg:mt-6">
-            <button
-              className="mt-4 md:mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
-             text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
-            group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
-             transform transition-transform duration-200 hover:scale-105"
-            >
+            <button className="mt-4 md:mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white focus:outline-none transform transition-transform duration-200 hover:scale-105">
               <div className="flex items-center space-x-2 px-6 py-2 bg-[#181717] rounded-md transition-all ease-in duration-75 group-hover:bg-opacity-0">
                 <Image
                   src={buildIcon}
@@ -102,12 +98,7 @@ const page = () => {
               </div>
             </button>
 
-            <button
-              className="ml-0 md:ml-4 mt-2 md:mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
-     text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
-     group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800
-     transform transition-transform duration-200 hover:scale-105"
-            >
+            <button className="ml-0 md:ml-4 mt-2 md:mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white  focus:outline-none transform transition-transform duration-200 hover:scale-105">
               <div className="flex items-center space-x-2 px-6 py-2 bg-[#181717] rounded-md transition-all ease-in duration-75 group-hover:bg-opacity-0">
                 <Image
                   src={grantIcon}
@@ -145,21 +136,23 @@ const page = () => {
             Sustainable Proof Of Stake (SPoS)
           </p>
           <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-8 text-justify">
-            The 5ire ecosystem embarks on a holistic journey towards sustainability.  Its very foundation lies in sustainability, entrenched within its core via the Sustainable Proof of Stake (SPoS) consensus mechanism.
+            The 5ire ecosystem embarks on a holistic journey towards
+            sustainability. Its very foundation lies in sustainability,
+            entrenched within its core via the Sustainable Proof of Stake (SPoS)
+            consensus mechanism.
           </p>
           <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-4 text-justify">
-            Sustainable Proof of Stake is the world’s first ESG compliance-based reward distribution mechanism that emerges as a governance-based system powering
+            Sustainable Proof of Stake is the world’s first ESG compliance-based
+            reward distribution mechanism that emerges as a governance-based
+            system powering
           </p>
           <p className="text-sm md:text-md font-medium text-[#a7a4a4] mt-4 text-justify">
             SPoS lays a strong foundation for building the next generation of
-            dApps,
-            prioritising both security and real-world impact. It operates a
-            dual-chain 
-            architecture that empowers developers to choose the chain that best
-            suits their 
-            the high-performance 5ire Native chain or the widely compatible 5ire
-            EVM chain.
-            This ensures seamless migration for existing Ethereum dApps.
+            dApps, prioritising both security and real-world impact. It operates
+            a dual-chain architecture that empowers developers to choose the
+            chain that best suits their the high-performance 5ire Native chain
+            or the widely compatible Pollux EVM chain.This ensures seamless
+            migration for existing Ethereum dApps.
           </p>
           <div className="flex flex-col md:flex-row mt-8">
             <div className="flex flex-row items-center">
@@ -214,10 +207,7 @@ const page = () => {
           Get Started With Pollux
         </p>
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-4 lg:space-x-10 items-center w-full mt-12 md:mt-40   ">
-          <div
-            className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] transform transition-transform duration-200 hover:scale-105
-          md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-b-2 md:rounded-b-[48px] p-4 lg:p-6"
-          >
+          <div className="flex flex-col space-y-4 items-center justify-between w-full md:w-[25%] h-[350px] md:h-[300px] lg:h-[350px] transform transition-transform duration-200 hover:scale-105 md:border-dashed md:border-l-2 md:border-r-2 -ml-[3px]  top-0 md:border-b-2 md:rounded-b-[48px] p-4 lg:p-6">
             <p className="shadow-inner shadow-[#8af969] h-10 pt-1 w-8  rounded-full ">
               {" "}
               01

@@ -101,7 +101,7 @@ const page = () => {
           <div className="relative flex justify-center items-center md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] border-dashed border-2 border-white rounded-full">
             <div className="absolute flex justify-center items-center w-[320px] h-[320px] rounded-full">
               <Image
-                src={ polluxLogo}
+                src={polluxLogo}
                 alt="Polluxcoin Logo"
                 width={200}
                 height={200}
@@ -115,22 +115,27 @@ const page = () => {
 
               // Fix for Framer Motion style compatibility
 
-              const imageTransform = `rotate(${angle - 90}deg) translateX(${translateX}px)`;
+              const imageTransform = `rotate(${
+                angle - 90
+              }deg) translateX(${translateX}px)`;
 
               return (
                 <React.Fragment key={index}>
                   {/* Ensuring Framer Motion's type compatibility */}
                   <motion.div
-                    style={{  position: "absolute",
+                    style={{
+                      position: "absolute",
                       top: "50%",
                       left: "50%",
                       width: "2px",
                       height: `${translateX}px`,
                       background: "linear-gradient(45deg, #55E128, #0A2505)", // Green gradient for the line
-                      boxShadow: "0 0 5px rgba(85,224,40, 0.6), 0 0 20px rgba(255, 255, 255, 0.5)",
+                      boxShadow:
+                        "0 0 5px rgba(85,224,40, 0.6), 0 0 20px rgba(255, 255, 255, 0.5)",
                       transform: `rotate(${angle}deg)`, // Rotate the line
                       transformOrigin: "top",
-                      zIndex: -1,}}
+                      zIndex: -1,
+                    }}
                     animate={{
                       height: ["350px", "360px", "350px"], // Move the line up and down
                     }}
@@ -192,43 +197,66 @@ const page = () => {
           <p className="hidden md:block">
             <GiConcentricCrescents size={32} />
           </p>
-          <p className="hidden md:block text-4xl font-semibold">Discover our Ecosystem</p>
+          <p className="hidden md:block text-4xl font-semibold">
+            Discover our Ecosystem
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
           {/* Box 1 */}
           <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
             <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p><GrProjects size={52} className="text-white" /></p>
+              <p>
+                <GrProjects size={52} className="text-white" />
+              </p>
             </div>
 
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">All Projects</h3>
+            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
+              All Projects
+            </h3>
             <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates velit eveniet aliquid veritatis. Tempora beatae doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi doloremque aperiam, minus exercitationem debitis a?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates velit eveniet aliquid veritatis. Tempora beatae
+              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
+              doloremque aperiam, minus exercitationem debitis a?
             </p>
           </div>
 
           {/* Box 2 */}
           <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
             <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p><GrProjects size={52} className="text-white" /></p>
+              <p>
+                <GrProjects size={52} className="text-white" />
+              </p>
             </div>
 
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">All Projects</h3>
+            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
+              All Projects
+            </h3>
             <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates velit eveniet aliquid veritatis. Tempora beatae doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi doloremque aperiam, minus exercitationem debitis a?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates velit eveniet aliquid veritatis. Tempora beatae
+              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
+              doloremque aperiam, minus exercitationem debitis a?
             </p>
           </div>
 
           {/* Box 3 */}
           <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
             <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p><GrProjects size={52} className="text-white" /></p>
+              <p>
+                <GrProjects size={52} className="text-white" />
+              </p>
             </div>
 
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">All Projects</h3>
+            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
+              All Projects
+            </h3>
             <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates velit eveniet aliquid veritatis. Tempora beatae doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi doloremque aperiam, minus exercitationem debitis a?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates velit eveniet aliquid veritatis. Tempora beatae
+              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
+              doloremque aperiam, minus exercitationem debitis a?
             </p>
           </div>
         </div>
