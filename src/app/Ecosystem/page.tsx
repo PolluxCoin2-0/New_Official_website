@@ -17,6 +17,14 @@ const page = () => {
 
   const distances = [350, 350, 350, 350, 350, 350];
 
+  // Define the interface for the project data
+interface Project {
+  name: string;
+  description: string;
+  image: string; // Image paths can be typed as 'string' because we are using URLs for the images
+  url: string;
+}
+
   const images = [
     { src: UvitokenLogo, url: "https://uvi.network/" },
     { src: SulLogo, url: "https://sulaana.com/" },
@@ -81,7 +89,7 @@ const page = () => {
   ];
 
   // Reusable Card Component
-const ProjectCard = ({ name, description, image, url }) => {
+  const ProjectCard = ({ name, description, image, url }: Project) => {
   return (
     <div className="relative bg-black p-6 pt-10 pb-12 border-[1px] border-[#444343] rounded-tl-3xl rounded-br-3xl hover:border-r-[4px] hover:border-b-[4px] hover:border-r-[#8af969] hover:border-b-[#8af969] transform transition-transform duration-200 hover:scale-105">
       <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-[#8af969] rounded-full flex justify-center p-2">

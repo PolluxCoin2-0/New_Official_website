@@ -1,22 +1,37 @@
 "use client";
 import React, { useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
+// Define interfaces for formData and errors
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface FormErrors {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<FormErrors>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -25,7 +40,8 @@ const ContactForm = () => {
   };
 
   const validateForm = () => {
-    const newErrors = {};
+   
+    const newErrors: FormErrors = { name: "", email: "", subject: "", message: "" };
     if (!formData.name) newErrors.name = "Name is required";
     if (!formData.email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
@@ -37,7 +53,7 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
       // Create the mailto link with pre-filled fields
@@ -132,7 +148,7 @@ const ContactForm = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              rows="6"
+              rows={6}
               className="w-full px-6 py-3 border border-gray-300 bg-black rounded-xl"
             />
             {errors.message && (
