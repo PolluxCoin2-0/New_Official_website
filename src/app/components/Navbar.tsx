@@ -286,7 +286,7 @@ export default function Navbar() {
       title: "About",
       dropdown: [
         { title: "About Us", href: "/" },
-        { title: "Contact", href: "/" },
+        { title: "Contact", href: "https://calendly.com/priyanshu_pollux/30min?month=2024-11" },
       ],
     },
   ];

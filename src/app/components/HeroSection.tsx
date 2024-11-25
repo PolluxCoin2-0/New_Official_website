@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import getStartImg from "../../../public/started.png";
 import docsImg from "../../../public/docs.png";
 import Link from "next/link"; 
-
+import Calendly from "../Calendly/page";
 const AnimatedText2 = () => {
   const words = ["SCALABILITY", "INNOVATION", "SEAMLESS", "WEB3 INTEGRATION"];
   const colors = [
@@ -148,6 +148,11 @@ export default function HeroSection() {
           /> EXPLORE DOCS
         </button>
         </Link>
+      </div>
+
+      {/* Calendly */}
+      <div>
+        <Calendly/>
       </div>
     </section>
   );
