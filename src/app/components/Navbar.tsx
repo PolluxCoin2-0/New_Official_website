@@ -280,13 +280,13 @@ export default function Navbar() {
     },
     {
       title: "Ecosystem",
-      href: "/",
+      href: "/Ecosystem",
     },
     {
       title: "About",
       dropdown: [
         { title: "About Us", href: "/" },
-        { title: "Contact", href: "https://calendly.com/priyanshu_pollux/30min?month=2024-11" },
+        { title: "Contact", href: "/ContactForm" },
       ],
     },
   ];

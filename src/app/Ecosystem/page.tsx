@@ -2,13 +2,110 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import img from "../../../public/ele2.svg";
+import Link from "next/link";
 import polluxLogo from "../../../public/pollux logo.svg";
 import { GiConcentricCrescents } from "react-icons/gi";
-import { GrProjects } from "react-icons/gr";
+import UvitokenLogo from "../../../public/uviLogo.png";
+import SulLogo from "../../../public/sulLogo.svg";
+import PolinkLogo from "../../../public/PolinkLogo.png";
+import CrowdLogo from "../../../public/crowdLogo.png";
+import PolluxLogo from "../../../public/polluxLogo (2).png";
+import polinkextLogo from "../../../public/PoxscanImage.png";
+import spotLogo from "../../../public/SpotLogo.png";
 
 const page = () => {
+
   const distances = [350, 350, 350, 350, 350, 350];
+
+  const images = [
+    { src: UvitokenLogo, url: "https://uvi.network/" },
+    { src: SulLogo, url: "https://sulaana.com/" },
+    { src: PolinkLogo, url: "https://play.google.com/store/apps/details?id=com.app.PoLink&hl=en_IN&pli=1" },
+    { src: CrowdLogo, url: "https://crowd1.club/" },
+    { src: PolluxLogo, url: "https://polluxchain.com/" },
+    { src: polinkextLogo, url: "https://chromewebstore.google.com/detail/polink/afeibjjgfjfphjedhdjgbgbhpomolbjm" },
+  ];
+
+  
+  const projects = [
+    {
+      name: "Uvitoken",
+      description:
+        "A decentralized token offering cutting-edge DeFi solutions. Learn more about its unique ecosystem.",
+      image:  UvitokenLogo, // Replace with your actual image path
+      url: "https://www.uvitoken.com",
+    },
+    {
+      name: "SulToken",
+      description:
+        "SulToken is revolutionizing blockchain with high scalability and low transaction fees.",
+      image: SulLogo,
+      url: "https://www.sultoken.com",
+    },
+    {
+      name: "Polink",
+      description:
+        "Polink connects ecosystems, enabling seamless interoperability across blockchain networks.",
+      image: PolinkLogo,
+      url: "https://www.polink.com",
+    },
+    {
+      name: "CrowdToken",
+      description:
+        "Empowering communities with decentralized governance and collaborative decision-making.",
+      image: CrowdLogo,
+      url: "https://www.crowdtoken.com",
+    },
+    {
+      name: "CrowdToken",
+      description:
+        "Empowering communities with decentralized governance and collaborative decision-making.",
+      image: PolluxLogo,
+      url: "https://www.crowdtoken.com",
+    },
+    {
+      name: "CrowdToken",
+      description:
+        "Empowering communities with decentralized governance and collaborative decision-making.",
+      image: polinkextLogo,
+      url: "https://www.crowdtoken.com",
+    },
+    {
+      name: "CrowdToken",
+      description:
+        "Empowering communities with decentralized governance and collaborative decision-making.",
+      image: spotLogo,
+      url: "https://www.crowdtoken.com",
+    },
+    
+  ];
+
+  // Reusable Card Component
+const ProjectCard = ({ name, description, image, url }) => {
+  return (
+    <div className="relative bg-black p-6 pt-10 pb-12 border-[1px] border-[#444343] rounded-tl-3xl rounded-br-3xl hover:border-r-[4px] hover:border-b-[4px] hover:border-r-[#8af969] hover:border-b-[#8af969] transform transition-transform duration-200 hover:scale-105">
+      <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-[#8af969] rounded-full flex justify-center p-2">
+        <Image
+          src={image}
+          alt={`${name} Logo`}
+          width={60}
+          height={60}
+          className="rounded-full object-contain"
+        />
+      </div>
+      <h3 className="text-start text-xl font-semibold mb-8 text-white mt-4">{name}</h3>
+      <p className="text-gray-300 text-start">{description}</p>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#5FE768] mt-4 block underline text-start"
+      >
+        Visit Website
+      </a>
+    </div>
+  );
+};
 
   return (
     <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-64">
@@ -164,7 +261,7 @@ const page = () => {
                         borderRadius: "50%",
                       }}
                     >
-                      <motion.div
+                    <motion.div
                         animate={{ rotate: 360 }}
                         whileHover={{ rotate: 0 }}
                         transition={{
@@ -173,16 +270,19 @@ const page = () => {
                           ease: "linear",
                         }}
                       >
-                        <div className="rounded-full w-32 h-32 bg-black shadow-inner shadow-green-500 flex justify-center items-center">
-                          <Image
-                            src={img}
-                            alt={`Polluxcoin Logo ${index}`}
-                            width={50}
-                            height={50}
-                          />
-                        </div>
-                      </motion.div>
-                    </motion.div>
+                    <Link href={images[index].url} target="_blank">
+                    <div
+                      className="group relative rounded-full w-32 h-32 bg-black shadow-inner shadow-green-500 flex justify-center items-center">
+                      <Image
+                        src={images[index].src}
+                        alt={`Polluxcoin Logo ${index}`}
+                        width={70}
+                        height={70}
+                      />
+                     </div>
+                    </Link>
+                    </motion.div> 
+                     </motion.div>
                   </div>
                 </React.Fragment>
               );
@@ -192,75 +292,25 @@ const page = () => {
       </div>
 
       {/* Our Projects */}
-      <div className="-mt-60 md:mt-16">
-        <div className="flex flex-row space-x-2 items-center">
-          <p className="hidden md:block">
-            <GiConcentricCrescents size={32} />
-          </p>
-          <p className="hidden md:block text-4xl font-semibold">
-            Discover our Ecosystem
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-          {/* Box 1 */}
-          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
-            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p>
-                <GrProjects size={52} className="text-white" />
-              </p>
-            </div>
-
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
-              All Projects
-            </h3>
-            <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates velit eveniet aliquid veritatis. Tempora beatae
-              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
-              doloremque aperiam, minus exercitationem debitis a?
-            </p>
-          </div>
-
-          {/* Box 2 */}
-          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
-            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p>
-                <GrProjects size={52} className="text-white" />
-              </p>
-            </div>
-
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
-              All Projects
-            </h3>
-            <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates velit eveniet aliquid veritatis. Tempora beatae
-              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
-              doloremque aperiam, minus exercitationem debitis a?
-            </p>
-          </div>
-
-          {/* Box 3 */}
-          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
-            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p>
-                <GrProjects size={52} className="text-white" />
-              </p>
-            </div>
-
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
-              All Projects
-            </h3>
-            <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates velit eveniet aliquid veritatis. Tempora beatae
-              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
-              doloremque aperiam, minus exercitationem debitis a?
-            </p>
-          </div>
-        </div>
+      <div className="relative text-center px-4 lg:px-16 mt-24 pb-64">
+      <div className="flex flex-row space-x-6  ">
+        <p>
+          <GiConcentricCrescents size={32} />
+        </p>
+        <p className="text-4xl font-semibold">Discover our Ecosystem</p>
       </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-24">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            name={project.name}
+            description={project.description}
+            image={project.image}
+            url={project.url}
+          />
+        ))}
+      </div>
+    </div>
     </div>
   );
 };

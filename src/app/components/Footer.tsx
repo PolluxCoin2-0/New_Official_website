@@ -88,7 +88,7 @@ export default function Footer() {
       
       <div className="flex flex-row justify-center items-center space-x-2 mt-16 mb-8  border-t-[1px] border-[#4e4c4c] pt-8">
       <p><FaRegCopyright size={20}/></p>
-      <p className="text-lg md:text-xl font-bold">
+      <p className="text-md md:text-xl font-bold">
       2024 Polluxchain. All rights reserved.
       </p>
       </div>
