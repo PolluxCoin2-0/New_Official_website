@@ -2,13 +2,13 @@
 
 import { TypewriterEffect } from "./ui/Typewriter-effect";
 import { motion } from "framer-motion";
-import Image from "next/image"; 
+import Image from "next/image";
 import polluxLogo from "../../../public/pollux logo.svg";
 import { useEffect, useState } from "react";
 import getStartImg from "../../../public/started.png";
 import docsImg from "../../../public/docs.png";
-import Link from "next/link"; 
-import Calendly from "../Calendly/page.jsx";
+import Link from "next/link";
+import Calendly from "../Calendly/index.jsx";
 const AnimatedText2 = () => {
   const words = ["SCALABILITY", "INNOVATION", "SEAMLESS", "WEB3 INTEGRATION"];
   const colors = [
@@ -103,7 +103,7 @@ export default function HeroSection() {
           }}
         >
           <Image
-          src={polluxLogo}
+            src={polluxLogo}
             alt="Polluxcoin Logo"
             width={300}
             height={300}
@@ -111,13 +111,13 @@ export default function HeroSection() {
           />
         </motion.div>
       </motion.div>
-        
-        <TypewriterEffect
-          words={words}
-          className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-6"
-        />
-  
-       {/* Headline: Decentralize the web */}
+
+      <TypewriterEffect
+        words={words}
+        className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl font-bold mt-0 md:mt-6"
+      />
+
+      {/* Headline: Decentralize the web */}
       <h2 className="text-lg sm:text-2xl lg:text-2xl xl:text-2xl font-medium text-[#fff] mt-20">
         Your gateway to a Hybrid Layer 1 Blockchain designed for{" "}
       </h2>
@@ -125,34 +125,36 @@ export default function HeroSection() {
 
       {/* Buttons Section */}
       <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center items-center">
-      <Link href="/" passHref>
-        <button className="flex items-center space-x-2 justify-center text-lg font-semibold px-6 py-3 rounded-xl bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] transition-all w-full sm:w-auto">
-        <Image
-          src={getStartImg}
-            alt="Polluxcoin Logo"
-            width={25}
-            height={25}
-            className="mr-2"
-          /> GET STARTED
-        </button>
+        <Link href="/" passHref>
+          <button className="flex items-center space-x-2 justify-center text-lg font-semibold px-6 py-3 rounded-xl bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] transition-all w-full sm:w-auto">
+            <Image
+              src={getStartImg}
+              alt="Polluxcoin Logo"
+              width={25}
+              height={25}
+              className="mr-2"
+            />{" "}
+            GET STARTED
+          </button>
         </Link>
 
         <Link href="/" passHref>
-        <button className=" flex items-center space-x-2 justify-center text-lg border-[1px] border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black w-full sm:w-auto">
-        <Image
-          src={docsImg}
-            alt="Polluxcoin Logo"
-            width={25}
-            height={25}
-            className="mr-2"
-          /> EXPLORE DOCS
-        </button>
+          <button className=" flex items-center space-x-2 justify-center text-lg border-[1px] border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black w-full sm:w-auto">
+            <Image
+              src={docsImg}
+              alt="Polluxcoin Logo"
+              width={25}
+              height={25}
+              className="mr-2"
+            />{" "}
+            EXPLORE DOCS
+          </button>
         </Link>
       </div>
 
       {/* Calendly */}
       <div>
-        <Calendly/>
+        <Calendly />
       </div>
     </section>
   );

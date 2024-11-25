@@ -23,6 +23,12 @@
       "@assets/*": ["./public/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Calendly/page.Jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/Calendly/index.jsx"
+  ],
   "exclude": ["node_modules"]
 }
