@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use client'
 
 import React, { useEffect, useState } from 'react';
@@ -5,7 +6,7 @@ import { PopupWidget } from "react-calendly";
 import { RiWechatFill } from "react-icons/ri";
 import { motion } from "framer-motion"; // Import Framer Motion
 
-const Calendly: React.FC = () => {
+const Calendly = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -13,13 +14,12 @@ const Calendly: React.FC = () => {
   }, []);
 
   return (
-    /* eslint-disable */
     <div className="App">
       {isClient && (
         <PopupWidget
           url="https://calendly.com/priyanshu_pollux/30min"
           rootElement={document.body}
-          /* eslint-disable-line */
+          /* eslint-disable no-console, no-alert*/
           text={
             // Animated Icon
             <motion.div
