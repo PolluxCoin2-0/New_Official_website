@@ -13,11 +13,13 @@ const Calendly: React.FC = () => {
   }, []);
 
   return (
+    /* eslint-disable */
     <div className="App">
       {isClient && (
         <PopupWidget
           url="https://calendly.com/priyanshu_pollux/30min"
           rootElement={document.body}
+          /* eslint-disable-line */
           text={
             // Animated Icon
             <motion.div

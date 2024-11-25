@@ -301,9 +301,9 @@ interface Project {
 
       {/* Our Projects */}
       <div className="relative text-center px-4 lg:px-16 mt-24 pb-64">
-      <div className="flex flex-row space-x-6  ">
+      <div className="flex flex-row space-x-4 items-center  ">
         <p>
-          <GiConcentricCrescents size={32} />
+          <GiConcentricCrescents size={32} color="#8af969" />
         </p>
         <p className="text-4xl font-semibold">Discover our Ecosystem</p>
       </div>
