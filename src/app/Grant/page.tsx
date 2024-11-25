@@ -5,7 +5,6 @@ import Tilt from "react-parallax-tilt";
 import bannerImg from "../../../public/banner.jpg";
 import banner2Img from "../../../public/banner 2.jpg";
 import Image from "next/image";
-import Calendly from "../Calendly/page";
 import JoinUs from "../components/ui/JoinUs";
 import applyImg from "../../../public/apply.png";
 
@@ -175,11 +174,6 @@ const Page = () => {
       {/* Joib Us Page */}
       <div className="mt-12">
         <JoinUs />
-      </div>
-
-      {/* Calendly */}
-      <div>
-        <Calendly />
       </div>
     </div>
   );
