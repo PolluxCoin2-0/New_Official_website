@@ -1,31 +1,45 @@
 'use client'
- 
+
 import React, { useEffect, useState } from 'react';
-import {PopupWidget } from "react-calendly";
-// InlineWidget
- 
+import { PopupWidget } from "react-calendly";
+import { RiWechatFill } from "react-icons/ri";
+import { motion } from "framer-motion"; // Import Framer Motion
+
 const Calendly: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
- 
+
   useEffect(() => {
     setIsClient(true);
   }, []);
- 
+
   return (
     <div className="App">
       {isClient && (
-        //  <InlineWidget url="https://calendly.com/priyanshu_pollux/30min" />
-         
         <PopupWidget
           url="https://calendly.com/priyanshu_pollux/30min"
-          rootElement={document.body}  // Use document.body as the root element
-          text="Click here to schedule!"
-          textColor="#000000"
-          color="#8af969"
+          rootElement={document.body}
+          text={
+            // Animated Icon
+            <motion.div
+              initial={{ y: 0 }}
+              animate={{ y: [-10, 0, -10] }} // Bounce up and down
+              transition={{
+                duration: 1, // Time for one complete bounce
+                repeat: Infinity, // Loop the animation
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
+              style={{ display: "inline-block" }}
+            >
+              <RiWechatFill size={80} style={{ color: "#8af969" }} />
+            </motion.div>
+          }
+          textColor="none"
+          color="none"
         />
       )}
     </div>
   );
 };
- 
+
 export default Calendly;
