@@ -14,14 +14,14 @@ const Index = () => {
 
   const images = [
     { src: UvitokenLogo, url: "https://uvi.network/", rotation: "90deg" },
-    { src: SulmineLogo, url: "https://sulaana.com/", rotation: "30deg" },
+    { src: SulLogo, url: "", rotation: "30deg" },
     {
       src: UvitokenLogo,
       url: "https://play.google.com/store/apps/details?id=com.app.PoLink&hl=en_IN&pli=1",
       rotation: "330deg",
     },
     { src: PolinkLogo, url: "https://crowd1.club/", rotation: "270deg" },
-    { src: SulLogo, url: "https://polluxchain.com/", rotation: "210deg" },
+    { src: SulmineLogo, url: "https://polluxchain.com/", rotation: "210deg" },
     {
       src: CrowdLogo,
       url: "https://chromewebstore.google.com/detail/polink/afeibjjgfjfphjedhdjgbgbhpomolbjm",
@@ -31,15 +31,15 @@ const Index = () => {
 
   const descriptions = [
     {
-      name: "CROWD1",
-      url: "https://crowd1.club/",
+      name: "UVI SWAP",
+      url: "https://uviswap.org/",
       description:
-        "A crowdfunding platform that bridges innovators with investors, enabling secure, transparent, and efficient fundraising for Web3 projects.",
+        "PolluxChain decentralized exchange (DEX) for seamless token swaps, liquidity provision, and yield farming.",
     },
 
     {
       name: "SULMINE",
-      url: "https://t.me/PoxMineBot",
+      url: "",
       description:
         "Unlock Sulana mining opportunities! Designed for crypto enthusiasts aiming to maximize their passive income streams through efficient mining operations.",
     },
@@ -61,16 +61,17 @@ const Index = () => {
       description:
         "A revolutionary decentralized exchange offering seamless token swaps, liquidity pooling, and enhanced trading experiences.",
     },
+   
     {
-      name: "UVI SWAP",
-      url: "https://uviswap.org/",
+      name: "CROWD1",
+      url: "https://crowd1.club/",
       description:
-        "PolluxChain decentralized exchange (DEX) for seamless token swaps, liquidity provision, and yield farming.",
+        "A crowdfunding platform that bridges innovators with investors, enabling secure, transparent, and efficient fundraising for Web3 projects.",
     },
   ];
 
   return (
-    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-64">
+    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-0 md:mt-24 pb-0 md:pb-64">
       {/* Animated Rockets Background */}
       <div className="absolute inset-0 z-0">
         {[...Array(20)].map((_, index) => (

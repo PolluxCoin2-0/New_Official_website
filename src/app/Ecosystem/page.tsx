@@ -54,7 +54,7 @@ const page = () => {
       name: "SULAANA",
       description:
         "A revolutionary decentralized exchange offering seamless token swaps, liquidity pooling, and enhanced trading experiences. Built for speed, security, and scalability.",
-      image:  SulaanaLogo,
+      image:  SulmineLogo,
       urlTitle: "Explore Sulaana",
       url: "https://sulaana.com/",
     },
@@ -63,7 +63,7 @@ const page = () => {
       name: "SULMINE",
       description:
         "Unlock Sulana mining opportunities! Designed for crypto enthusiasts aiming to maximize their passive income streams through efficient mining operations.",
-      image: SulmineLogo,
+      image: SulaanaLogo,
       urlTitle: "Get Started with Sulmine",
       url: "",
     },
@@ -124,17 +124,20 @@ const page = () => {
 
   return (
     <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-64">
-      <div>
+      <div className="hidden md:block">
       <AnimatedProducts/>
      </div>
 
       {/* Our Projects */}
-      <div className="relative text-center px-4 lg:px-16 mt-24 pb-64">
-      <div className="flex flex-row space-x-4 items-center  ">
-        <p>
+      <div className="relative text-center px-4 lg:px-12 mt-24 pb-64">
+      <div className="flex flex-row space-x-2 md:space-x-4 items-center  ">
+      <p className="block md:hidden">
+          <FaRecycle size={24} color="#8af969" />
+        </p>
+        <p className="hidden md:block">
           <FaRecycle size={32} color="#8af969" />
         </p>
-        <p className="text-4xl font-semibold">Explore our diverse projects:</p>
+        <p className="text-md md:text-4xl font-semibold text-nowrap">Explore our diverse projects:</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-24">
         {projects.map((project, index) => (
