@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import connectImg from "../../../../public/paper-plane 1.svg";
 import documentImg from "../../../../public/google-docs 1.svg";
 import communityImg from "../../../../public/group 1 1.svg";
@@ -79,6 +80,8 @@ const JoinUs = () => {
               Engage with a global network of enthusiasts and contributors.
               Let’s grow together.
             </p>
+
+            <Link href="https://t.me/polluxchainDAO">
             <button
               className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000]
@@ -88,6 +91,7 @@ const JoinUs = () => {
                 Connect with Us
               </span>
             </button>
+            </Link>
           </div>
         </div>
       </div>
