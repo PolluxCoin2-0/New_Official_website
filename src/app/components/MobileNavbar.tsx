@@ -628,7 +628,7 @@ export default function MobileNavbar() {
         { title: "News & Events", href: "/" },
       ],
     },
-    { title: "Ecosystem", href: "/" },
+    { title: "Ecosystem", href: "/Ecosystem" },
     {
       title: "About",
       dropdown: [
