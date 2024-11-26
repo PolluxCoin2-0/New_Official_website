@@ -162,7 +162,7 @@ const Page = () => {
             </p>
           </div>
           <div>
-            <button className=" mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium ml-10 md:ml-0 text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white focus:ring-4 focus:outline-none">
+            <button className=" mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium ml-10 md:ml-0 text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white focus:outline-none">
               <span className="text-white text-xl relative px-20 md:px-10 py-2.5 transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
                 Apply Now
               </span>

@@ -64,13 +64,7 @@ interface Project {
       image: CrowdLogo,
       url: "https://www.crowdtoken.com",
     },
-    {
-      name: "CrowdToken",
-      description:
-        "Empowering communities with decentralized governance and collaborative decision-making.",
-      image: PolluxLogo,
-      url: "https://www.crowdtoken.com",
-    },
+   
     {
       name: "CrowdToken",
       description:

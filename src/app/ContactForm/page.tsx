@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
+import JoinUs from "../components/ui/JoinUs";
+import Calendly from "../Calendly";
 // Define interfaces for formData and errors
 interface FormData {
   name: string;
@@ -82,10 +84,7 @@ const ContactForm = () => {
     }
 }
 
-
-
-
-  return (
+return (
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-32 mt-32">
       <p className="text-2xl md:text-4xl font-medium">Contact Us</p>
       <div className="border-[1px] border-[#2e2d2d] rounded-3xl mt-6 w-full md:w-[70%] mx-auto p-2 md:p-10">
@@ -162,6 +161,16 @@ const ContactForm = () => {
             Send Message
           </button>
         </form>
+      </div>
+
+      {/* Join Us */}
+      <div className="mt-24">
+        <JoinUs/>
+      </div>
+
+      {/* Calendly */}
+      <div>
+        <Calendly/>
       </div>
     </div>
   );
