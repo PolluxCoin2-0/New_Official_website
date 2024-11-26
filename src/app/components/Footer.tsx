@@ -86,11 +86,10 @@ export default function Footer() {
         </div>
       </div>
       
-      <div className="flex flex-row justify-center items-center space-x-2 mt-16 mb-8  border-t-[1px] border-[#4e4c4c] pt-8">
-      <p><FaRegCopyright size={20}/></p>
-      <p className="text-lg md:text-xl font-bold">
-      2024 Polluxchain. All rights reserved.
-      </p>
+      <div className="flex flex-row justify-center items-center space-x-1 md:space-x-2 mt-16 mb-8  border-t-[1px] border-[#4e4c4c] pt-8">
+      <p className="block md:hidden"><FaRegCopyright size={14}/></p>
+      <p className="hidden md:block"><FaRegCopyright size={20}/></p>
+      <p className="text-sm md:text-xl font-bold text-nowrap ">2024 Polluxchain. All rights reserved.</p>
       </div>
     </footer>
   );

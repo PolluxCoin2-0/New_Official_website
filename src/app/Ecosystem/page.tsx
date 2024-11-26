@@ -1,266 +1,157 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import img from "../../../public/ele2.svg";
-import polluxLogo from "../../../public/pollux logo.svg";
-import { GiConcentricCrescents } from "react-icons/gi";
-import { GrProjects } from "react-icons/gr";
+import { FaRecycle } from "react-icons/fa6";
+import UvitokenLogo from "../../../public/uviLogo.png";
+import SulaanaLogo from "../../../public/sulLogo.svg";
+import SulmineLogo from "../../../public/SulmineLogo.svg";
+import PolinkLogo from "../../../public/PolinkLogo.png";
+import CrowdLogo from "../../../public/crowdLogo.png";
+import polluxLogo from "../../../public/polluxlogo.png";
+import spotLogo from "../../../public/SpotLogo.png";
+import AnimatedProducts from "../../../src/app/AnimatedProduct";
+import { FaLink } from "react-icons/fa6";
 
 const page = () => {
-  const distances = [350, 350, 350, 350, 350, 350];
+
+
+  // Define the interface for the project data
+  interface Project {
+  name: string;
+  description: string;
+  image: string; // Image paths can be typed as 'string' because we are using URLs for the images
+  url: string;
+  urlTitle: string;
+}
+
+  const projects = [
+    {
+      name: "UVI SWAP",
+      description:
+        "PolluxChain decentralized exchange (DEX) for seamless token swaps, liquidity provision, and yield farming. Experience fast, secure, and decentralized trading like never before.",
+      image:  UvitokenLogo, // Replace with your actual image path
+      urlTitle: "Trade on UviSwap",
+      url: "https://uviswap.org/",
+
+    },
+    {
+      name: "UVI Mining",
+      description:
+        "Mine UVI Tokens effortlessly! Participate in PolluxChain mining program to earn rewards while contributing to network security and decentralization.",
+      image:  UvitokenLogo,
+      urlTitle: "Start Mining UVI",
+      url: "https://uvi.network/",
+    },
+    {
+      name: "POX MINING",
+      description:
+        "Stake and mine POX tokens, adding stability and liquidity to the ecosystem. A rewarding way to engage with PolluxChain’s vibrant community.",
+      image: polluxLogo,
+      urlTitle: "Join POX Mining",
+      url: "https://t.me/PoxMineBot",
+    },
+    {
+      name: "SULAANA",
+      description:
+        "A revolutionary decentralized exchange offering seamless token swaps, liquidity pooling, and enhanced trading experiences. Built for speed, security, and scalability.",
+      image:  SulmineLogo,
+      urlTitle: "Explore Sulaana",
+      url: "https://sulaana.com/",
+    },
+   
+    {
+      name: "SULMINE",
+      description:
+        "Unlock Sulana mining opportunities! Designed for crypto enthusiasts aiming to maximize their passive income streams through efficient mining operations.",
+      image: SulaanaLogo,
+      urlTitle: "Get Started with Sulmine",
+      url: "",
+    },
+    {
+      name: "CROWD1",
+      description:
+        "A crowdfunding platform that bridges innovators with investors, enabling secure, transparent, and efficient fundraising for Web3 projects.",
+      image:  CrowdLogo,
+      urlTitle: "Visit Crowd1",
+      url: "https://crowd1.club/",
+    },
+    {
+      name: "POLINK",
+      description:
+        "A non-custodial wallet designed to securely manage your digital assets while ensuring complete control over your funds. Polink also supports a governance model, allowing users to participate in decision-making within the ecosystem. Experience seamless transactions with PolluxChain's native token and beyond.",
+      image: PolinkLogo,
+      urlTitle: "Explore Polink Wallet",
+      url: "https://chromewebstore.google.com/detail/polink/afeibjjgfjfphjedhdjgbgbhpomolbjm",
+    },
+    {
+      name: "SPOT 30 USDX",
+      description:
+        "Your one-stop solution for decentralized stablecoin swaps. Trade USDx with unmatched speed, low fees, and maximum security.",
+      image: spotLogo,
+      urlTitle: "Access Spot30 USDx",
+      url: "https://spot30usdx.com/",
+    },
+    
+  ];
+
+  // Reusable Card Component
+  const ProjectCard = ({ name, description, image, urlTitle, url }: Project) => {
+  return (
+    <div className="h-full relative bg-black p-6 pt-10 pb-12 border-[1px] border-[#444343] rounded-tl-3xl rounded-br-3xl hover:border-r-[4px] hover:border-b-[4px] hover:border-r-[#8af969] hover:border-b-[#8af969] transform transition-transform duration-200 hover:scale-105">
+      <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-[#8af969] rounded-full flex justify-center p-2">
+        <Image
+          src={image}
+          alt={`${name} Logo`}
+          width={60}
+          height={60}
+          className="rounded-full object-contain"
+        />
+      </div>
+      <h3 className="text-start text-xl font-semibold  text-white mt-4 h-[15%]">{name}</h3>
+      <p className="text-start text-[#a7a4a4] leading-7 truncate-description pt-5 h-[65%]">{description}</p>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#8af969]  mt-4 no-underline text-start flex flex-row items-center space-x-2 h-[20%]"
+      >
+        <p><FaLink size={20}/></p> 
+        <p>{urlTitle}</p>
+      </a>
+    </div>
+  );
+};
 
   return (
-    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-64">
-      {/* Animated Rockets Background */}
-      <div className="absolute inset-0 z-0">
-        {[...Array(20)].map((_, index) => (
-          <motion.div
-            key={`rocket-${index}`}
-            className="absolute rounded-full shadow-lg"
-            style={{
-              width: "15px",
-              height: "15px",
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              backgroundColor: "#77af54", // Green rocket color
-              boxShadow: "0 0 10px rgba(255, 255, 255, 0.8)",
-            }}
-            initial={{
-              opacity: 0,
-              scale: 1,
-            }}
-            animate={{
-              y: ["0%", "-50%", "-100%"],
-              opacity: [1, 0.5, 0],
-              scale: [1, 1.2, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          >
-            {[...Array(5)].map((_, sparkIndex) => (
-              <motion.div
-                key={`spark-${index}-${sparkIndex}`}
-                className="absolute bg-yellow-300 rounded-full"
-                style={{
-                  width: `${Math.random() * 3}px`,
-                  height: `${Math.random() * 3}px`,
-                  bottom: 0,
-                  left: `${Math.random() * 100 - 50}%`,
-                }}
-                animate={{
-                  y: [0, -10],
-                  opacity: [1, 0],
-                }}
-                transition={{
-                  duration: Math.random() * 0.5 + 0.5,
-                  repeat: Infinity,
-                  delay: Math.random() * 0.2,
-                }}
-              />
-            ))}
-          </motion.div>
-        ))}
+    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-16 ">
+      <div className="hidden lg:block">
+      <AnimatedProducts/>
+     </div>
 
-        {[...Array(150)].map((_, index) => (
-          <motion.div
-            key={`star-${index}`}
-            className="absolute rounded-full"
-            style={{
-              width: `${Math.random() * 2 + 1}px`,
-              height: `${Math.random() * 2 + 1}px`,
-              backgroundColor: `rgba(255, 255, 255, ${Math.random() * 0.8})`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              boxShadow: "0 0 8px rgba(255, 255, 255, 0.8)",
-            }}
-            animate={{
-              opacity: [0.6, 1, 0.6],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
+      {/* Our Projects */}
+      <div className="relative text-center px-4 lg:px-12 mt-24 pb-0 ">
+      <div className="flex flex-row space-x-2 md:space-x-4 items-center  ">
+      <p className="block md:hidden">
+          <FaRecycle size={24} color="#8af969" />
+        </p>
+        <p className="hidden md:block">
+          <FaRecycle size={32} color="#8af969" />
+        </p>
+        <p className="text-md md:text-4xl font-semibold text-nowrap">Explore our diverse projects:</p>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 md:mt-24">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            name={project.name}
+            description={project.description}
+            image={project.image}
+            urlTitle={project.urlTitle}
+            url={project.url}
           />
         ))}
       </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 text-white pb-64">
-        <p className="text-2xl md:text-4xl font-bold">Our Diverse Ecosystem</p>
-        <p className="text-md md:text-lg font-semibold pt-4 text-gray-300">
-          Integrated Excellence with Pollux Chain
-        </p>
-
-        <div className="hidden md:flex justify-center md:mt-72 lg:mt-60">
-          <div className="relative flex justify-center items-center md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] border-dashed border-2 border-white rounded-full">
-            <div className="absolute flex justify-center items-center w-[320px] h-[320px] rounded-full">
-              <Image
-                src={polluxLogo}
-                alt="Polluxcoin Logo"
-                width={200}
-                height={200}
-                className="w-48 sm:w-64 md:w-48 lg:w-52"
-              />
-            </div>
-
-            {[...Array(6)].map((_, index) => {
-              const angle = (index * 360) / 6;
-              const translateX = distances[index];
-
-              // Fix for Framer Motion style compatibility
-
-              const imageTransform = `rotate(${
-                angle - 90
-              }deg) translateX(${translateX}px)`;
-
-              return (
-                <React.Fragment key={index}>
-                  {/* Ensuring Framer Motion's type compatibility */}
-                  <motion.div
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      width: "2px",
-                      height: `${translateX}px`,
-                      background: "linear-gradient(45deg, #55E128, #0A2505)", // Green gradient for the line
-                      boxShadow:
-                        "0 0 5px rgba(85,224,40, 0.6), 0 0 20px rgba(255, 255, 255, 0.5)",
-                      transform: `rotate(${angle}deg)`, // Rotate the line
-                      transformOrigin: "top",
-                      zIndex: -1,
-                    }}
-                    animate={{
-                      height: ["350px", "360px", "350px"], // Move the line up and down
-                    }}
-                    transition={{
-                      repeat: Infinity,
-                      duration: 1,
-                      ease: "easeInOut",
-                    }}
-                  />
-
-                  <div
-                    className="absolute"
-                    style={{
-                      transform: imageTransform,
-                      transformOrigin: "center",
-                    }}
-                  >
-                    <motion.div
-                      transition={{
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 10,
-                      }}
-                      style={{
-                        background: "rgba(255, 255, 255, 0.9)",
-                        borderRadius: "50%",
-                      }}
-                    >
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        whileHover={{ rotate: 0 }}
-                        transition={{
-                          repeat: Infinity,
-                          duration: 10,
-                          ease: "linear",
-                        }}
-                      >
-                        <div className="rounded-full w-32 h-32 bg-black shadow-inner shadow-green-500 flex justify-center items-center">
-                          <Image
-                            src={img}
-                            alt={`Polluxcoin Logo ${index}`}
-                            width={50}
-                            height={50}
-                          />
-                        </div>
-                      </motion.div>
-                    </motion.div>
-                  </div>
-                </React.Fragment>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Our Projects */}
-      <div className="-mt-60 md:mt-16">
-        <div className="flex flex-row space-x-2 items-center">
-          <p className="hidden md:block">
-            <GiConcentricCrescents size={32} />
-          </p>
-          <p className="hidden md:block text-4xl font-semibold">
-            Discover our Ecosystem
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
-          {/* Box 1 */}
-          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
-            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p>
-                <GrProjects size={52} className="text-white" />
-              </p>
-            </div>
-
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
-              All Projects
-            </h3>
-            <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates velit eveniet aliquid veritatis. Tempora beatae
-              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
-              doloremque aperiam, minus exercitationem debitis a?
-            </p>
-          </div>
-
-          {/* Box 2 */}
-          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
-            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p>
-                <GrProjects size={52} className="text-white" />
-              </p>
-            </div>
-
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
-              All Projects
-            </h3>
-            <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates velit eveniet aliquid veritatis. Tempora beatae
-              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
-              doloremque aperiam, minus exercitationem debitis a?
-            </p>
-          </div>
-
-          {/* Box 3 */}
-          <div className="relative bg-black p-10 pt-5 pb-12 rounded-2xl shadow-inner shadow-green-500">
-            <div className="absolute top-[-20px] right-[-20px] z-10 bg-black w-[100px] h-[100px] shadow-inner shadow-green-500 rounded-full p-6">
-              <p>
-                <GrProjects size={52} className="text-white" />
-              </p>
-            </div>
-
-            <h3 className="text-xl font-semibold mb-4 text-white mt-10">
-              All Projects
-            </h3>
-            <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptates velit eveniet aliquid veritatis. Tempora beatae
-              doloribus ad autem blanditiis, ut nobis pariatur distinctio, nisi
-              doloremque aperiam, minus exercitationem debitis a?
-            </p>
-          </div>
-        </div>
-      </div>
+    </div>
     </div>
   );
 };
