@@ -33,7 +33,9 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -42,8 +44,12 @@ const ContactForm = () => {
   };
 
   const validateForm = () => {
-   
-    const newErrors: FormErrors = { name: "", email: "", subject: "", message: "" };
+    const newErrors: FormErrors = {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
     if (!formData.name) newErrors.name = "Name is required";
     if (!formData.email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
@@ -66,28 +72,27 @@ const ContactForm = () => {
         Email: ${formData.email}
         Message: ${formData.message}
       `);
- 
-  const mailtoLink =`https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(
+
+      const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
-  // Open the user's default email client with the pre-filled details
-  window.location.href = mailtoLink;
+      // Open the user's default email client with the pre-filled details
+      window.location.href = mailtoLink;
 
-  // Optionally reset the form after submission
-  setFormData({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
+      // Optionally reset the form after submission
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     }
-}
+  };
 
-return (
+  return (
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-32 mt-32">
       <p className="text-2xl md:text-4xl font-medium">Contact Us</p>
-      <div className="border-[1px] border-[#2e2d2d] rounded-3xl mt-6 w-full md:w-[70%] mx-auto p-2 md:p-10">
+      <div className="border-[1px] border-[#2e2d2d] rounded-3xl mt-12 w-full md:w-[70%] mx-auto p-2 md:p-16">
         <div className="flex flex-row justify-center items-center space-x-1 md:space-x-2 pt-4 md:pt-0">
           <div>
             <FaTelegramPlane color="#8af969" size={28} />
@@ -108,7 +113,7 @@ return (
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-6 py-3 border border-gray-300 bg-black  rounded-xl"
+                className="w-full px-6 py-4 border-[1px] border-[#504f4f] bg-black  rounded-xl"
               />
               {errors.name && (
                 <span className="text-red-500 text-sm">{errors.name}</span>
@@ -121,7 +126,7 @@ return (
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-6 py-3 border border-gray-300 bg-black rounded-xl"
+                className="w-full px-6 py-4 border-[1px] border-[#504f4f] bg-black rounded-xl"
               />
               {errors.email && (
                 <span className="text-red-500 text-sm">{errors.email}</span>
@@ -135,7 +140,7 @@ return (
               placeholder="Subject"
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-6 py-3 border border-gray-300 bg-black rounded-xl"
+              className="w-full px-6 py-4  border-[1px] border-[#504f4f] bg-black rounded-xl"
             />
             {errors.subject && (
               <span className="text-red-500 text-sm">{errors.subject}</span>
@@ -148,7 +153,7 @@ return (
               value={formData.message}
               onChange={handleChange}
               rows={6}
-              className="w-full px-6 py-3 border border-gray-300 bg-black rounded-xl"
+              className="w-full px-6 py-4 border-[1px] border-[#504f4f] bg-black rounded-xl"
             />
             {errors.message && (
               <span className="text-red-500 text-sm">{errors.message}</span>
@@ -165,12 +170,12 @@ return (
 
       {/* Join Us */}
       <div className="mt-24">
-        <JoinUs/>
+        <JoinUs />
       </div>
 
       {/* Calendly */}
       <div>
-        <Calendly/>
+        <Calendly />
       </div>
     </div>
   );
