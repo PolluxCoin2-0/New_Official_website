@@ -123,13 +123,13 @@ const page = () => {
 };
 
   return (
-    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-64">
-      <div className="hidden md:block">
+    <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-16 ">
+      <div className="hidden lg:block">
       <AnimatedProducts/>
      </div>
 
       {/* Our Projects */}
-      <div className="relative text-center px-4 lg:px-12 mt-24 pb-64">
+      <div className="relative text-center px-4 lg:px-12 mt-24 pb-0 ">
       <div className="flex flex-row space-x-2 md:space-x-4 items-center  ">
       <p className="block md:hidden">
           <FaRecycle size={24} color="#8af969" />
@@ -139,7 +139,7 @@ const page = () => {
         </p>
         <p className="text-md md:text-4xl font-semibold text-nowrap">Explore our diverse projects:</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 md:mt-24">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
