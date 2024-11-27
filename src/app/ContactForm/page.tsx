@@ -1,93 +1,93 @@
 "use client";
-import React, { useState } from "react";
-import { FaTelegramPlane } from "react-icons/fa";
+import React  from "react";
+// import { FaTelegramPlane } from "react-icons/fa";
 import JoinUs from "../components/ui/JoinUs";
 import Calendly from "../Calendly";
 // Define interfaces for formData and errors
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+// interface FormData {
+//   name: string;
+//   email: string;
+//   subject: string;
+//   message: string;
+// }
 
-interface FormErrors {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+// interface FormErrors {
+//   name: string;
+//   email: string;
+//   subject: string;
+//   message: string;
+// }
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState<FormData>({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
-  const [errors, setErrors] = useState<FormErrors>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  // const [errors, setErrors] = useState<FormErrors>({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
 
-  const validateForm = () => {
-    const newErrors: FormErrors = {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    };
-    if (!formData.name) newErrors.name = "Name is required";
-    if (!formData.email) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(formData.email))
-      newErrors.email = "Email is invalid";
-    if (!formData.subject) newErrors.subject = "Subject is required";
-    if (!formData.message) newErrors.message = "Message is required";
-    setErrors(newErrors);
+  // const validateForm = () => {
+  //   const newErrors: FormErrors = {
+  //     name: "",
+  //     email: "",
+  //     subject: "",
+  //     message: "",
+  //   };
+  //   if (!formData.name) newErrors.name = "Name is required";
+  //   if (!formData.email) newErrors.email = "Email is required";
+  //   else if (!/\S+@\S+\.\S+/.test(formData.email))
+  //     newErrors.email = "Email is invalid";
+  //   if (!formData.subject) newErrors.subject = "Subject is required";
+  //   if (!formData.message) newErrors.message = "Message is required";
+  //   setErrors(newErrors);
 
-    return Object.keys(newErrors).length === 0;
-  };
+  //   return Object.keys(newErrors).length === 0;
+  // };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Create the mailto link with pre-filled fields
-      const recipientEmail = "priyanshu@poxscan.io"; // Replace with your email
-      const subject = encodeURIComponent(formData.subject);
-      const body = encodeURIComponent(`
-        Name: ${formData.name}
-        Email: ${formData.email}
-        Message: ${formData.message}
-      `);
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   if (validateForm()) {
+  //     // Create the mailto link with pre-filled fields
+  //     const recipientEmail = "priyanshu@poxscan.io"; // Replace with your email
+  //     const subject = encodeURIComponent(formData.subject);
+  //     const body = encodeURIComponent(`
+  //       Name: ${formData.name}
+  //       Email: ${formData.email}
+  //       Message: ${formData.message}
+  //     `);
 
-      const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(body)}`;
-      // Open the user's default email client with the pre-filled details
-      window.location.href = mailtoLink;
+  //     const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(
+  //       subject
+  //     )}&body=${encodeURIComponent(body)}`;
+  //     // Open the user's default email client with the pre-filled details
+  //     window.location.href = mailtoLink;
 
-      // Optionally reset the form after submission
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    }
-  };
+  //     // Optionally reset the form after submission
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       subject: "",
+  //       message: "",
+  //     });
+  //   }
+  // };
 
   return (
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-32 mt-32">
