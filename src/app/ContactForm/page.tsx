@@ -91,8 +91,10 @@ const ContactForm = () => {
 
   return (
     <div className="text-center min-h-screen px-2 md:px-4 lg:px-6 xl:px-32 mt-32">
-      <p className="text-2xl md:text-4xl font-medium">Contact Us</p>
-      <div className="border-[1px] border-[#2e2d2d] rounded-3xl mt-12 w-full md:w-[70%] mx-auto p-2 md:p-16">
+      {/* <p className="text-2xl md:text-4xl font-medium">Contact Us</p> */}
+      
+        
+      {/* <div className="border-[1px] border-[#2e2d2d] rounded-3xl mt-12 w-full md:w-[70%] mx-auto p-2 md:p-16">
         <div className="flex flex-row justify-center items-center space-x-1 md:space-x-2 pt-4 md:pt-0">
           <div>
             <FaTelegramPlane color="#8af969" size={28} />
@@ -166,7 +168,7 @@ const ContactForm = () => {
             Send Message
           </button>
         </form>
-      </div>
+      </div> */}
 
       {/* Join Us */}
       <div className="mt-24">

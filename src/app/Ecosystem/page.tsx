@@ -9,7 +9,7 @@ import PolinkLogo from "../../../public/PolinkLogo.png";
 import CrowdLogo from "../../../public/crowdLogo.png";
 import polluxLogo from "../../../public/polluxlogo.png";
 import spotLogo from "../../../public/SpotLogo.png";
-import AnimatedProducts from "../../../src/app/AnimatedProduct";
+// import AnimatedProducts from "../../../src/app/AnimatedProduct";
 import { FaLink } from "react-icons/fa6";
 
 const page = () => {
@@ -124,9 +124,9 @@ const page = () => {
 
   return (
     <div className="relative text-center px-2 md:px-4 lg:px-6 xl:px-44 mt-24 pb-16 ">
-      <div className="hidden lg:block">
+      {/* <div className="hidden lg:block">
       <AnimatedProducts/>
-     </div>
+     </div> */}
 
       {/* Our Projects */}
       <div className="relative text-center px-4 lg:px-12 mt-24 pb-0 ">
@@ -138,8 +138,13 @@ const page = () => {
           <FaRecycle size={32} color="#8af969" />
         </p>
         <p className="text-md md:text-4xl font-semibold text-nowrap">Explore our diverse projects:</p>
+       
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 md:mt-24">
+      <p className="text-center md:text-start text-md md:text-lg font-semibold pt-4 text-[#a7a4a4] ml-0 md:ml-16">
+          Empowering the future of blockchain innovation with a suite of
+          cutting-edge decentralized applications and platforms.
+        </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 md:mt-16">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
