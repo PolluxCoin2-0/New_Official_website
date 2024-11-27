@@ -80,8 +80,8 @@ export default function Navbar() {
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/" },
-        { title: "Contact", href: "/" },
+        { title: "About Us", href: "/AboutUs" },
+        { title: "Contact", href: "/ContactForm" },
       ],
     },
   ];
