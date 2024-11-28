@@ -68,7 +68,7 @@ export default function Navbar() {
       title: "Community",
       dropdown: [
         { title: "Community", href: "/Community" },
-        { title: "Partner With Us", href: "/" },
+        { title: "Partner With Us", href: "https://docs.google.com/forms/d/e/1FAIpQLScf1JyE_H4GUiJNSBvdcK4-7xDYB_c1GaMbsvSkkXZJR8rDBQ/viewform" },
         { title: "Blog ➚", href: "https://medium.com/@PolluxDao" },
         { title: "News & Events", href: "/" },
       ],

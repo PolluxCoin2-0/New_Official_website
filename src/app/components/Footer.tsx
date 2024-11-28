@@ -11,7 +11,7 @@ import { FaRegCopyright } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="p-6 text-center px-4 md:px-4 lg:px-6 xl:px-44 mt-0 md:mt-16">
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="flex flex-col lg:flex-row justify-between">
         <div className="w-[40%] md:w-[10%] -mt-6">
           <Image
             src={polluxLogo}
@@ -22,11 +22,11 @@ export default function Footer() {
             className=""
           />
 
-             {/* Google Play */}
-             <div className="mt-3">
+          {/* Google Play */}
+          <div className="mt-3">
             <button
               type="button"
-              className="flex items-center justify-center w-48 text-white bg-black rounded-lg h-14 border-[1px] border-[#ffffff]"
+              className="flex items-center justify-center w-48 lg:w-40 xl:w-48 text-white bg-black rounded-lg h-14 border-[1px] border-[#ffffff]"
             >
               <div className="mr-3">
                 <svg viewBox="30 336.7 120.9 129.2" width="30">
@@ -61,7 +61,7 @@ export default function Footer() {
           <div>
             <button
               type="button"
-              className="flex items-center justify-center w-48 mt-3 text-white bg-black h-14 rounded-lg border-[1px] border-[#ffffff]"
+              className="flex items-center justify-center w-48 lg:w-40 xl:w-48 mt-3 text-white bg-black h-14 rounded-lg border-[1px] border-[#ffffff] "
             >
               <div className="mr-6">
                 <svg viewBox="0 0 384 512" width="30">
@@ -79,12 +79,11 @@ export default function Footer() {
               </div>
             </button>
           </div>
-
         </div>
 
-        <div className="text-start mt-5 md:mt-0">
+        <div className="text-start mt-5 lg:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Company</p>
-          <Link href="/">
+          <Link href="/AboutUs" target="_blank">
             <p className="text-lg font-medium pt-4 block hover:text-[#a7a4a4]">
               About Us
             </p>
@@ -103,7 +102,7 @@ export default function Footer() {
           <a href="/validator" className="text-lg font-semibold pt-2 block">Validator</a>
         </div> */}
 
-        <div className="text-start mt-5 md:mt-0">
+        <div className="text-start mt-5 lg:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Explore</p>
           <Link href="/Ecosystem" target="_blank">
             <p className="text-lg font-medium pt-4 block hover:text-[#a7a4a4]">
@@ -127,7 +126,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <div className=" text-start mt-5 md:mt-0">
+        <div className=" text-start mt-5 lg:mt-0">
           <p className="text-xl font-bold text-[#8AF969]">Learn</p>
           <Link href="/" target="_blank">
             <p className="text-lg font-medium pt-4 block hover:text-[#a7a4a4]">
@@ -139,7 +138,10 @@ export default function Footer() {
               Whitepaper
             </p>
           </Link>
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSee5dvxl7dq0Hei0dq4i7pkeM3iU7u3x46IMR1oDR6Loqc2mw/viewform" target="_blank">
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSee5dvxl7dq0Hei0dq4i7pkeM3iU7u3x46IMR1oDR6Loqc2mw/viewform"
+            target="_blank"
+          >
             <p className="text-lg font-medium pt-2 block hover:text-[#a7a4a4]">
               Become an Ambassador
             </p>
@@ -147,7 +149,7 @@ export default function Footer() {
         </div>
 
         <div className=" flex flex-col">
-          <div className="flex flex-row space-x-5 mt-5 md:mt-0">
+          <div className="flex flex-row space-x-5 mt-5 lg:mt-0">
             <a
               href="https://x.com/Polluxchain"
               target="_blank"
@@ -178,8 +180,6 @@ export default function Footer() {
               <FaTelegramPlane size={36} />
             </a>
           </div>
-       
-         
         </div>
       </div>
 

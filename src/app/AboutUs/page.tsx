@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import visionImg from "../../../public/visions.svg";
@@ -33,7 +34,7 @@ const teamMembers: TeamMember[] = [
     name: "Priyanshu",
     role: "CTO",
     img: avatar1,
-    socialLink: "",
+    socialLink: "https://x.com/Mundr1Priyanshu",
   },
   {
     name: "Shivam Singh",
@@ -69,7 +70,7 @@ const teamMembers: TeamMember[] = [
     name: "Durgesh Yadav",
     role: "Frontend Developer",
     img: avatar7,
-    socialLink: "",
+    socialLink: "https://x.com/durgesh_yadav21?t=ZR9rJohqnxXZaOBP2IaQKA&s=09",
   },
   {
     name: "Saurabh Singh",
@@ -145,11 +146,13 @@ const page = () => {
             benefit economy, where sustainable practices are at the forefront of
             innovation.
           </p>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLScf1JyE_H4GUiJNSBvdcK4-7xDYB_c1GaMbsvSkkXZJR8rDBQ/viewform">
           <button className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white focus:outline-none ">
             <span className="text-white text-xl relative px-20 md:px-10 py-2.5 text-nowrap transition-all ease-in duration-75 bg-[#181717]  rounded-md group-hover:bg-opacity-0">
               Contact Us
             </span>
           </button>
+          </Link>
         </div>
 
         <div className="hidden lg:block -mt-32">
@@ -285,7 +288,7 @@ const page = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 items-center gap-x-0 md:gao-x-4 lg:gap-x-0 gap-y-0 justify-center">
             {teamMembers.map((member, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center ">
                 <TeamMemberCard
                   img={member.img}
                   name={member.name}
