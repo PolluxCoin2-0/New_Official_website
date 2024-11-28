@@ -3,6 +3,7 @@ import React  from "react";
 // import { FaTelegramPlane } from "react-icons/fa";
 import JoinUs from "../components/ui/JoinUs";
 import Calendly from "../Calendly";
+
 // Define interfaces for formData and errors
 // interface FormData {
 //   name: string;
