@@ -81,7 +81,7 @@ export default function Navbar() {
       title: "About",
       dropdown: [
         { title: "About Us", href: "/AboutUs" },
-        { title: "Contact", href: "/ContactForm" },
+        { title: "Contact", href: "/" },
       ],
     },
   ];
