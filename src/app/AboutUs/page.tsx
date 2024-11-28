@@ -45,7 +45,7 @@ const teamMembers: TeamMember[] = [
     name: "Charil Saini",
     role: "Blockchain Developer",
     img: avatar3,
-    socialLink: "",
+    socialLink: "https://x.com/ethgodseye",
   },
   {
     name: "Sukirat",
@@ -98,7 +98,7 @@ const page = () => {
     img,
     socialLink,
   }) => (
-    <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 rounded-lg w-full h-full pt-4   ">
+    <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-0 lg:space-x-4 rounded-lg w-full h-full pt-4   ">
       <div>
         <p className="rounded-full w-28 h-28 text-center  p-6">
           <Image
@@ -113,11 +113,11 @@ const page = () => {
       </div>
 
       <div className="flex flex-col justify-center md:justify-start ">
-        <p className="text-center md:text-start text-lg font-medium pt-1 md:pt-0">
+        <p className="text-center md:text-start text-lg font-medium pt-1 md:pt-0 text-nowrap">
           {name}
         </p>
-        <div className="flex flex-row space-x-4 items-center pt-0 md:pt-2 ">
-          <p className=" text-md text-[#a7a4a4]">{role}</p>
+        <div className="flex flex-row space-x-4 md:space-x-2 lg:space-x-4 items-center pt-0 md:pt-2 ">
+          <p className=" text-md text-[#a7a4a4] text-nowrap">{role}</p>
           {/* <p className="pt-1 text-[#a7a4a4]">{position}</p> */}
           <a
             href={socialLink}
@@ -283,7 +283,7 @@ const page = () => {
           <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold mb-6 md:mb-20">
             Our Expert Team
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-x-0 gap-y-0 justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 items-center gap-x-0 md:gao-x-4 lg:gap-x-0 gap-y-0 justify-center">
             {teamMembers.map((member, index) => (
               <div key={index} className="flex flex-col items-center">
                 <TeamMemberCard
