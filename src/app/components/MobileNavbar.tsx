@@ -632,7 +632,7 @@ export default function MobileNavbar() {
     {
       title: "About",
       dropdown: [
-        { title: "About Us", href: "/" },
+        { title: "About Us", href: "/AboutUs" },
         { title: "Contact", href: "/" },
       ],
     },
