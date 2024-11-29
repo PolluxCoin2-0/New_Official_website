@@ -89,7 +89,7 @@ export default function Footer() {
               Community
             </p>
           </Link>
-          <Link href="/" target="_blank">
+          <Link href="https://drive.google.com/drive/folders/1MDN94d2SjlZQ5CJCdycd28hjjpB-RiDc?usp=sharing" target="_blank">
             <p className="text-lg font-medium pt-2 block hover:text-[#a7a4a4]">
               Brand Kit
             </p>
