@@ -25,7 +25,7 @@ export default function Footer() {
 
           {/* polink */}
           <div>
-            <Link href="https://chromewebstore.google.com/detail/polink/afeibjjgfjfphjedhdjgbgbhpomolbjm">
+            <Link href="https://chromewebstore.google.com/detail/polink/afeibjjgfjfphjedhdjgbgbhpomolbjm" target="_blank">
               <button
                 type="button"
                 className="flex items-center justify-center w-48 lg:w-44 xl:w-44 mt-3 text-white bg-black h-14 rounded-lg border-[1px] border-[#ffffff] "
