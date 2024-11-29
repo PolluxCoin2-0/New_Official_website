@@ -301,10 +301,8 @@ const page = () => {
           </div>
         </div> */}
 
-        <div className="w-[80%] mt-24 mx-auto">
-          <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold mb-6 md:mb-6">
-            Our Expert Team
-          </p>
+        <div className="w-[80%] mt-12  mx-auto">
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 items-center gap-x-0 md:gao-x-4 lg:gap-x-0 gap-y-0 justify-center">
             {teamMembers.map((member, index) => (
               <div key={index} className="flex flex-col items-center ">
