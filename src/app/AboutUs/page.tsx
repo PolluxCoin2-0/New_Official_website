@@ -60,7 +60,7 @@ const teamMembers: TeamMember[] = [
     socialLink: "https://x.com/ethgodseye",
   },
   {
-    name: "Sukirat",
+    name: "Sukirat Singh",
     role: "Blockchain Developer",
     img: sukiratImg,
     socialLink: "https://x.com/SinghSukirat",
@@ -87,7 +87,7 @@ const teamMembers: TeamMember[] = [
     name: "Saurabh Singh",
     role: "App Developer",
     img: sauravImg,
-    socialLink: "",
+    socialLink: "https://www.linkedin.com/in/saurav-kumar-174a4a174?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
   {
     name: "Chandra Shekhar Bala",
@@ -148,14 +148,14 @@ const page = () => {
       {/* About us  */}
       <div className="flex flex-row justify-between">
         <div>
-          <p className="text-3xl md:text-4xl font-semibold ">About Pollux</p>
+          <p className="text-3xl md:text-4xl font-semibold ">About PolluxChain</p>
           <p className="text-[#a7a4a4] mt-5 text-md md:text-lg font-medium text-justify leading-relaxed">
-            At Pollux, we are dedicated to leveraging blockchain technology to
-            build a sustainable <br />
-            future. Our ecosystem represents a paradigm shift from a for-profit
-            economy to a for- <br />
-            benefit economy, where sustainable practices are at the forefront of
-            innovation.
+          At PolluxChain, we are committed to revolutionizing the blockchain space with <br/>cutting-edge 
+technology and innovative solutions. Our hybrid Layer 1 ecosystem <br/>is designed to empower users 
+and developers, offering unparalleled scalability, efficiency, <br/>and adaptability.
+PolluxChain drives a shift towards a decentralized future, where innovation <br/>and community collaboration 
+fuel growth and opportunities for all.
+
           </p>
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLScf1JyE_H4GUiJNSBvdcK4-7xDYB_c1GaMbsvSkkXZJR8rDBQ/viewform">
           <button className="mt-10 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white focus:outline-none ">
@@ -194,14 +194,13 @@ const page = () => {
             <p className="text-2xl font-semibold">Our Vision</p>
           </div>
           <p className="text-[#a7a4a4] mt-5 text-md font-medium text-justify leading-loose">
-            PolluxChain envisions itself as a leading blockchain ecosystem for
-            the 5th Industrial Revolution (5IR), fostering and incentivizing
-            self-governing DAOs towards sustainable development. Our core
-            business concept revolves around the for-benefit paradigm,
-            encapsulated in our proof-of-benefit model. This model promotes
-            sustainable practices that benefit the environment, ensuring that
-            business entities not only focus on profitability but also integrate
-            sustainability into their fundamental operations.
+          PolluxChain envisions itself as a pioneering hybrid Layer 1 blockchain ecosystem,
+shaping the future of decentralized innovation and empowering self-governing communities.
+Our core mission centers around enabling efficient, scalable, and inclusive blockchain solutions 
+that drive real-world impact.{" "} <br/>
+ Through advanced consensus mechanisms and a seamless ecosystem, 
+we aim to foster equitable participation, facilitate technological excellence, and redefine the 
+possibilities of blockchain for the modern world.
           </p>
         </div>
 
@@ -219,14 +218,14 @@ const page = () => {
             <p className="text-2xl font-semibold">Our Mission</p>
           </div>
           <p className="text-[#a7a4a4] mt-5 text-md font-medium text-justify leading-loose">
-            PolluxChain envisions itself as a leading blockchain ecosystem for
-            the 5th Industrial Revolution (5IR), fostering and incentivizing
-            self-governing DAOs towards sustainable development. Our core
-            business concept revolves around the for-benefit paradigm,
-            encapsulated in our proof-of-benefit model. This model promotes
-            sustainable practices that benefit the environment, ensuring that
-            business entities not only focus on profitability but also integrate
-            sustainability into their fundamental operations.
+          At PolluxChain, our mission is to build a robust and dynamic hybrid Layer 1 blockchain ecosystem that
+empowers decentralized innovation and redefines the future of finance. We are dedicated to creating
+opportunities for individuals, organizations, and communities by enabling efficient, secure, and scalable 
+blockchain solutions.
+{" "}<br/>
+Our goal is to unlock transformative potential through innovative platforms that drive transparency,
+financial inclusion, and technological progress, fostering a decentralized economy that empowers users 
+and builds a sustainable digital future.
           </p>
         </div>
       </div>

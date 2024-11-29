@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import polluxLogo from "../../../public/polluxlogowhite.png";
+import polinkImage from "../../../public/PoxscanImage.png"
 import { BsTwitterX } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -23,13 +24,14 @@ export default function Footer() {
           />
 
           {/* Google Play */}
-          <div className="mt-3">
+          <div className="mt-0">
+            <a href="https://drive.google.com/file/d/1OwHb07DaJIphbDnRVoOf5d62KM2VkwrZ"  download>
             <button
               type="button"
-              className="flex items-center justify-center w-48 lg:w-40 xl:w-48 text-white bg-black rounded-lg h-14 border-[1px] border-[#ffffff]"
+              className="flex items-center justify-center w-36 lg:w-40 xl:w-40 text-white bg-black rounded-lg h-12 border-[1px] border-[#ffffff]"
             >
               <div className="mr-3">
-                <svg viewBox="30 336.7 120.9 129.2" width="30">
+                <svg viewBox="30 336.7 120.9 129.2" width="22">
                   <path
                     fill="#FFD400"
                     d="M119.2,421.2c15.3-8.4,27-14.8,28-15.3c3.2-1.7,6.5-6.2,0-9.7  c-2.1-1.1-13.4-7.3-28-15.3l-20.1,20.2L119.2,421.2z"
@@ -49,22 +51,24 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <div className="text-start text-xs">GET IT ON</div>
-                <div className="-mt-1 font-sans text-xl font-semibold">
+                <div className="text-start text-[10px]">GET IT ON</div>
+                <div className="-mt-1 font-sans text-lg font-semibold">
                   Google Play
                 </div>
               </div>
             </button>
+            </a>
           </div>
 
           {/*  App store  */}
           <div>
+            <a href="https://apps.apple.com/in/app/polink-wallet/id6736746385"  download>
             <button
               type="button"
-              className="flex items-center justify-center w-48 lg:w-40 xl:w-48 mt-3 text-white bg-black h-14 rounded-lg border-[1px] border-[#ffffff] "
+              className="flex items-center justify-center w-36 lg:w-40 xl:w-40 mt-3 text-white bg-black h-12 rounded-lg border-[1px] border-[#ffffff] "
             >
               <div className="mr-6">
-                <svg viewBox="0 0 384 512" width="30">
+                <svg viewBox="0 0 384 512" width="24">
                   <path
                     fill="currentColor"
                     d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
@@ -72,12 +76,40 @@ export default function Footer() {
                 </svg>
               </div>
               <div>
-                <div className="text-xs">Download on the</div>
-                <div className="-mt-1 font-sans text-xl font-semibold">
+                <div className="text-start text-[10px]">Download on the</div>
+                <div className="-mt-1 font-sans text-lg font-semibold">
                   App Store
                 </div>
               </div>
             </button>
+            </a>
+          </div>
+
+          {/* polink */}
+          <div>
+            <Link href="https://chromewebstore.google.com/detail/polink/afeibjjgfjfphjedhdjgbgbhpomolbjm">
+            <button
+              type="button"
+              className="flex items-center justify-center w-36 lg:w-40 xl:w-40 mt-3 text-white bg-black h-12 rounded-lg border-[1px] border-[#ffffff] p-1"
+            >
+              <div className="mr-3">
+              <Image
+            src={polinkImage}
+            alt="banner-image"
+            width={0}
+            height={0}
+            style={{ width: "100%" }}
+            className=""
+          />
+              </div>
+              <div>
+              <div className="text-start text-[10px]">Add</div>
+                <div className="-mt-1 font-sans text-md font-semibold text-nowrap">
+                  Polink Network
+                </div>
+              </div>
+            </button>
+            </Link>
           </div>
         </div>
 
