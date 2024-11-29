@@ -633,7 +633,7 @@ export default function MobileNavbar() {
       title: "About",
       dropdown: [
         { title: "About Us", href: "/AboutUs" },
-        { title: "Contact", href: "/" },
+        { title: "Contact", href: "https://docs.google.com/forms/d/e/1FAIpQLScf1JyE_H4GUiJNSBvdcK4-7xDYB_c1GaMbsvSkkXZJR8rDBQ/viewform" },
       ],
     },
   ];
