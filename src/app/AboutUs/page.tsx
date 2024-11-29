@@ -182,7 +182,7 @@ const page = () => {
 
             <p className="text-2xl font-semibold">Our Vision</p>
           </div>
-          <p className="text-[#a7a4a4] mt-5 text-md font-medium text-justify leading-relaxed">
+          <p className="text-[#a7a4a4] mt-5 text-md font-medium text-justify leading-loose">
             PolluxChain envisions itself as a leading blockchain ecosystem for
             the 5th Industrial Revolution (5IR), fostering and incentivizing
             self-governing DAOs towards sustainable development. Our core
@@ -207,7 +207,7 @@ const page = () => {
 
             <p className="text-2xl font-semibold">Our Mission</p>
           </div>
-          <p className="text-[#a7a4a4] mt-5 text-md font-medium text-justify leading-relaxed">
+          <p className="text-[#a7a4a4] mt-5 text-md font-medium text-justify leading-loose">
             PolluxChain envisions itself as a leading blockchain ecosystem for
             the 5th Industrial Revolution (5IR), fostering and incentivizing
             self-governing DAOs towards sustainable development. Our core
@@ -250,9 +250,13 @@ const page = () => {
               Ram Bilas Rana
             </p>
             <p className="pt-1 text-[#a7a4a4]">Founder</p>
+            <Link href="https://x.com/DiamondRamRana1"
+             target="_blank"
+             rel="noopener noreferrer">
             <p className="pt-4">
               <BsTwitterX size={24} />
             </p>
+            </Link>
           </div>
 
           <div
@@ -276,14 +280,18 @@ const page = () => {
               Kamal Kundal
             </p>
             <p className="pt-1 text-[#a7a4a4]">Co-Founder</p>
+            <Link href="https://x.com/kamalkundal91"
+             target="_blank"
+             rel="noopener noreferrer">
             <p className="pt-4">
               <BsTwitterX size={24} />
             </p>
+            </Link>
           </div>
         </div>
 
         <div className="w-[80%] mt-24 mx-auto">
-          <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold mb-6 md:mb-20">
+          <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold mb-6 md:mb-6">
             Our Expert Team
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 items-center gap-x-0 md:gao-x-4 lg:gap-x-0 gap-y-0 justify-center">
