@@ -224,6 +224,7 @@ export default function Navbar() {
           )}
 
           {/* Get $POLLUX Button */}
+          <Link href="https://linktr.ee/polluxchain"   target="_blank">
           <Button
             variant="primary"
             className="bg-[#8af969] text-black hover:shadow-[0_0_10px_#8af969] hover:bg-[#8af969] hover:text-black transition-all rounded-xl duration-300 relative flex items-center justify-center h-10 w-36 px-4"
@@ -239,9 +240,10 @@ export default function Navbar() {
                 className="h-6 w-6"
               />
             ) : (
-              <p className="font-semibold text-sm">GET $POX</p>
+              <p className="font-semibold text-sm ">GET $POX</p>
             )}
           </Button>
+          </Link>
         </div>
       </div>
 

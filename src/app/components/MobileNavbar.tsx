@@ -729,6 +729,7 @@ export default function MobileNavbar() {
             {item.title === "About" && (
               <>
                 {/* Get $POLLUX Button */}
+                <Link href="https://linktr.ee/polluxchain"   target="_blank">
                 <div className="mt-4 w-full flex justify-center">
                   <Button
                     variant="primary"
@@ -737,6 +738,7 @@ export default function MobileNavbar() {
                     Get $POLLUX
                   </Button>
                 </div>
+                </Link>
 
                 {/* Social Media Icons */}
                 <div className="mt-4 flex justify-center space-x-4">
