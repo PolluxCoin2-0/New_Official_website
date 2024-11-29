@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,19 +7,19 @@ import visionImg from "../../../public/visions.svg";
 import missionImg from "../../../public/mission.svg";
 import aboutBgImg from "../../../public/OBJECTS.svg";
 import { BsTwitterX } from "react-icons/bs";
+import ramImg from "../../../public/ram bhaiya (2).png";
+import kamalImg from "../../../public/kamal bhaiya (2).png";
+import priyanshImg from "../../../public/avatar1 (2).png";
+import shivamImg from "../../../public/shivam.png";
+import charilImg from "../../../public/charil.png";
+import sukiratImg from "../../../public/sukirat.png";
+import abhishakImg from "../../../public/abhishek.png"
+import shubhamImg from "../../../public/shubham.png";
+import durgesh from "../../../public/durgesh.png";
+import sauravImg from "../../../public/saurav.png";
+import balaImg from "../../../public/bala.png";
+import ritikImg from "../../../public/hritik.png";
 import JoinUs from "../components/ui/JoinUs";
-import avatar1 from "../../../public/avatar1 (2).png";
-import avatar2 from "../../../public/avatar10.png";
-import avatar3 from "../../../public/avatar1.png";
-import avatar4 from "../../../public/avatar4.png";
-import avatar5 from "../../../public/avatar5.png";
-import avatar6 from "../../../public/avatar4.png";
-import avatar7 from "../../../public/avatar7 (2).png";
-import avatar8 from "../../../public/avatar6.png";
-import avatar9 from "../../../public/avatar9.png";
-import avatar10 from "../../../public/avatar9 (2).png";
-import avatar11 from "../../../public/avatar7.png";
-import avatar12 from "../../../public/avatar12.png";
 // Define the TeamMember type
 interface TeamMember {
   name: string;
@@ -31,63 +30,75 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
+    name: " Ram Bilas Rana",
+    role: "Founder",
+    img: ramImg,
+    socialLink: "https://x.com/DiamondRamRana1",
+  },
+  {
+    name: " Kamal Kundal",
+    role: "Co-Founder",
+    img: kamalImg,
+    socialLink: "https://x.com/kamalkundal91",
+  },
+  {
     name: "Priyanshu",
     role: "CTO",
-    img: avatar1,
+    img: priyanshImg,
     socialLink: "https://x.com/Mundr1Priyanshu",
   },
   {
     name: "Shivam Singh",
     role: "Blockchain Developer",
-    img: avatar2,
+    img: shivamImg,
     socialLink: "https://x.com/ShivamS96168034",
   },
   {
     name: "Charil Saini",
     role: "Blockchain Developer",
-    img: avatar3,
+    img: charilImg,
     socialLink: "https://x.com/ethgodseye",
   },
   {
     name: "Sukirat",
     role: "Blockchain Developer",
-    img: avatar6,
+    img: sukiratImg,
     socialLink: "https://x.com/SinghSukirat",
   },
   {
     name: "Abhishek Harta",
     role: "UI/UX Designer",
-    img: avatar9,
-    socialLink: "",
+    img: abhishakImg,
+    socialLink: "https://www.linkedin.com/in/abhishak-harta-4a3a96252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
   {
     name: "Shubham Gupta",
     role: "Frontend Developer",
-    img: avatar8,
+    img: shubhamImg,
     socialLink: "https://x.com/jointoshubham?t=Eg-K68yKWfJIclx8frcUIQ&s=09",
   },
   {
     name: "Durgesh Yadav",
     role: "Frontend Developer",
-    img: avatar7,
+    img: durgesh,
     socialLink: "https://x.com/durgesh_yadav21?t=ZR9rJohqnxXZaOBP2IaQKA&s=09",
   },
   {
     name: "Saurabh Singh",
     role: "App Developer",
-    img: avatar10,
+    img: sauravImg,
     socialLink: "",
   },
   {
     name: "Chandra Shekhar Bala",
     role: "App Developer",
-    img: avatar5,
+    img: balaImg,
     socialLink: "https://x.com/chandrastwt",
   },
   {
     name: "Hritik Raj",
     role: "Devops Engineer",
-    img: avatar4,
+    img: ritikImg,
     socialLink: "https://x.com/rhrits",
   },
 ];
@@ -227,7 +238,7 @@ const page = () => {
         </p>
         {/* <div className="w-[80%] h-10 md:h-44 bg-green-600 rounded-2xl bg-gradient-to-b from-[#1C5A04] to-[#68A541] flex flex-row justify-center mx-auto mt-8"></div> */}
 
-        <div className="flex flex-col md:flex-row justify-center space-x-0 md:space-x-16 lg:space-x-24 w-full mt-0 md:mt-12">
+        {/* <div className="flex flex-col md:flex-row justify-center space-x-0 md:space-x-16 lg:space-x-24 w-full mt-0 md:mt-12">
           <div
             className="flex flex-col items-center w-full md:w-[40%] lg:w-[30%] xl:w-[20%]   mt-16 md:mt-0  rounded-2xl pt-12 pb-12 transform transition-transform duration-200 hover:scale-105"
             style={{
@@ -288,7 +299,7 @@ const page = () => {
             </p>
             </Link>
           </div>
-        </div>
+        </div> */}
 
         <div className="w-[80%] mt-24 mx-auto">
           <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold mb-6 md:mb-6">
