@@ -149,7 +149,7 @@ const page = () => {
       <div className="flex flex-row justify-between">
         <div>
           <p className="text-3xl md:text-4xl font-semibold ">About PolluxChain</p>
-          <p className="text-[#a7a4a4] mt-5 text-md md:text-lg font-medium text-justify leading-relaxed">
+          <p className="text-[#a7a4a4] mt-5 text-md md:text-lg font-medium  leading-relaxed">
           At PolluxChain, we are committed to revolutionizing the blockchain space with <br/>cutting-edge 
 technology and innovative solutions. Our hybrid Layer 1 ecosystem <br/>is designed to empower users 
 and developers, offering unparalleled scalability, efficiency, <br/>and adaptability.
