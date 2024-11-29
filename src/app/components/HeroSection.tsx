@@ -83,7 +83,7 @@ export default function HeroSection() {
       {/* Logo with Tilt Effect */}
 
       {/* Logo with Continuous Rotation and Gradient Hover Effect */}
-      <motion.div
+      {/* <motion.div
         className="relative mt-20 sm:mt-14 md:mt-20"
         transition={{
           type: "spring",
@@ -101,7 +101,18 @@ export default function HeroSection() {
             duration: 10, // Continuous rotation speed
             ease: "linear",
           }}
-        >
+        > */}
+           <motion.div
+                className=" relative mt-20 sm:mt-14 md:mt-20"
+                animate={{
+                  rotate: [0, 360], // Rotate from 0 to 360 degrees
+                }}
+                transition={{
+                  duration: 10, // Duration of one full rotation (in seconds)
+                  repeat: Infinity, // Infinite rotation
+                  ease: "linear", // Smooth and continuous rotation
+                }}
+              >
           <Image
             src={polluxLogo}
             alt="Polluxcoin Logo"
@@ -109,8 +120,9 @@ export default function HeroSection() {
             height={300}
             className="w-48 sm:w-64 md:w-72 lg:w-60"
           />
-        </motion.div>
-      </motion.div>
+          </motion.div>
+        {/* </motion.div>
+      </motion.div> */}
 
       <TypewriterEffect
         words={words}

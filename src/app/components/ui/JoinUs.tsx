@@ -29,6 +29,7 @@ const JoinUs = () => {
               Want to partner with us or innovate on PolluxChain? <br/>
               <span className="font-bold">Connect with our core team and start collaborating.</span>
             </p>
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLScf1JyE_H4GUiJNSBvdcK4-7xDYB_c1GaMbsvSkkXZJR8rDBQ/viewform">
             <button
               className=" mt-8 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium
              text-gray-900 rounded-lg group bg-gradient-to-br from-[#8AF969] to-[#000000] hover:text-white dark:text-white  focus:outline-none  "
@@ -37,6 +38,7 @@ const JoinUs = () => {
                 Get in Touch
               </span>
             </button>
+            </Link>
           </div>
 
           <div className="border-[1px] border-[#504f4f] bg-black rounded-2xl  text-start p-4 md:p-6 w-full lg:w-[50%] transform transition-transform duration-200 hover:scale-105 mt-10 md:mt-5 lg:mt-0">
