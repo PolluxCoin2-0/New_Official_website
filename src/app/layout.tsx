@@ -78,6 +78,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+       <link rel="icon" href="/pollux logo.svg" type="image/*" />
        <Head>
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
